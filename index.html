@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spargo — Shop Smarter. Save Better.</title>
+  <meta name="description" content="Spargo finds the cheapest prices on groceries, produce, household items, hardware, and gas near you. Build your list, we'll find the best store." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">SPARGO</a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#exclusives">Exclusives</a></li>
+      </ul>
+      <div class="nav-cta">
+        <button class="btn-green" onclick="document.getElementById('waitlist-email').focus()">Join Waitlist →</button>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section>
+  <div class="container">
+    <div class="hero">
+      <div class="hero-blob"></div>
+      <div class="hero-blob2"></div>
+
+      <div class="hero-left">
+        <div class="hero-badge">
+          <div class="badge-dot"></div>
+          Coming soon to iOS &amp; Android
+        </div>
+
+        <h1>Shop smarter.<br><em>Save better.</em></h1>
+
+        <p class="hero-p">Spargo finds the cheapest prices on groceries, produce, household items, hardware, and gas — all near you. Build your list, we'll find the best store.</p>
+
+        <form class="waitlist-form" onsubmit="handleWaitlist(event)">
+          <input id="waitlist-email" type="email" placeholder="Enter your email address" required />
+          <button type="submit" class="btn-green">Get Early Access →</button>
+        </form>
+
+        <div class="social-proof">
+          <div class="avatars">
+            <div class="av av1">A</div>
+            <div class="av av2">K</div>
+            <div class="av av3">M</div>
+            <div class="av av4">J</div>
+            <div class="av av5">S</div>
+          </div>
+          <span>100+ people already on the waitlist</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="phone-scene">
+
+          <!-- Back phone: search -->
+          <div class="phone phone-back">
+            <div class="screen">
+              <div class="s2-header">
+                <div class="s2-title">Search</div>
+                <div class="s2-sub">Find the cheapest price for anything</div>
+              </div>
+              <div class="s2-searchbar">
+                <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><circle cx="5" cy="5" r="4" stroke="#aaa" stroke-width="1.5"/><path d="M8.5 8.5L11 11" stroke="#aaa" stroke-width="1.5" stroke-linecap="round"/></svg>
+                eggs
+              </div>
+              <div style="font-size:7.5px;color:#6a8a6a;padding:0 10px 6px">117 results · Cheapest first</div>
+              <div class="s2-result">
+                <div class="s2-rank">1</div>
+                <div class="s2-info"><div class="s2-store">Real Cdn Superstore</div><div class="s2-item">PC Blue Menu Eggs</div></div>
+                <div class="s2-right"><div class="s2-price">$1.49</div><div class="s2-dist">8.7 km</div></div>
+              </div>
+              <div class="s2-result">
+                <div class="s2-rank light">2</div>
+                <div class="s2-info"><div class="s2-store">No Frills - Beddington</div><div class="s2-item">PC Blue Menu Eggs</div></div>
+                <div class="s2-right"><div class="s2-price muted">$1.50</div><div class="s2-dist">6.4 km</div></div>
+              </div>
+              <div class="s2-result">
+                <div class="s2-rank light">3</div>
+                <div class="s2-info"><div class="s2-store">Safeway - Chinook</div><div class="s2-item">Burnbrae Eggs2go</div></div>
+                <div class="s2-right"><div class="s2-price muted">$2.49</div><div class="s2-dist">18.9 km</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Back2 phone: list -->
+          <div class="phone phone-back2">
+            <div class="screen">
+              <div class="s2-header">
+                <div class="s2-title">My List</div>
+                <div class="s2-sub">0/3 items checked</div>
+              </div>
+              <div style="padding:6px 0">
+                <div class="s3-item"><div class="s3-circle"></div>PC Blue Menu White Eggs 12 Pack</div>
+                <div class="s3-item"><div class="s3-circle"></div>Farmer's Market Fuji Apples</div>
+                <div class="s3-item"><div class="s3-circle"></div>No Name Extra Large Eggs</div>
+              </div>
+              <div class="s3-btn">🛒 Find Cheapest Stores</div>
+            </div>
+          </div>
+
+          <!-- Main phone: clickable carousel -->
+          <div class="phone phone-main" id="mainPhone" onclick="cycleScreen()" title="Tap to see more screens">
+
+            <!-- Screen viewport — clips to one screen at a time -->
+            <div class="phone-carousel" id="phoneCarousel">
+
+              <!-- SCREEN 0: Deals -->
+              <div class="carousel-screen">
+                <div class="screen">
+                  <div class="screen-header">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                      <div>
+                        <div class="screen-logo">SPARGO</div>
+                        <div class="screen-sub">Shop smarter. Save better.</div>
+                      </div>
+                      <div style="display:flex;gap:8px;opacity:0.7">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M8.5 2a5.5 5.5 0 0 1 5.5 5.5c0 4-5.5 9.5-5.5 9.5S3 11.5 3 7.5A5.5 5.5 0 0 1 8.5 2z" stroke="white" stroke-width="1.3"/><circle cx="8.5" cy="7.5" r="2" stroke="white" stroke-width="1.3"/></svg>
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><circle cx="8.5" cy="5.5" r="3" stroke="white" stroke-width="1.3"/><path d="M2 15c0-3.6 2.9-5.5 6.5-5.5S15 11.4 15 15" stroke="white" stroke-width="1.3"/></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="padding:11px 11px 0;font-size:12px;font-weight:700;color:#0f2e14">Deals</div>
+                  <div style="font-size:8px;color:#6a8a6a;padding:2px 11px 9px">The best prices near you right now</div>
+                  <div class="screen-body">
+                    <div class="deal-card">
+                      <div class="deal-name">Kelloggs Eggo Thick &amp; Fluffy Waffles Original</div>
+                      <div class="deal-store">No Frills - Beddington</div>
+                      <div class="deal-row">
+                        <div class="deal-price-group">
+                          <span class="deal-price">$3.29</span>
+                          <span class="deal-old">$4.00</span>
+                          <span class="deal-badge">18% OFF</span>
+                        </div>
+                        <span class="deal-save">Save $0.71</span>
+                      </div>
+                      <div class="deal-footer"><span>📍 6.4 km away</span><span>Ends May 23</span></div>
+                    </div>
+                    <div class="deal-card">
+                      <div class="deal-name">Farmer's Market Fuji Apples</div>
+                      <div class="deal-store">No Frills - Beddington</div>
+                      <div class="deal-row">
+                        <div class="deal-price-group">
+                          <span class="deal-price">$0.79</span>
+                          <span class="deal-old">$1.32</span>
+                          <span class="deal-badge">40% OFF</span>
+                        </div>
+                        <span class="deal-save">Save $0.53</span>
+                      </div>
+                      <div class="deal-footer"><span>📍 6.4 km away</span><span>Ends May 17</span></div>
+                    </div>
+                    <div class="deal-card">
+                      <div class="deal-name">Aussie Miracle Volume Shampoo</div>
+                      <div class="deal-store">No Frills - Beddington</div>
+                      <div class="deal-row">
+                        <div class="deal-price-group">
+                          <span class="deal-price">$9.00</span>
+                          <span class="deal-old">$11.49</span>
+                          <span class="deal-badge">22% OFF</span>
+                        </div>
+                        <span class="deal-save">Save $2.49</span>
+                      </div>
+                      <div class="deal-footer"><span>📍 6.4 km away</span><span>Ends May 16</span></div>
+                    </div>
+                  </div>
+                  <div class="screen-nav">
+                    <div class="nav-tab active">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 5h12M4 8h8M6 11h4" stroke="#2D7A3A" stroke-width="1.5" stroke-linecap="round"/></svg>
+                      <span>Deals</span>
+                    </div>
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="#bbb" stroke-width="1.4"/><path d="M11 11l3 3" stroke="#bbb" stroke-width="1.4" stroke-linecap="round"/></svg><span>Search</span></div>
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="3" width="10" height="10" rx="2" stroke="#bbb" stroke-width="1.4"/><circle cx="8" cy="8" r="2.5" stroke="#bbb" stroke-width="1.4"/></svg><span>Scan</span></div>
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h10" stroke="#bbb" stroke-width="1.4" stroke-linecap="round"/></svg><span>My List</span></div>
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2l1.5 4.5H14l-3.7 2.7 1.4 4.3L8 11l-3.7 2.5 1.4-4.3L2 6.5h4.5z" stroke="#bbb" stroke-width="1.3" stroke-linejoin="round"/></svg><span>Exclusives</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SCREEN 1: Search results -->
+              <div class="carousel-screen">
+                <div class="screen">
+                  <div class="s2-header" style="background:#f0f9f0;padding:18px 14px 10px">
+                    <div class="s2-title">Search</div>
+                    <div class="s2-sub">Find the cheapest price for anything</div>
+                  </div>
+                  <div class="s2-searchbar" style="margin:8px 12px">
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><circle cx="5" cy="5" r="4" stroke="#aaa" stroke-width="1.5"/><path d="M8.5 8.5L11 11" stroke="#aaa" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    eggs
+                  </div>
+                  <div style="font-size:7.5px;color:#6a8a6a;padding:0 12px 6px">117 results · Cheapest first</div>
+                  <div class="s2-result">
+                    <div class="s2-rank">1</div>
+                    <div class="s2-info"><div class="s2-store">Real Cdn Superstore</div><div class="s2-item">PC Blue Menu Eggs</div></div>
+                    <div class="s2-right"><div class="s2-price">$1.49</div><div class="s2-dist">8.7 km</div></div>
+                  </div>
+                  <div class="s2-result">
+                    <div class="s2-rank light">2</div>
+                    <div class="s2-info"><div class="s2-store">No Frills - Beddington</div><div class="s2-item">PC Blue Menu Eggs</div></div>
+                    <div class="s2-right"><div class="s2-price muted">$1.50</div><div class="s2-dist">6.4 km</div></div>
+                  </div>
+                  <div class="s2-result">
+                    <div class="s2-rank light">3</div>
+                    <div class="s2-info"><div class="s2-store">Safeway - Chinook</div><div class="s2-item">Burnbrae Eggs2go</div></div>
+                    <div class="s2-right"><div class="s2-price muted">$2.49</div><div class="s2-dist">18.9 km</div></div>
+                  </div>
+                  <div class="s2-result">
+                    <div class="s2-rank light">4</div>
+                    <div class="s2-info"><div class="s2-store">No Frills - Beddington</div><div class="s2-item">No Name Extra Broad Egg Noodles</div></div>
+                    <div class="s2-right"><div class="s2-price muted">$2.99</div><div class="s2-dist">6.4 km</div></div>
+                  </div>
+                  <div class="screen-nav">
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 5h12M4 8h8M6 11h4" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"/></svg><span>Deals</span></div>
+                    <div class="nav-tab active"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="#2D7A3A" stroke-width="1.4"/><path d="M11 11l3 3" stroke="#2D7A3A" stroke-width="1.4" stroke-linecap="round"/></svg><span>Search</span></div>
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="3" width="10" height="10" rx="2" stroke="#bbb" stroke-width="1.4"/><circle cx="8" cy="8" r="2.5" stroke="#bbb" stroke-width="1.4"/></svg><span>Scan</span></div>
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h10" stroke="#bbb" stroke-width="1.4" stroke-linecap="round"/></svg><span>My List</span></div>
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2l1.5 4.5H14l-3.7 2.7 1.4 4.3L8 11l-3.7 2.5 1.4-4.3L2 6.5h4.5z" stroke="#bbb" stroke-width="1.3" stroke-linejoin="round"/></svg><span>Exclusives</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SCREEN 2: My List -->
+              <div class="carousel-screen">
+                <div class="screen">
+                  <div class="s2-header" style="background:#f0f9f0;padding:18px 14px 10px">
+                    <div class="s2-title">My List</div>
+                    <div class="s2-sub">0/3 items checked</div>
+                  </div>
+                  <div style="padding:6px 0">
+                    <div class="s3-item"><div class="s3-circle"></div>PC Blue Menu White Eggs 12 Pack</div>
+                    <div class="s3-item"><div class="s3-circle"></div>Farmer's Market Fuji Apples</div>
+                    <div class="s3-item"><div class="s3-circle"></div>No Name Extra Large Eggs</div>
+                  </div>
+                  <div class="s3-btn" style="margin:8px 12px 0">🛒 Find Cheapest Stores</div>
+                  <div style="padding:12px 12px 0">
+                    <div style="font-size:9px;font-weight:700;color:#0f2e14;margin-bottom:8px">Best option</div>
+                    <div style="background:white;border-radius:10px;border:1.5px solid #2D7A3A;padding:11px 12px;margin-bottom:7px">
+                      <div style="display:flex;justify-content:space-between;align-items:center">
+                        <div style="font-size:9px;font-weight:700;color:#0f2e14">No Frills - Beddington</div>
+                        <div style="background:rgba(45,122,58,0.1);color:#2D7A3A;font-size:7px;font-weight:700;padding:2px 6px;border-radius:5px">BEST</div>
+                      </div>
+                      <div style="font-size:7.5px;color:#6a8a6a;margin:2px 0 7px">All 3 items · 6.4 km away</div>
+                      <div style="display:flex;justify-content:space-between;align-items:center">
+                        <div style="font-size:17px;font-weight:700;color:#2D7A3A">$8.28</div>
+                        <div style="font-size:7.5px;color:#6a8a6a">vs $11.20 at Safeway</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="screen-nav">
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 5h12M4 8h8M6 11h4" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"/></svg><span>Deals</span></div>
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="#bbb" stroke-width="1.4"/><path d="M11 11l3 3" stroke="#bbb" stroke-width="1.4" stroke-linecap="round"/></svg><span>Search</span></div>
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="3" width="10" height="10" rx="2" stroke="#bbb" stroke-width="1.4"/><circle cx="8" cy="8" r="2.5" stroke="#bbb" stroke-width="1.4"/></svg><span>Scan</span></div>
+                    <div class="nav-tab active"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h10" stroke="#2D7A3A" stroke-width="1.4" stroke-linecap="round"/></svg><span>My List</span></div>
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2l1.5 4.5H14l-3.7 2.7 1.4 4.3L8 11l-3.7 2.5 1.4-4.3L2 6.5h4.5z" stroke="#bbb" stroke-width="1.3" stroke-linejoin="round"/></svg><span>Exclusives</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SCREEN 3: Exclusives -->
+              <div class="carousel-screen">
+                <div class="screen">
+                  <div class="s2-header" style="background:#f0f9f0;padding:18px 14px 10px">
+                    <div class="s2-title">Exclusives</div>
+                    <div class="s2-sub">Spargo-only deals from partner stores</div>
+                  </div>
+                  <div style="display:flex;flex-direction:column;align-items:center;padding:20px 14px 0;text-align:center">
+                    <div style="width:44px;height:44px;border-radius:50%;background:rgba(45,122,58,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:10px">
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3l2 6h6l-5 3.5 2 6L11 15l-5 3.5 2-6L3 9.5h6z" stroke="#2D7A3A" stroke-width="1.4" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div style="font-size:11px;font-weight:700;color:#0f2e14;margin-bottom:5px">Coming Soon</div>
+                    <div style="font-size:8.5px;color:#6a8a6a;line-height:1.5;margin-bottom:16px">We're partnering with local stores to bring you exclusive deals you won't find anywhere else.</div>
+                  </div>
+                  <div style="background:white;border:1px dashed rgba(45,122,58,0.3);border-radius:12px;padding:14px;margin:0 12px">
+                    <div style="font-size:8.5px;font-weight:700;color:#0f2e14;margin-bottom:10px">What to expect:</div>
+                    <div style="display:flex;align-items:center;gap:7px;font-size:8px;color:#4a6a4a;margin-bottom:7px"><div style="width:6px;height:6px;border-radius:50%;background:#2D7A3A;flex-shrink:0"></div>Exclusive discounts only for Spargo users</div>
+                    <div style="display:flex;align-items:center;gap:7px;font-size:8px;color:#4a6a4a;margin-bottom:7px"><div style="width:6px;height:6px;border-radius:50%;background:#2D7A3A;flex-shrink:0"></div>First access to flash sales &amp; limited deals</div>
+                    <div style="display:flex;align-items:center;gap:7px;font-size:8px;color:#4a6a4a"><div style="width:6px;height:6px;border-radius:50%;background:#2D7A3A;flex-shrink:0"></div>Deals from your favourite local Calgary stores</div>
+                  </div>
+                  <div class="screen-nav" style="margin-top:auto">
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 5h12M4 8h8M6 11h4" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"/></svg><span>Deals</span></div>
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="#bbb" stroke-width="1.4"/><path d="M11 11l3 3" stroke="#bbb" stroke-width="1.4" stroke-linecap="round"/></svg><span>Search</span></div>
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="3" width="10" height="10" rx="2" stroke="#bbb" stroke-width="1.4"/><circle cx="8" cy="8" r="2.5" stroke="#bbb" stroke-width="1.4"/></svg><span>Scan</span></div>
+                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h10" stroke="#bbb" stroke-width="1.4" stroke-linecap="round"/></svg><span>My List</span></div>
+                    <div class="nav-tab active"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2l1.5 4.5H14l-3.7 2.7 1.4 4.3L8 11l-3.7 2.5 1.4-4.3L2 6.5h4.5z" stroke="#2D7A3A" stroke-width="1.3" stroke-linejoin="round"/></svg><span>Exclusives</span></div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- end carousel -->
+
+            <!-- Dot indicators inside the phone bezel -->
+            <div class="phone-dots" id="phoneDots">
+              <div class="phone-dot active"></div>
+              <div class="phone-dot"></div>
+              <div class="phone-dot"></div>
+              <div class="phone-dot"></div>
+            </div>
+
+          </div><!-- end phone-main -->
+
+          <!-- Bouncing click me badge -->
+          <div class="tap-hint" id="tapHint">
+            <div class="tap-hint-bubble">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                <path d="M5 2.5C5 1.67 5.67 1 6.5 1S8 1.67 8 2.5v4.2l1.2.7c.5.3.8.85.8 1.43v.87A3 3 0 0 1 7 12H5.5A3.5 3.5 0 0 1 2 8.5V6a1 1 0 0 1 1-1 1 1 0 0 1 1 1v1h1V2.5z" stroke="white" stroke-width="1.1" stroke-linejoin="round"/>
+              </svg>
+              click me!
+            </div>
+            <div class="tap-hint-arrow"></div>
+          </div>
+
+          <!-- Float cards -->
+          <div class="float-card float-1">
+            <div class="float-label">Avg. saved / week</div>
+            <div class="float-value">$150</div>
+            <div class="float-sub">per household</div>
+          </div>
+          <div class="float-card float-2">
+            <div class="float-label">Deals near you</div>
+            <div class="float-value">117</div>
+            <div class="float-sub">updated daily</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item reveal">
+        <div class="stat-num">$150</div>
+        <div class="stat-label">avg. saved per week per household</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">stores tracked across Canada</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-num">Daily</div>
+        <div class="stat-label">price updates across all categories</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="features-head reveal">
+      <div class="section-label">What Spargo does</div>
+      <div class="section-title">Every feature built<br>to save you money</div>
+    </div>
+    <div class="features-grid">
+
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7.5" stroke="#2D7A3A" stroke-width="1.6"/><path d="M17 17l4 4" stroke="#2D7A3A" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Price search</h3>
+        <p>Search any item — groceries, gas, hardware — and see prices ranked cheapest first, filtered by distance from you.</p>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="15" rx="2" stroke="#2D7A3A" stroke-width="1.6"/><path d="M7 10h10M7 14h6" stroke="#2D7A3A" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Grocery list optimizer</h3>
+        <p>Add your whole shopping list and Spargo tells you the single cheapest store — or the best split across multiple stores.</p>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.2 6.5H21l-5.5 4 2 6.5L12 16l-5.5 4 2-6.5L3 9.5h6.8z" stroke="#2D7A3A" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Exclusive offers</h3>
+        <p>Get early access to flash sales and partner deals before they go public. Spargo-only discounts from local stores.</p>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-1">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" stroke="#2D7A3A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Price score</h3>
+        <p>Scan or manually enter a price tag and get a score out of 100 — a full breakdown of whether you're actually getting a deal.</p>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-2">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 5 5 5 9c0 6 7 13 7 13s7-7 7-13c0-4-3-7-7-7z" stroke="#2D7A3A" stroke-width="1.6"/><circle cx="12" cy="9" r="2.5" stroke="#2D7A3A" stroke-width="1.6"/></svg>
+        </div>
+        <h3>Proximity filtering</h3>
+        <p>Sort deals and search results by distance. No point saving $0.50 when the store is 30 km away.</p>
+      </div>
+
+      <div class="feature-card reveal reveal-delay-3">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="8" height="8" rx="1.5" stroke="#2D7A3A" stroke-width="1.6"/><rect x="14" y="2" width="8" height="8" rx="1.5" stroke="#2D7A3A" stroke-width="1.6"/><rect x="2" y="14" width="8" height="8" rx="1.5" stroke="#2D7A3A" stroke-width="1.6"/><rect x="14" y="14" width="8" height="8" rx="1.5" stroke="#2D7A3A" stroke-width="1.6"/></svg>
+        </div>
+        <h3>Barcode scanning</h3>
+        <p>Point your camera at any shelf label or price sticker. Spargo reads it and instantly shows you better options nearby.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="how-inner">
+      <div>
+        <div class="section-label reveal">Simple by design</div>
+        <div class="section-title reveal">How Spargo<br>works</div>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>Set your location</h4>
+              <p>Tell Spargo your city. We'll find deals and stores within your reach, ranked by proximity.</p>
+            </div>
+          </div>
+          <div class="step reveal reveal-delay-1">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>Browse or search</h4>
+              <p>See today's best deals near you, or search for any specific item across all nearby stores.</p>
+            </div>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>Build your list</h4>
+              <p>Add items to your grocery list and let Spargo calculate the cheapest single store — or the best combo.</p>
+            </div>
+          </div>
+          <div class="step reveal reveal-delay-3">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4>Save money, every week</h4>
+              <p>Get directions, check hours, and shop smarter. The average Spargo household saves $150 a week.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="how-phone-wrap reveal">
+        <div class="how-phone">
+          <div class="screen">
+            <div class="s2-header" style="background:#f0f9f0;padding:18px 14px 10px">
+              <div class="s2-title">My List</div>
+              <div class="s2-sub">0/3 items checked</div>
+            </div>
+            <div style="padding:8px 0">
+              <div class="s3-item"><div class="s3-circle"></div>PC Blue Menu White Eggs 12 Pack</div>
+              <div class="s3-item"><div class="s3-circle"></div>Farmer's Market Fuji Apples</div>
+              <div class="s3-item"><div class="s3-circle"></div>No Name Extra Large Eggs 12 Pack</div>
+            </div>
+            <div class="s3-btn">🛒 Find Cheapest Stores</div>
+            <div style="padding:16px 12px 0">
+              <div style="font-size:10px;font-weight:700;color:#0f2e14;margin-bottom:10px">Best option</div>
+              <div style="background:white;border-radius:12px;border:1.5px solid #2D7A3A;padding:14px 14px;margin-bottom:8px">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start">
+                  <div>
+                    <div style="font-size:10px;font-weight:700;color:#0f2e14">No Frills - Beddington</div>
+                    <div style="font-size:8px;color:#6a8a6a;margin-top:2px">All 3 items in stock · 6.4 km</div>
+                  </div>
+                  <div style="background:rgba(45,122,58,0.1);color:#2D7A3A;font-size:8px;font-weight:700;padding:3px 8px;border-radius:6px">BEST</div>
+                </div>
+                <div style="margin-top:10px;display:flex;justify-content:space-between;align-items:center">
+                  <div style="font-size:18px;font-weight:700;color:#2D7A3A">$8.28</div>
+                  <div style="font-size:8px;color:#6a8a6a">vs $11.20 at Safeway</div>
+                </div>
+              </div>
+              <div style="background:white;border-radius:12px;border:1px solid #e4f0e4;padding:12px 14px">
+                <div style="font-size:10px;font-weight:600;color:#1a2e1a">Real Cdn Superstore</div>
+                <div style="font-size:8px;color:#6a8a6a;margin-top:2px">2 items available · 8.7 km</div>
+                <div style="margin-top:8px;font-size:15px;font-weight:700;color:#4a7a4a">$9.40</div>
+              </div>
+            </div>
+            <div class="screen-nav" style="margin-top:auto">
+              <div class="nav-tab">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 5h12M4 8h8M6 11h4" stroke="#bbb" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span>Deals</span>
+              </div>
+              <div class="nav-tab">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="#bbb" stroke-width="1.4"/><path d="M11 11l3 3" stroke="#bbb" stroke-width="1.4" stroke-linecap="round"/></svg>
+                <span>Search</span>
+              </div>
+              <div class="nav-tab">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="3" width="10" height="10" rx="2" stroke="#bbb" stroke-width="1.4"/><circle cx="8" cy="8" r="2.5" stroke="#bbb" stroke-width="1.4"/></svg>
+                <span>Scan</span>
+              </div>
+              <div class="nav-tab active">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h10" stroke="#2D7A3A" stroke-width="1.4" stroke-linecap="round"/></svg>
+                <span>My List</span>
+              </div>
+              <div class="nav-tab">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2l1.5 4.5H14l-3.7 2.7 1.4 4.3L8 11l-3.7 2.5 1.4-4.3L2 6.5h4.5z" stroke="#bbb" stroke-width="1.3" stroke-linejoin="round"/></svg>
+                <span>Exclusives</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXCLUSIVES -->
+<section class="exclusives" id="exclusives">
+  <div class="container">
+    <div class="excl-inner">
+      <div>
+        <div class="section-label reveal">Members only</div>
+        <div class="section-title reveal">Deals you won't<br>find anywhere else</div>
+        <p class="section-subtitle reveal" style="margin-bottom:40px">Spargo partners with local stores to bring you exclusive discounts, early access to flash sales, and limited-time offers that never make it to the public flyer.</p>
+
+        <div class="excl-card reveal">
+          <div class="excl-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3l2.5 7.5H23L17 15l2.5 8L13 19l-6.5 4 2.5-8L3 10.5h7.5z" stroke="#2D7A3A" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="excl-tag">EXCLUSIVE</div>
+            <h4>Early flash sale access</h4>
+            <p>See limited deals up to 24 hours before they go live to the public.</p>
+          </div>
+        </div>
+
+        <div class="excl-card reveal reveal-delay-1">
+          <div class="excl-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 13c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z" stroke="#2D7A3A" stroke-width="1.5"/><path d="M13 9v4l3 3" stroke="#2D7A3A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="excl-tag">PARTNER DEAL</div>
+            <h4>Partner store discounts</h4>
+            <p>Store-specific deals available only to Spargo members — no coupon clipping needed.</p>
+          </div>
+        </div>
+
+        <div class="excl-card reveal reveal-delay-2">
+          <div class="excl-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M6 12l5 5 9-9" stroke="#2D7A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="excl-tag">COMING SOON</div>
+            <h4>Loyalty rewards</h4>
+            <p>Earn points on every deal you use. Redeem for extra savings at partner locations.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div style="background:white;border:1px solid var(--card-border);border-radius:28px;overflow:hidden;box-shadow:var(--shadow-md)">
+          <div style="background:var(--green-dark);padding:36px 32px;text-align:center">
+            <div style="font-family:'DM Serif Display',serif;font-size:28px;color:white;margin-bottom:8px">Exclusives</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.55)">Spargo-only deals from partner stores</div>
+            <div style="margin-top:28px;background:rgba(255,255,255,0.06);border:1px dashed rgba(255,255,255,0.2);border-radius:16px;padding:28px 20px">
+              <div style="font-size:36px;margin-bottom:8px">⭐</div>
+              <div style="font-size:14px;font-weight:600;color:white;margin-bottom:6px">Coming Soon</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.5);line-height:1.6">We're partnering with local stores to bring you exclusive deals you won't find anywhere else.</div>
+            </div>
+          </div>
+          <div style="padding:24px 28px">
+            <div style="font-size:12px;font-weight:600;color:#0f2e14;margin-bottom:16px;letter-spacing:0.5px;text-transform:uppercase">What to expect</div>
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:#4a6a4a">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0"></div>
+                Exclusive discounts only for Spargo users
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:#4a6a4a">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0"></div>
+                First access to flash sales and limited deals
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;font-size:14px;color:#4a6a4a">
+                <div style="width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0"></div>
+                Deals from your favourite local stores
+              </div>
+            </div>
+            <button class="btn-green" style="width:100%;margin-top:24px;justify-content:center" onclick="document.getElementById('cta-email').focus()">Join Waitlist for Early Access →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container" style="position:relative;z-index:1">
+    <div class="section-title">Ready to stop overpaying?</div>
+    <p class="section-subtitle">Join the waitlist and be first to download Spargo when it launches.</p>
+    <form class="cta-form" onsubmit="handleWaitlist(event)">
+      <input id="cta-email" type="email" placeholder="your@email.com" required />
+      <button type="submit" class="btn-white">Get Early Access</button>
+    </form>
+    <p class="cta-note">No spam. No credit card. Just early access.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">SPARGO</div>
+        <div class="footer-copy">Shop smarter. Save better. &copy; 2026 Spargo</div>
+      </div>
+      <div class="app-badges">
+        <div class="app-badge">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.5 8.3C11.5 6.3 13 5.3 13 5.3S11.5 3.5 9.8 4C8.8 4.3 8.3 4.5 7.8 4.5s-1-.2-2-.5C4 3.5 2.5 5 2.5 5S4 6.3 4 8.3 2.5 12 2.5 12s1.5.5 3-1c.5-.7 1-1 1.5-1h1.5c.5 0 1 .3 1.5 1 1.5 1.5 3 1 3 1S11.5 10.3 11.5 8.3z" fill="white"/></svg>
+          App Store
+        </div>
+        <div class="app-badge">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 2.5L13 8 3 13.5V2.5z" stroke="white" stroke-width="1.2" stroke-linejoin="round"/></svg>
+          Google Play
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
