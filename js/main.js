@@ -55,18 +55,39 @@ const phoneObserver = new IntersectionObserver((entries) => {
 phoneObserver.observe(phoneScene);
 resetPhoneAnimation();
 
+// EmailJS config
+const EMAILJS_PUBLIC_KEY  = 'DBpMueAacdhrc7DWd';
+const EMAILJS_SERVICE_ID  = 'service_d89u48f';
+const EMAILJS_TEMPLATE_ID = 'template_duck8s4';
+
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
 // Waitlist form
-function handleWaitlist(e) {
+async function handleWaitlist(e) {
   e.preventDefault();
   const input = e.target.querySelector('input[type="email"]');
-  const btn = e.target.querySelector('button');
-  const email = input.value;
-  btn.textContent = '✓ You\'re on the list!';
-  btn.style.background = '#8acc28';
-  btn.disabled = true;
+  const btn   = e.target.querySelector('button');
+  const email = input.value.trim();
+
+  if (!email) return;
+
+  const originalText = btn.textContent;
+  btn.disabled   = true;
   input.disabled = true;
-  input.value = '';
-  input.placeholder = email + ' · confirmed';
+  btn.textContent = 'Joining…';
+
+  try {
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, { from_email: email });
+    btn.textContent = '✓ You\'re on the list';
+    input.value = '';
+    input.placeholder = email + ' · confirmed';
+  } catch {
+    btn.disabled   = false;
+    input.disabled = false;
+    btn.textContent = originalText;
+    input.style.borderColor = '#c0392b';
+    input.placeholder = 'Something went wrong — try again';
+  }
 }
 
 // Nav scroll style
