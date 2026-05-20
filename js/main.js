@@ -62,15 +62,40 @@ const EMAILJS_TEMPLATE_ID = 'template_duck8s4';
 
 emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
+// Escape HTML entities — prevents injected markup from rendering if value is ever written to the DOM
+function escapeHTML(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;');
+}
+
+// RFC 5321-compliant email regex — rejects addresses with SQL/script payloads structurally
+const EMAIL_RE = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+
+function isValidEmail(email) {
+  return EMAIL_RE.test(email);
+}
+
 // Waitlist form
 async function handleWaitlist(e) {
   e.preventDefault();
   const input = e.target.querySelector('input[type="email"]');
   const btn   = e.target.querySelector('button');
-  const email = input.value.trim();
+  const raw   = input.value.trim();
 
-  if (!email) return;
+  if (!isValidEmail(raw)) {
+    input.style.borderColor = '#c0392b';
+    input.focus();
+    return;
+  }
 
+  // Sanitize before sending — escapes any HTML entities in the value
+  const email = escapeHTML(raw);
+
+  input.style.borderColor = '';
   const originalText = btn.textContent;
   btn.disabled   = true;
   input.disabled = true;
@@ -80,7 +105,7 @@ async function handleWaitlist(e) {
     await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, { from_email: email });
     btn.textContent = '✓ You\'re on the list';
     input.value = '';
-    input.placeholder = email + ' · confirmed';
+    input.placeholder = raw + ' · confirmed';
   } catch {
     btn.disabled   = false;
     input.disabled = false;
