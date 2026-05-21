@@ -11,7 +11,7 @@ function toggleTheme() {
   }
 })();
 
-// Phone screen carousel for better UI/UX
+// Phone screen carousel for better UI/
 let currentScreen = 0;
 const totalScreens = 4;
 const carousel = document.getElementById('phoneCarousel');
