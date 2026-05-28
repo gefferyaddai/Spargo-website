@@ -1029,6 +1029,22 @@ nav {
     top: -200px; left: 50%; transform: translateX(-50%);
     pointer-events: none;
 }
+.click-me-badge {
+    position: absolute;
+    bottom: 110px;        /* adjust up/down */
+    left: -40px;         /* adjust left/right */
+    background: #fff;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a1a;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    white-space: nowrap;
+    z-index: 10;
+    animation: float 2s ease-in-out infinite;
+    pointer-events: none;
+}
 
 .cta-label {
     font-family: 'Syne', sans-serif;
