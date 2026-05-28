@@ -1089,9 +1089,10 @@ footer {
     font-weight: 500;
     display: flex; align-items: center; gap: 8px;
     cursor: pointer;
-    transition: border-color 0.2s;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
 }
-.app-badge:hover { border-color: var(--lime-border); }
+.app-badge:hover { border-color: var(--lime-border); color: var(--lime); }
 
 /* ── SCROLL ANIMATIONS ── */
 @keyframes fadeSlideUp {
