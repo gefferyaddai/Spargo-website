@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://spargo.app/sitemap.xml
+Sitemap: https://savewithspargo.com/sitemap.xml

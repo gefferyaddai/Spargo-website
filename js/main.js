@@ -42,6 +42,20 @@ const phoneObserver = new IntersectionObserver((entries) => {
 phoneObserver.observe(phoneScene);
 resetPhoneAnimation();
 
+// Google Sheets logging
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwvjSHuO3SMbWbJ473d3aGKP6wcSYNwDtoeS9jAKPUkmEmu9BaFzQ83aZKNnisX5YVh/exec';
+
+async function logToSheets(email) {
+  try {
+    await fetch(SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: JSON.stringify({ email }),
+      headers: { 'Content-Type': 'text/plain' }
+    });
+  } catch {}
+}
+
 // EmailJS config
 const EMAILJS_PUBLIC_KEY  = 'DBpMueAacdhrc7DWd';
 const EMAILJS_SERVICE_ID  = 'service_d89u48f';
@@ -89,7 +103,10 @@ async function handleWaitlist(e) {
   btn.textContent = 'Joining…';
 
   try {
-    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, { from_email: email });
+    await Promise.all([
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, { email: email }),
+      logToSheets(email)
+    ]);
     btn.textContent = '✓ You\'re on the list';
     input.value = '';
     input.placeholder = raw + ' · confirmed';
