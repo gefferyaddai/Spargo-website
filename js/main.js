@@ -43,15 +43,13 @@ phoneObserver.observe(phoneScene);
 resetPhoneAnimation();
 
 // Google Sheets logging
-const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwvjSHuO3SMbWbJ473d3aGKP6wcSYNwDtoeS9jAKPUkmEmu9BaFzQ83aZKNnisX5YVh/exec';
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbw_ZKCC3MnEisB1p0B6YuFDJU8YHgfNDwZl6aGJjbxG8rGrfS3a4M7pM4rkePMZSzKm/exec';
 
 async function logToSheets(email) {
   try {
-    await fetch(SHEETS_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      body: JSON.stringify({ email }),
-      headers: { 'Content-Type': 'text/plain' }
+    await fetch(`${SHEETS_URL}?email=${encodeURIComponent(email)}`, {
+      method: 'GET',
+      mode: 'no-cors'
     });
   } catch {}
 }

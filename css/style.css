@@ -771,6 +771,32 @@ nav {
 .float-1 { right: -20px; top: 100px; width: 148px; }
 .float-2 { left: -24px; bottom: 120px; width: 154px; }
 
+.click-me-badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--lime);
+    color: #0c0c0c;
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 16px;
+    border-radius: 50px;
+    white-space: nowrap;
+    box-shadow: 0 4px 20px rgba(168,230,61,0.4);
+}
+.click-me-arrow {
+    width: 0; height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 9px solid var(--lime);
+    position: absolute;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .float-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 5px; }
 .float-value { font-size: 28px; font-weight: 700; color: var(--lime); line-height: 1; }
 .float-value-sm { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 2px; }
