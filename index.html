@@ -19,32 +19,28 @@
   <meta name="twitter:description" content="Spargo finds the cheapest prices on groceries, produce, hardware, and gas near you. Build your list, we'll find the best store." />
   <meta name="twitter:image"       content="https://spargo.app/og-image.png" />
 
+    <link rel="canonical" href="https://spargo.app/" />
+  <meta name="theme-color" content="#A8E63D" />
+  <link rel="icon" type="image/png" href="spargo-logo.png" />
+  <link rel="apple-touch-icon" href="spargo-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="light">
 
 <!-- NAV -->
 <nav id="mainNav">
   <div class="container">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">SPARGO</a>
+      <a href="#" class="nav-logo"><img src="spargo-logo-nobg.png" alt="Spargo" /></a>
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#exclusives">Exclusives</a></li>
       </ul>
       <div class="nav-cta">
-        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode">
-          <span class="theme-icon-dark">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <span class="theme-icon-light">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          </span>
-        </button>
         <button class="btn-primary" onclick="document.getElementById('waitlist-email').focus()">Join Waitlist</button>
       </div>
       <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
@@ -61,10 +57,6 @@
     <a href="#how" onclick="toggleMenu()">How it works</a>
     <a href="#exclusives" onclick="toggleMenu()">Exclusives</a>
     <button class="btn-primary" onclick="toggleMenu(); document.getElementById('waitlist-email').focus()">Join Waitlist</button>
-    <button class="theme-toggle-mobile" onclick="toggleTheme()">
-      <span class="theme-icon-dark">🌙 Dark mode</span>
-      <span class="theme-icon-light">☀️ Light mode</span>
-    </button>
   </div>
 </div>
 
@@ -717,7 +709,7 @@
   <div class="container">
     <div class="footer-inner">
       <div>
-        <div class="footer-logo">SPARGO</div>
+        <div class="footer-logo"><img src="spargo-logo-nobg.png" alt="Spargo" /></div>
         <div class="footer-copy">Shop smarter. Save better. &copy; 2026 Spargo</div>
         <div class="footer-legal">
           <a href="privacy.html">Privacy Policy</a>

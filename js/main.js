@@ -1,16 +1,3 @@
-// Theme toggle
-function toggleTheme() {
-  const isLight = document.body.classList.toggle('light');
-  localStorage.setItem('spargo-theme', isLight ? 'light' : 'dark');
-}
-
-// Apply saved theme on load
-(function() {
-  if (localStorage.getItem('spargo-theme') === 'light') {
-    document.body.classList.add('light');
-  }
-})();
-
 // Phone screen carousel for better UI/
 let currentScreen = 0;
 const totalScreens = 4;

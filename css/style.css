@@ -234,6 +234,7 @@ nav {
     text-decoration: none;
 }
 .nav-logo span { color: var(--lime); }
+.nav-logo img { height: 44px; width: auto; display: block; }
 
 .nav-links {
     display: flex;
@@ -1059,6 +1060,7 @@ footer {
     font-weight: 800; font-size: 15px; letter-spacing: 4px;
     color: var(--text); margin-bottom: 6px;
 }
+.footer-logo img { height: 38px; width: auto; display: block; }
 .footer-copy { font-size: 12px; color: var(--text-muted); }
 .footer-legal {
   display: flex;
