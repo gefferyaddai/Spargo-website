@@ -103,305 +103,39 @@
       <div class="hero-visual">
         <div class="phone-scene" id="phoneScene">
 
-          <!-- Back phone: search results (matches real app) -->
+          <!-- Back phone -->
           <div class="phone phone-back">
-            <div class="screen">
-              <div class="s2-header">
-                <div class="s2-title">Search</div>
-                <div class="s2-sub">Find the cheapest price for anything</div>
-              </div>
-              <div class="s2-searchbar">
-                <svg width="9" height="9" viewBox="0 0 12 12" fill="none"><circle cx="5" cy="5" r="4" stroke="#aaa" stroke-width="1.5"/><path d="M8.5 8.5L11 11" stroke="#aaa" stroke-width="1.5" stroke-linecap="round"/></svg>
-                eggs
-                <svg style="margin-left:auto" width="9" height="9" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#ccc" stroke-width="1.5"/><path d="M4 4l4 4M8 4l-4 4" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/></svg>
-              </div>
-              <div class="s2-filter-row">
-                <div class="s2-filter">All</div>
-                <div class="s2-filter off">Produce</div>
-                <div class="s2-filter off">Dairy</div>
-                <div class="s2-filter off">Meat</div>
-              </div>
-              <div class="s2-meta-row">
-                <div class="s2-meta">117 results · Cheapest first</div>
-                <div class="s2-best-badge">👑 Best price</div>
-              </div>
-              <div class="s2-result">
-                <div class="s2-rank">1</div>
-                <div class="s2-info"><div class="s2-store">Real Canadian Superstore</div><div class="s2-item">PC Blue Menu Hard-boiled Eggs...</div></div>
-                <div class="s2-right"><div class="s2-price">$1.49</div><div class="s2-dist">8.7 km</div></div>
-              </div>
-              <div class="s2-result">
-                <div class="s2-rank light">2</div>
-                <div class="s2-info"><div class="s2-store">No Frills - Beddington</div><div class="s2-item">PC Blue Menu Hard-boiled Eggs...</div></div>
-                <div class="s2-right"><div class="s2-price muted">$1.50</div><div class="s2-dist">6.4 km</div></div>
-              </div>
-              <div class="s2-result">
-                <div class="s2-rank light">3</div>
-                <div class="s2-info"><div class="s2-store">Safeway - Chinook</div><div class="s2-item">Burnbrae Farms Eggs2go...</div></div>
-                <div class="s2-right"><div class="s2-price muted">$2.49</div><div class="s2-dist">18.9 km</div></div>
-              </div>
-              <div class="s2-result">
-                <div class="s2-rank light">4</div>
-                <div class="s2-info"><div class="s2-store">No Frills - Beddington</div><div class="s2-item">No Name Extra Broad Egg Noodles</div></div>
-                <div class="s2-right"><div class="s2-price muted">$2.99</div><div class="s2-dist">6.4 km</div></div>
-              </div>
-            </div>
+            <div class="screen"><img src="pricescore.png" alt="Price Score" /></div>
           </div>
 
           <!-- Back2 phone: My List (matches real app) -->
+          <!-- Back2 phone -->
           <div class="phone phone-back2">
-            <div class="screen">
-              <div class="s2-header">
-                <div class="s2-title">My List</div>
-                <div class="s2-sub">0/3 items checked</div>
-              </div>
-              <div class="s3-add-row">
-                <div class="s3-add-input">
-                  <svg width="8" height="8" viewBox="0 0 12 12" fill="none"><circle cx="5.5" cy="5.5" r="4" stroke="#bbb" stroke-width="1.4"/><path d="M9 9l2 2" stroke="#bbb" stroke-width="1.4" stroke-linecap="round"/></svg>
-                  + Add an item...
-                </div>
-                <div class="s3-add-btn">+</div>
-              </div>
-              <div class="s3-items">
-                <div class="s3-item"><div class="s3-circle"></div>PC Blue Menu White Eggs 12 Pack<div class="s3-trash">🗑</div></div>
-                <div class="s3-item"><div class="s3-circle"></div>Farmer's Market Fuji Apples<div class="s3-trash">🗑</div></div>
-                <div class="s3-item"><div class="s3-circle"></div>No Name Extra Large Eggs<div class="s3-trash">🗑</div></div>
-              </div>
-              <div class="s3-btn">
-                <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><rect x="2" y="4" width="12" height="10" rx="2" stroke="white" stroke-width="1.5"/><path d="M5 4V3a3 3 0 0 1 6 0v1" stroke="white" stroke-width="1.5"/></svg>
-                Find Cheapest Stores
-              </div>
-            </div>
+            <div class="screen"><img src="searchpage 2.png" alt="Search" /></div>
           </div>
 
           <!-- Main phone: clickable carousel -->
           <div class="phone phone-main" id="mainPhone" onclick="cycleScreen()" title="Tap to see more screens">
             <div class="phone-carousel" id="phoneCarousel">
 
-              <!-- SCREEN 0: Deals — matches real app -->
+              <!-- SCREEN 0: Deals -->
               <div class="carousel-screen">
-                <div class="screen">
-                  <div class="screen-page-header">
-                    <div class="sph-left">
-                      <div class="sph-title">Deals</div>
-                      <div class="sph-sub">The best prices near you right now</div>
-                    </div>
-                    <div class="sph-icons">
-                      <div class="sph-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M8 2a4 4 0 0 1 4 4c0 3.5-4 9-4 9S4 9.5 4 6a4 4 0 0 1 4-4z" stroke="#1e6b1e" stroke-width="1.4"/><circle cx="8" cy="6" r="1.5" stroke="#1e6b1e" stroke-width="1.4"/></svg></div>
-                      <div class="sph-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="5" r="3" stroke="#1e6b1e" stroke-width="1.4"/><path d="M2 14c0-3.3 2.7-5 6-5s6 1.7 6 5" stroke="#1e6b1e" stroke-width="1.4" stroke-linecap="round"/></svg></div>
-                    </div>
-                  </div>
-                  <div class="screen-body">
-                    <div class="deal-card">
-                      <div class="deal-card-top">
-                        <div class="deal-name">Kelloggs Eggo Thick &amp; Fluffy Waffles</div>
-                        <div class="deal-heart">♡</div>
-                      </div>
-                      <div class="deal-store">No Frills - Beddington</div>
-                      <div class="deal-row">
-                        <div class="deal-price-group">
-                          <span class="deal-price">$3.29</span>
-                          <span class="deal-old">$4.00</span>
-                          <span class="deal-badge">18% OFF</span>
-                        </div>
-                        <span class="deal-save">Save $0.71</span>
-                      </div>
-                      <div class="deal-footer"><span>📍 6.4 km away</span><span>Ends May 23</span></div>
-                    </div>
-                    <div class="deal-card">
-                      <div class="deal-card-top">
-                        <div class="deal-name">Farmer's Market Fuji Apples</div>
-                        <div class="deal-heart">♡</div>
-                      </div>
-                      <div class="deal-store">No Frills - Beddington</div>
-                      <div class="deal-row">
-                        <div class="deal-price-group">
-                          <span class="deal-price">$0.79</span>
-                          <span class="deal-old">$1.32</span>
-                          <span class="deal-badge">40% OFF</span>
-                        </div>
-                        <span class="deal-save">Save $0.53</span>
-                      </div>
-                      <div class="deal-footer"><span>📍 6.4 km away</span><span>Ends May 17</span></div>
-                    </div>
-                    <div class="deal-card">
-                      <div class="deal-card-top">
-                        <div class="deal-name">Aussie Miracle Volume Shampoo</div>
-                        <div class="deal-heart">♡</div>
-                      </div>
-                      <div class="deal-store">No Frills - Beddington</div>
-                      <div class="deal-row">
-                        <div class="deal-price-group">
-                          <span class="deal-price">$9.00</span>
-                          <span class="deal-old">$11.49</span>
-                          <span class="deal-badge">22% OFF</span>
-                        </div>
-                        <span class="deal-save">Save $2.49</span>
-                      </div>
-                      <div class="deal-footer"><span>📍 6.4 km away</span><span>Ends May 16</span></div>
-                    </div>
-                  </div>
-                  <div class="screen-nav">
-                    <div class="nav-tab active"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 7.5L7.5 2l6.5 6.5V14a.5.5 0 0 1-.5.5h-3.5V10H6v4.5H2.5A.5.5 0 0 1 2 14V7.5z" stroke="#1e6b1e" stroke-width="1.4" stroke-linejoin="round"/></svg><span>Deals</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="#aaa" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#aaa" stroke-width="1.5" stroke-linecap="round"/></svg><span>Search</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 5V3.5A1.5 1.5 0 0 1 3.5 2H5M11 2h1.5A1.5 1.5 0 0 1 14 3.5V5M14 11v1.5A1.5 1.5 0 0 1 12.5 14H11M5 14H3.5A1.5 1.5 0 0 1 2 12.5V11" stroke="#aaa" stroke-width="1.4" stroke-linecap="round"/><circle cx="8" cy="8" r="2" stroke="#aaa" stroke-width="1.4"/></svg><span>Scan</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 7h12M2 10h8M2 13h5" stroke="#aaa" stroke-width="1.4" stroke-linecap="round"/></svg><span>My List</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2l1.5 4H14l-3.5 2.5 1.5 4L8 10.5 4 12.5l1.5-4L2 6h4.5z" stroke="#aaa" stroke-width="1.4" stroke-linejoin="round"/></svg><span>Exclusives</span></div>
-                  </div>
-                </div>
+                <div class="screen"><img src="dealspage.png" alt="Deals" /></div>
               </div>
 
-              <!-- SCREEN 1: Search results — matches real app -->
+              <!-- SCREEN 1: Search -->
               <div class="carousel-screen">
-                <div class="screen">
-                  <div class="s2-header">
-                    <div class="s2-title">Search</div>
-                    <div class="s2-sub">Find the cheapest price for anything</div>
-                  </div>
-                  <div class="s2-searchbar">
-                    <svg width="9" height="9" viewBox="0 0 12 12" fill="none"><circle cx="5" cy="5" r="4" stroke="#aaa" stroke-width="1.5"/><path d="M8.5 8.5L11 11" stroke="#aaa" stroke-width="1.5" stroke-linecap="round"/></svg>
-                    eggs
-                    <svg style="margin-left:auto" width="9" height="9" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#ccc" stroke-width="1.5"/><path d="M4 4l4 4M8 4l-4 4" stroke="#ccc" stroke-width="1.5" stroke-linecap="round"/></svg>
-                  </div>
-                  <div class="s2-filter-row">
-                    <div class="s2-filter">All</div>
-                    <div class="s2-filter off">Produce</div>
-                    <div class="s2-filter off">Dairy</div>
-                    <div class="s2-filter off">Meat</div>
-                  </div>
-                  <div class="s2-meta-row">
-                    <div class="s2-meta">117 results · Cheapest first</div>
-                    <div class="s2-best-badge">👑 Best price</div>
-                  </div>
-                  <div class="s2-result">
-                    <div class="s2-rank">1</div>
-                    <div class="s2-info"><div class="s2-store">Real Canadian Superstore</div><div class="s2-item">PC Blue Menu Hard-boiled Eggs...</div></div>
-                    <div class="s2-right"><div class="s2-price">$1.49</div><div class="s2-dist">8.7 km</div></div>
-                  </div>
-                  <div class="s2-result">
-                    <div class="s2-rank light">2</div>
-                    <div class="s2-info"><div class="s2-store">No Frills - Beddington</div><div class="s2-item">PC Blue Menu Hard-boiled Eggs...</div></div>
-                    <div class="s2-right"><div class="s2-price muted">$1.50</div><div class="s2-dist">6.4 km</div></div>
-                  </div>
-                  <div class="s2-result">
-                    <div class="s2-rank light">3</div>
-                    <div class="s2-info"><div class="s2-store">Safeway - Chinook</div><div class="s2-item">Burnbrae Farms Eggs2go...</div></div>
-                    <div class="s2-right"><div class="s2-price muted">$2.49</div><div class="s2-dist">18.9 km</div></div>
-                  </div>
-                  <div class="s2-result">
-                    <div class="s2-rank light">4</div>
-                    <div class="s2-info"><div class="s2-store">No Frills - Beddington</div><div class="s2-item">No Name Extra Broad Egg Noodles</div></div>
-                    <div class="s2-right"><div class="s2-price muted">$2.99</div><div class="s2-dist">6.4 km</div></div>
-                  </div>
-                  <div class="screen-nav">
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 7.5L7.5 2l6.5 6.5V14a.5.5 0 0 1-.5.5h-3.5V10H6v4.5H2.5A.5.5 0 0 1 2 14V7.5z" stroke="#aaa" stroke-width="1.4" stroke-linejoin="round"/></svg><span>Deals</span></div>
-                    <div class="nav-tab active"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="#1e6b1e" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#1e6b1e" stroke-width="1.5" stroke-linecap="round"/></svg><span>Search</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 5V3.5A1.5 1.5 0 0 1 3.5 2H5M11 2h1.5A1.5 1.5 0 0 1 14 3.5V5M14 11v1.5A1.5 1.5 0 0 1 12.5 14H11M5 14H3.5A1.5 1.5 0 0 1 2 12.5V11" stroke="#aaa" stroke-width="1.4" stroke-linecap="round"/><circle cx="8" cy="8" r="2" stroke="#aaa" stroke-width="1.4"/></svg><span>Scan</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 7h12M2 10h8M2 13h5" stroke="#aaa" stroke-width="1.4" stroke-linecap="round"/></svg><span>My List</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2l1.5 4H14l-3.5 2.5 1.5 4L8 10.5 4 12.5l1.5-4L2 6h4.5z" stroke="#aaa" stroke-width="1.4" stroke-linejoin="round"/></svg><span>Exclusives</span></div>
-                  </div>
-                </div>
+                <div class="screen"><img src="searchpage 2.png" alt="Search" /></div>
               </div>
 
-              <!-- SCREEN 2: My List — matches real app -->
+              <!-- SCREEN 2: Cheapest Stores -->
               <div class="carousel-screen">
-                <div class="screen">
-                  <div class="screen-page-header">
-                    <div class="sph-left">
-                      <div class="sph-title">My List</div>
-                      <div class="sph-sub">0/3 items checked</div>
-                    </div>
-                    <div class="sph-icons">
-                      <div class="sph-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><path d="M8 2a4 4 0 0 1 4 4c0 3.5-4 9-4 9S4 9.5 4 6a4 4 0 0 1 4-4z" stroke="#1e6b1e" stroke-width="1.4"/><circle cx="8" cy="6" r="1.5" stroke="#1e6b1e" stroke-width="1.4"/></svg></div>
-                      <div class="sph-icon"><svg width="11" height="11" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="5" r="3" stroke="#1e6b1e" stroke-width="1.4"/><path d="M2 14c0-3.3 2.7-5 6-5s6 1.7 6 5" stroke="#1e6b1e" stroke-width="1.4" stroke-linecap="round"/></svg></div>
-                    </div>
-                  </div>
-                  <div class="s3-add-row">
-                    <div class="s3-add-input">
-                      <svg width="8" height="8" viewBox="0 0 12 12" fill="none"><circle cx="5.5" cy="5.5" r="4" stroke="#bbb" stroke-width="1.4"/><path d="M9 9l2 2" stroke="#bbb" stroke-width="1.4" stroke-linecap="round"/></svg>
-                      + Add an item...
-                    </div>
-                    <div class="s3-add-btn">+</div>
-                  </div>
-                  <div class="s3-items">
-                    <div class="s3-item"><div class="s3-circle"></div>PC Blue Menu White Eggs 12 Pack<div class="s3-trash">🗑</div></div>
-                    <div class="s3-item"><div class="s3-circle"></div>Farmer's Market Fuji Apples<div class="s3-trash">🗑</div></div>
-                    <div class="s3-item"><div class="s3-circle"></div>No Name Extra Large Eggs<div class="s3-trash">🗑</div></div>
-                  </div>
-                  <div class="s3-btn">
-                    <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><rect x="2" y="4" width="12" height="10" rx="2" stroke="white" stroke-width="1.5"/><path d="M5 4V3a3 3 0 0 1 6 0v1" stroke="white" stroke-width="1.5"/></svg>
-                    Find Cheapest Stores
-                  </div>
-                  <div class="best-option-wrap">
-                    <div class="best-label">Best option</div>
-                    <div class="best-card">
-                      <div class="best-top">
-                        <div class="best-store">No Frills - Beddington</div>
-                        <div class="best-tag">BEST</div>
-                      </div>
-                      <div class="best-meta">All 3 items · 6.4 km away</div>
-                      <div class="best-bottom">
-                        <div class="best-price">$8.28</div>
-                        <div class="best-vs">vs $11.20 at Safeway</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="screen-nav">
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 7.5L7.5 2l6.5 6.5V14a.5.5 0 0 1-.5.5h-3.5V10H6v4.5H2.5A.5.5 0 0 1 2 14V7.5z" stroke="#aaa" stroke-width="1.4" stroke-linejoin="round"/></svg><span>Deals</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="#aaa" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#aaa" stroke-width="1.5" stroke-linecap="round"/></svg><span>Search</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 5V3.5A1.5 1.5 0 0 1 3.5 2H5M11 2h1.5A1.5 1.5 0 0 1 14 3.5V5M14 11v1.5A1.5 1.5 0 0 1 12.5 14H11M5 14H3.5A1.5 1.5 0 0 1 2 12.5V11" stroke="#aaa" stroke-width="1.4" stroke-linecap="round"/><circle cx="8" cy="8" r="2" stroke="#aaa" stroke-width="1.4"/></svg><span>Scan</span></div>
-                    <div class="nav-tab active"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 7h12M2 10h8M2 13h5" stroke="#1e6b1e" stroke-width="1.4" stroke-linecap="round"/></svg><span>My List</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2l1.5 4H14l-3.5 2.5 1.5 4L8 10.5 4 12.5l1.5-4L2 6h4.5z" stroke="#aaa" stroke-width="1.4" stroke-linejoin="round"/></svg><span>Exclusives</span></div>
-                  </div>
-                </div>
+                <div class="screen"><img src="cheapeststores.png" alt="Cheapest Stores" /></div>
               </div>
 
-              <!-- SCREEN 3: Deals detail view — matches real app product modal -->
+              <!-- SCREEN 3: Deal Detail -->
               <div class="carousel-screen">
-                <div class="screen" style="background:white">
-                  <div style="background:#eef7ee;height:110px;display:flex;align-items:center;justify-content:center;position:relative;border-radius:0 0 16px 16px;overflow:hidden">
-                    <div style="font-size:42px">🍎</div>
-                    <div style="position:absolute;top:10px;right:10px;background:#1e6b1e;color:white;font-size:7px;font-weight:700;padding:3px 8px;border-radius:20px">40% OFF</div>
-                    <div style="position:absolute;top:10px;left:10px;width:18px;height:18px;background:rgba(0,0,0,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center">
-                      <svg width="8" height="8" viewBox="0 0 10 10" fill="none"><path d="M6.5 2L2 5l4.5 3" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                  </div>
-                  <div style="padding:10px 12px;flex:1">
-                    <div style="font-size:11px;font-weight:800;color:#0d2b0d;margin-bottom:3px">Farmer's Market Fuji Apples</div>
-                    <div style="font-size:7.5px;color:#6a9a6a;margin-bottom:8px;display:flex;align-items:center;gap:4px">
-                      <svg width="8" height="8" viewBox="0 0 12 12" fill="none"><rect x="1" y="3" width="10" height="8" rx="1.5" stroke="#6a9a6a" stroke-width="1.2"/></svg>
-                      No Frills - Beddington
-                      <svg width="8" height="8" viewBox="0 0 12 12" fill="none"><path d="M6 1a3.5 3.5 0 0 1 3.5 3.5C9.5 7 6 11 6 11S2.5 7 2.5 4.5A3.5 3.5 0 0 1 6 1z" stroke="#6a9a6a" stroke-width="1.2"/></svg>
-                      8220 Centre St NE
-                    </div>
-                    <div style="display:flex;align-items:baseline;gap:5px;margin-bottom:2px">
-                      <span style="font-size:20px;font-weight:800;color:#1e6b1e">$0.79</span>
-                      <span style="font-size:9px;color:#bbb;text-decoration:line-through">$1.32</span>
-                    </div>
-                    <div style="font-size:8px;color:#1e6b1e;font-weight:600;margin-bottom:10px">Save $0.53</div>
-                    <div style="border-top:1px solid #eef7ee;padding-top:8px;display:flex;flex-direction:column;gap:7px">
-                      <div style="display:flex;align-items:center;gap:6px;font-size:8px;color:#555">
-                        <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="2" stroke="#888" stroke-width="1.3"/><path d="M5 1v4M11 1v4M2 7h12" stroke="#888" stroke-width="1.3" stroke-linecap="round"/></svg>
-                        <div><div style="font-size:7px;color:#aaa">Deal valid until</div><div style="font-weight:600;color:#0d2b0d">Sunday, May 17</div></div>
-                      </div>
-                      <div style="display:flex;align-items:center;gap:6px;font-size:8px;color:#555">
-                        <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#888" stroke-width="1.3"/><path d="M8 5v3l2 2" stroke="#888" stroke-width="1.3" stroke-linecap="round"/></svg>
-                        <div><div style="font-size:7px;color:#aaa">Today's hours</div><div style="font-weight:600;color:#0d2b0d">08:00 – 21:00</div></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div style="padding:8px 10px;display:flex;gap:6px">
-                    <div style="flex:1;background:#1e6b1e;color:white;border-radius:20px;font-size:8px;font-weight:700;padding:9px;text-align:center">+ Add to List</div>
-                    <div style="flex:1;border:1.5px solid #1e6b1e;color:#1e6b1e;border-radius:20px;font-size:8px;font-weight:700;padding:9px;text-align:center">Get Directions</div>
-                  </div>
-                  <div class="screen-nav">
-                    <div class="nav-tab active"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 7.5L7.5 2l6.5 6.5V14a.5.5 0 0 1-.5.5h-3.5V10H6v4.5H2.5A.5.5 0 0 1 2 14V7.5z" stroke="#1e6b1e" stroke-width="1.4" stroke-linejoin="round"/></svg><span>Deals</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="#aaa" stroke-width="1.5"/><path d="M11 11l3 3" stroke="#aaa" stroke-width="1.5" stroke-linecap="round"/></svg><span>Search</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 5V3.5A1.5 1.5 0 0 1 3.5 2H5M11 2h1.5A1.5 1.5 0 0 1 14 3.5V5M14 11v1.5A1.5 1.5 0 0 1 12.5 14H11M5 14H3.5A1.5 1.5 0 0 1 2 12.5V11" stroke="#aaa" stroke-width="1.4" stroke-linecap="round"/><circle cx="8" cy="8" r="2" stroke="#aaa" stroke-width="1.4"/></svg><span>Scan</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 7h12M2 10h8M2 13h5" stroke="#aaa" stroke-width="1.4" stroke-linecap="round"/></svg><span>My List</span></div>
-                    <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2l1.5 4H14l-3.5 2.5 1.5 4L8 10.5 4 12.5l1.5-4L2 6h4.5z" stroke="#aaa" stroke-width="1.4" stroke-linejoin="round"/></svg><span>Exclusives</span></div>
-                  </div>
-                </div>
+                <div class="screen"><img src="openitemdealspage.png" alt="Deal Detail" /></div>
               </div>
 
             </div>
@@ -561,48 +295,7 @@
       <div class="how-visual reveal">
         <div class="how-phone-wrap">
           <div class="how-phone">
-            <div class="screen">
-              <div class="s2-header">
-                <div class="s2-title">My List</div>
-                <div class="s2-sub">0/3 items checked</div>
-              </div>
-              <div class="s3-items" style="padding:8px 0">
-                <div class="s3-item"><div class="s3-circle"></div>PC Blue Menu White Eggs 12 Pack</div>
-                <div class="s3-item"><div class="s3-circle"></div>Farmer's Market Fuji Apples</div>
-                <div class="s3-item"><div class="s3-circle"></div>No Name Extra Large Eggs 12 Pack</div>
-              </div>
-              <div class="s3-btn">🛒 Find Cheapest Stores</div>
-              <div class="best-option-wrap">
-                <div class="best-label">Best option</div>
-                <div class="best-card">
-                  <div class="best-top">
-                    <div class="best-store">No Frills - Beddington</div>
-                    <div class="best-tag">BEST</div>
-                  </div>
-                  <div class="best-meta">All 3 items in stock · 6.4 km</div>
-                  <div class="best-bottom">
-                    <div class="best-price">$8.28</div>
-                    <div class="best-vs">vs $11.20 at Safeway</div>
-                  </div>
-                </div>
-                <div class="best-card" style="opacity:0.5">
-                  <div class="best-top">
-                    <div class="best-store">Real Cdn Superstore</div>
-                  </div>
-                  <div class="best-meta">2 items available · 8.7 km</div>
-                  <div class="best-bottom">
-                    <div class="best-price">$9.40</div>
-                  </div>
-                </div>
-              </div>
-              <div class="screen-nav" style="margin-top:auto">
-                <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 5h12M4 8h8M6 11h4" stroke="#666" stroke-width="1.5" stroke-linecap="round"/></svg><span>Deals</span></div>
-                <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="#666" stroke-width="1.4"/><path d="M11 11l3 3" stroke="#666" stroke-width="1.4" stroke-linecap="round"/></svg><span>Search</span></div>
-                <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="3" width="10" height="10" rx="2" stroke="#666" stroke-width="1.4"/><circle cx="8" cy="8" r="2.5" stroke="#666" stroke-width="1.4"/></svg><span>Scan</span></div>
-                <div class="nav-tab active"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h10" stroke="#A8E63D" stroke-width="1.4" stroke-linecap="round"/></svg><span>My List</span></div>
-                <div class="nav-tab"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2l1.5 4.5H14l-3.7 2.7 1.4 4.3L8 11l-3.7 2.5 1.4-4.3L2 6.5h4.5z" stroke="#666" stroke-width="1.3" stroke-linejoin="round"/></svg><span>Exclusives</span></div>
-              </div>
-            </div>
+            <div class="screen"><img src="cheapeststores.png" alt="Cheapest Stores" /></div>
           </div>
         </div>
       </div>
