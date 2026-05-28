@@ -789,6 +789,7 @@ nav {
     animation: floatY 2.5s ease-in-out infinite;
 }
 
+.badge-dir::after { content: ">"; }
 
 
 .float-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 5px; }
@@ -1156,4 +1157,6 @@ footer {
     .phone-back2 { width: 172px; height: 358px; left: 76px; }
     .float-1 { right: -10px; }
     .float-2 { left: -10px; }
+    .click-me-badge { left: 0; right: 0; margin: auto; width: fit-content; bottom: 100px; }
+    .badge-dir::after { content: "^"; }
 }
