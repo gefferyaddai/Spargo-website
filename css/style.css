@@ -1078,21 +1078,16 @@ footer {
 }
 .footer-legal a:hover { color: var(--lime); }
 
-.app-badges { display: flex; gap: 10px; }
-.app-badge {
-    background: var(--bg-card);
-    border: 1px solid var(--border-md);
-    color: var(--text);
-    padding: 10px 18px;
-    border-radius: 10px;
-    font-size: 12px;
-    font-weight: 500;
-    display: flex; align-items: center; gap: 8px;
-    cursor: pointer;
+.social-icons { display: flex; gap: 16px; align-items: center; }
+.social-icon {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    transition: border-color 0.2s, color 0.2s;
+    transition: color 0.2s, transform 0.15s;
 }
-.app-badge:hover { border-color: var(--lime-border); color: var(--lime); }
+.social-icon:hover { color: var(--lime); transform: translateY(-2px); }
 
 /* ── SCROLL ANIMATIONS ── */
 @keyframes fadeSlideUp {
