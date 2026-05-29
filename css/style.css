@@ -1158,5 +1158,5 @@ footer {
     .float-1 { right: -10px; }
     .float-2 { left: -10px; }
     .click-me-badge { left: 0; right: 0; margin: auto; width: fit-content; bottom: 100px; }
-    .badge-dir::after { content: "^"; }
+    .badge-dir::after { content: "↑"; }
 }
