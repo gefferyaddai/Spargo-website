@@ -70,6 +70,13 @@
       margin-bottom: 48px;
     }
 
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #2D7A3A;
+      margin: 20px 0 6px;
+    }
+
     h2 {
       font-size: 16px;
       font-weight: 600;
@@ -120,48 +127,90 @@
 
 <main>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: May 2026</p>
+  <p class="updated">Last updated: September 2026</p>
 
-  <p>Spargo ("we", "us", or "our") is committed to protecting your personal information. This policy explains what we collect, why we collect it, and how it is used when you join our waitlist at <a href="https://savewithspargo.com">savewithspargo.com</a>.</p>
+  <p>Spargo ("we", "us", or "our") is committed to protecting your personal information. This policy explains what we collect, why we collect it, and how it is handled across both this website (<a href="https://savewithspargo.com">savewithspargo.com</a>) and the Spargo mobile app.</p>
 
-  <h2>What we collect</h2>
-  <p>When you submit the waitlist form, we collect:</p>
+  <h2>1. Information we collect</h2>
+
+  <h3>Account information</h3>
+  <p>When you create an account we collect your email address, and your first and last name if you provide them. Accounts are managed by <a href="https://clerk.com" target="_blank" rel="noopener">Clerk</a>. If you sign in with Google or Apple, we receive your email address and name from that provider &mdash; we never receive your password.</p>
+
+  <h3>Location</h3>
+  <p>With your permission, the app collects your device's precise location (latitude and longitude) and your city and province. This is used to show which nearby stores have the lowest prices and how far away they are. You can refuse or revoke location access in your device settings; the app still works, but store distances and "nearest store" results will not be available.</p>
+
+  <h3>Shopping activity</h3>
+  <p>We store the grocery lists and list items you create, the products and deals you favourite, your price scans, your notification history, and the time you last used the app.</p>
+
+  <h3>Camera and photos</h3>
+  <p>The app can scan a price tag using your camera, or a photo you select from your library. <strong>These images are transmitted to <a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a> for automated analysis</strong> in order to read the product and price from the image. Images submitted with a price report are also stored by us so we can review the report. We do not use your images for advertising, and we do not sell them.</p>
+
+  <h3>Payment information</h3>
+  <p>Subscriptions are processed by <a href="https://stripe.com" target="_blank" rel="noopener">Stripe</a>. <strong>Your full card number never reaches our servers.</strong> Card details are entered directly into Stripe's payment sheet. We store only a Stripe customer and subscription identifier, your subscription status, and the date your current period ends.</p>
+
+  <h3>Device and notification data</h3>
+  <p>If you enable push notifications we store a device push token, your time zone, and your notification preferences, including any quiet hours you set.</p>
+
+  <h3>Website analytics</h3>
+  <p>This website uses <a href="https://vercel.com/analytics" target="_blank" rel="noopener">Vercel Analytics</a>, which collects aggregate, privacy-preserving usage statistics about page visits. It does not use tracking cookies and does not identify you individually. If you join the waitlist, your email address is transmitted via <a href="https://www.emailjs.com" target="_blank" rel="noopener">EmailJS</a>.</p>
+
+  <h2>2. Why we collect it</h2>
   <ul>
-    <li>Your email address</li>
+    <li><strong>To provide the service</strong> &mdash; showing prices, deals and distances relevant to where you are, and keeping your lists and favourites available across sessions.</li>
+    <li><strong>To process your subscription</strong> &mdash; managing your free trial, billing, renewals and cancellations.</li>
+    <li><strong>To send notifications you asked for</strong> &mdash; price drops, sales on items in your lists, and expiring deals, subject to your preferences and quiet hours.</li>
+    <li><strong>To improve accuracy</strong> &mdash; reviewing price reports you submit so we can correct bad data.</li>
+    <li><strong>To meet legal obligations</strong> &mdash; including tax and accounting requirements relating to payments.</li>
   </ul>
-  <p>We do not collect your name, location, payment information, or any other personal data through this website.</p>
+  <p>We do not sell your personal information, and we do not share it with advertisers.</p>
 
-  <h2>Why we collect it</h2>
-  <p>Your email address is collected solely to notify you when Spargo launches and to send you early access information. By submitting the form you are providing express consent under Canada's Anti-Spam Legislation (CASL) to receive these communications.</p>
-
-  <h2>How we store and process it</h2>
-  <p>Waitlist submissions are transmitted securely via <a href="https://www.emailjs.com" target="_blank" rel="noopener">EmailJS</a>, a third-party email delivery service. Your email address is not sold, rented, or shared with any other third parties.</p>
-
-  <h2>How long we keep it</h2>
-  <p>We retain your email address until you unsubscribe or request deletion. Once Spargo launches, you may opt out of further communications at any time using the unsubscribe link included in every email.</p>
-
-  <h2>Your rights</h2>
-  <p>Under CASL and applicable Canadian privacy law, you have the right to:</p>
+  <h2>3. Who we share it with</h2>
+  <p>We share personal information only with service providers who process it on our behalf, under contract, for the purposes described above:</p>
   <ul>
-    <li>Withdraw consent and unsubscribe at any time</li>
-    <li>Request that we delete your email address from our records</li>
-    <li>Ask what personal information we hold about you</li>
+    <li><strong>Clerk</strong> &mdash; account creation and authentication</li>
+    <li><strong>Stripe</strong> &mdash; subscription payments</li>
+    <li><strong>Neon</strong> &mdash; database hosting</li>
+    <li><strong>Railway</strong> &mdash; application hosting</li>
+    <li><strong>Anthropic</strong> &mdash; automated analysis of price-tag images you submit</li>
+    <li><strong>Expo</strong> &mdash; delivery of push notifications</li>
+    <li><strong>SerpApi</strong> &mdash; online shopping search results, where you use that feature</li>
+    <li><strong>Google Maps Platform</strong> &mdash; address lookup, where you use that feature</li>
+    <li><strong>Vercel</strong> and <strong>EmailJS</strong> &mdash; this website and its waitlist form</li>
   </ul>
-  <p>To exercise any of these rights, email us at <a href="mailto:hello@spargo.app">hello@spargo.app</a>. We will respond within 30 days.</p>
+  <p>We may also disclose information where required by law, or to protect our rights, safety, or property.</p>
 
-  <h2>Cookies</h2>
-  <p>This website does not use tracking cookies, analytics, or local storage. No data is stored in your browser.</p>
+  <h2>4. Where your information is stored</h2>
+  <p><strong>Your information is stored on servers located in the United States.</strong> This means it may be accessible to United States courts, law enforcement and national security authorities under the laws of that country. By using Spargo you consent to this transfer and storage outside Canada.</p>
 
-  <h2>Changes to this policy</h2>
-  <p>If we make material changes to this policy, we will update the date at the top of this page. Continued use of the site after changes constitutes acceptance of the updated policy.</p>
+  <h2>5. How long we keep it</h2>
+  <p>We keep your account information and shopping activity for as long as your account is open. If you delete your account, we delete your personal information and cancel any active subscription. Records we are required to keep for legal, tax or accounting reasons &mdash; such as payment records held by Stripe &mdash; are retained for as long as the law requires. Waitlist email addresses are kept until you unsubscribe or ask us to delete them.</p>
 
-  <h2>Contact</h2>
-  <p>Questions about this policy? Reach us at <a href="mailto:hello@spargo.app">hello@spargo.app</a>.</p>
+  <h2>6. Your rights</h2>
+  <p>Under Canada's <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA) and Alberta's <em>Personal Information Protection Act</em> (PIPA), you have the right to:</p>
+  <ul>
+    <li>Access the personal information we hold about you</li>
+    <li>Ask us to correct information that is inaccurate or incomplete</li>
+    <li>Withdraw consent, including for location access, notifications and marketing email</li>
+    <li>Request deletion of your account and personal information</li>
+  </ul>
+  <p>You can delete your account and all associated data at any time from <strong>Profile &rarr; Delete account</strong> in the app. You can also email us at <a href="mailto:hello@spargo.app">hello@spargo.app</a> and we will respond within 30 days.</p>
+
+  <h2>7. Children</h2>
+  <p>Spargo is not directed at children under 13, and we do not knowingly collect personal information from them. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
+
+  <h2>8. Security</h2>
+  <p>Information is transmitted over encrypted connections (HTTPS) and stored in access-controlled systems. No method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+
+  <h2>9. Changes to this policy</h2>
+  <p>If we make material changes to this policy we will update the date at the top of this page and, where appropriate, notify you in the app. Continued use after changes take effect constitutes acceptance of the updated policy.</p>
+
+  <h2>10. Contact</h2>
+  <p>Questions, requests or complaints about this policy can be sent to <a href="mailto:hello@spargo.app">hello@spargo.app</a>. If you are not satisfied with our response, you may contact the Office of the Privacy Commissioner of Canada.</p>
 </main>
 
 <footer>
   <img src="spargo-logo-nobg.png" alt="Spargo" style="height:36px;width:auto;display:block;margin-bottom:10px;" />
-  &copy; 2026 Spargo · <a href="index.html">Back to home</a>
+  &copy; 2026 Spargo · <a href="index.html">Back to home</a> · <a href="terms.html">Terms of Service</a>
 </footer>
 
 </body>
