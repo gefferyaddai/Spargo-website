@@ -86,7 +86,7 @@ async function handleWaitlist(e) {
   const raw   = input.value.trim();
 
   if (!isValidEmail(raw)) {
-    input.style.borderColor = '#c0392b';
+    input.style.borderColor = 'var(--error)';
     input.focus();
     return;
   }
@@ -112,7 +112,7 @@ async function handleWaitlist(e) {
     btn.disabled   = false;
     input.disabled = false;
     btn.textContent = originalText;
-    input.style.borderColor = '#c0392b';
+    input.style.borderColor = 'var(--error)';
     input.placeholder = 'Something went wrong — try again';
   }
 }
@@ -121,8 +121,8 @@ async function handleWaitlist(e) {
 const nav = document.getElementById('mainNav');
 window.addEventListener('scroll', () => {
   nav.style.borderBottomColor = window.scrollY > 20
-      ? 'rgba(168,230,61,0.1)'
-      : 'rgba(255,255,255,0.07)';
+      ? 'var(--primary-border)'
+      : 'var(--border)';
 });
 
 // Mobile menu
