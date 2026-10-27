@@ -6,7 +6,17 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://savewithspargo.com/privacy.html</loc>
+    <loc>https://savewithspargo.com/store</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://savewithspargo.com/privacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://savewithspargo.com/terms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
