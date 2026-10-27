@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spargo for Stores — Your store. More shoppers. Better insights.</title>
+  <meta name="description" content="List your local store on Spargo. Manage product inventory, share offers and see how shoppers discover your products." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://savewithspargo.com/store" />
+  <meta property="og:title"       content="Spargo for Stores — Your store. More shoppers. Better insights." />
+  <meta property="og:description" content="List your local store on Spargo. Manage product inventory, share offers and see how shoppers discover your products." />
+  <meta property="og:image"       content="https://savewithspargo.com/spargofullogo.png" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Spargo for Stores — Your store. More shoppers. Better insights." />
+  <meta name="twitter:description" content="List your local store on Spargo. Manage product inventory, share offers and see how shoppers discover your products." />
+  <meta name="twitter:image"       content="https://savewithspargo.com/spargofullogo.png" />
+
+  <link rel="canonical" href="https://savewithspargo.com/store" />
+  <meta name="theme-color" content="#6C3CE1" />
+  <link rel="icon" type="image/png" href="spargo-logo.png" />
+  <link rel="apple-touch-icon" href="spargo-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    /* Store page: builds on css/style.css and uses its colour tokens */
+    :root { --ease-out: cubic-bezier(0.22, 1, 0.36, 1); }
+    section[id], article[id], li[id] { scroll-margin-top: 90px; }
+    button, input, select { font: inherit; }
+    .wrap { width: calc(100% - 96px); max-width: 1180px; margin: 0 auto; }
+    h1, h2, h3, p { margin: 0; }
+    h1, h2 { font-family: 'Instrument Serif', serif; font-weight: 400; color: var(--text); text-wrap: balance; }
+    h2 { font-size: clamp(36px, 4.2vw, 52px); line-height: 1.06; }
+    h3 { font-family: 'Syne', sans-serif; font-weight: 600; color: var(--text); }
+    p { color: var(--text-mid); line-height: 1.7; max-width: 60ch; text-wrap: pretty; }
+    .section-label { display: block; }
+    .nav-links a[aria-current="page"] { color: var(--primary); }
+
+    /* Buttons: the site's pill, plus pressed + ghost variants */
+    a.btn-primary { text-decoration: none; justify-content: center; }
+    .btn-primary { transition: background 0.2s, transform 0.2s var(--ease-out), box-shadow 0.2s; }
+    .btn-primary:active { transform: translateY(0) scale(0.98); box-shadow: none; }
+    .btn-primary .arrow { transition: transform 0.25s var(--ease-out); }
+    .btn-primary:hover .arrow { transform: translateX(3px); }
+    .btn-ghost { background: transparent; color: var(--primary); box-shadow: inset 0 0 0 1px var(--primary-border); }
+    .btn-ghost:hover { background: var(--primary-faint); color: var(--primary); box-shadow: inset 0 0 0 1px var(--primary); }
+    .btn-primary:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
+
+    /* Hero */
+    .store-hero { position: relative; overflow: hidden; padding: clamp(56px, 7vw, 96px) 0 clamp(40px, 5vw, 64px); }
+    .store-hero::before {
+      content: ''; position: absolute; width: 760px; height: 760px; border-radius: 50%;
+      background: radial-gradient(circle, var(--glow-soft) 0%, transparent 70%);
+      top: -240px; right: -160px; pointer-events: none;
+    }
+    .store-hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr); gap: clamp(24px, 3vw, 40px); align-items: center; }
+    .hero-copy { position: relative; z-index: 1; }
+    .hero-copy > * { animation: fadeSlideUp 0.7s var(--ease-out) both; }
+    .hero-copy > :nth-child(2) { animation-delay: 0.06s; }
+    .hero-copy > :nth-child(3) { animation-delay: 0.14s; }
+    .hero-copy > :nth-child(4) { animation-delay: 0.22s; }
+    .hero-copy > :nth-child(5) { animation-delay: 0.3s; }
+    .store-hero h1 { font-size: clamp(52px, 6vw, 80px); line-height: 0.98; letter-spacing: -0.015em; margin-bottom: 24px; }
+    .store-hero h1 em { color: var(--primary); font-style: italic; }
+    .store-hero p { font-size: 18px; max-width: 40ch; }
+    .store-hero .btn-primary { margin-top: 32px; padding: 16px 28px; font-size: 15px; }
+    .benefits { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 28px; list-style: none; padding: 0; }
+    .benefits li { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-mid); }
+    .benefits .tick { color: var(--primary); font-size: 13px; font-weight: 700; }
+    .hero-mockup {
+      /* the laptop sits in the lower right of its canvas; enlarge and pull it into the empty top-left */
+      width: 150%; max-width: none; height: auto; margin: -9% -12% -6% -30%; pointer-events: none;
+      filter: drop-shadow(0 30px 60px var(--glow-soft));
+      animation: fadeSlideUp 0.9s var(--ease-out) 0.2s both;
+    }
+
+    /* Value row: open, ruled, no box */
+    .stat-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .strip-item { padding: 22px 24px; display: flex; gap: 14px; align-items: center; }
+    .strip-item + .strip-item { border-left: 1px solid var(--border); }
+    .strip-item:first-child { padding-left: 0; }
+    .strip-item svg { width: 26px; height: 26px; color: var(--primary); flex-shrink: 0; }
+    .strip-item strong { display: block; font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.3; }
+    .strip-item span { display: block; font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+    /* Features: pinned intro, ruled list */
+    .store-features { padding: clamp(80px, 10vw, 140px) 0 clamp(64px, 8vw, 110px); display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(40px, 6vw, 96px); align-items: start; }
+    .features-intro { position: sticky; top: 110px; }
+    .features-intro p { margin-top: 18px; font-size: 16px; }
+    .feature-list { list-style: none; padding: 0; margin: 0; }
+    .feature-row {
+      display: grid; grid-template-columns: 48px 1fr; gap: 20px;
+      padding: 32px 0; border-top: 1px solid var(--border);
+    }
+    .feature-row:last-child { border-bottom: 1px solid var(--border); }
+    .feature-glyph {
+      width: 48px; height: 48px; border-radius: 14px;
+      display: grid; place-items: center;
+      color: var(--primary); background: var(--primary-faint);
+      transition: background 0.25s, color 0.25s;
+    }
+    .feature-glyph svg { width: 24px; height: 24px; }
+    .feature-glyph-text { font-family: 'Instrument Serif', serif; font-size: 30px; line-height: 1; }
+    .feature-row:hover .feature-glyph { background: var(--primary-fill); color: var(--on-primary); }
+    .feature-row h3 { font-size: 19px; margin: 4px 0 8px; }
+    .feature-row p { font-size: 15px; }
+
+    /* How it works: a connected timeline */
+    .store-how { padding: clamp(40px, 5vw, 64px) 0 clamp(80px, 10vw, 128px); }
+    .split-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; }
+    .split-heading p { font-size: 16px; max-width: 36ch; }
+    .split-heading h2 { margin-top: 0; }
+    .store-steps { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 56px; position: relative; }
+    .store-steps::before { content: ''; position: absolute; left: 0; right: 0; top: 27px; height: 1px; background: var(--border-md); }
+    .store-step { position: relative; padding-right: 28px; }
+    .step-number {
+      position: relative; width: 56px; height: 56px; border-radius: 50%;
+      display: grid; place-items: center;
+      font-family: 'Instrument Serif', serif; font-size: 28px; line-height: 1;
+      color: var(--primary); background: var(--bg); border: 1px solid var(--primary-border);
+      margin-bottom: 22px;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .store-step:hover .step-number { background: var(--primary-fill); color: var(--on-primary); border-color: var(--primary-fill); }
+    .store-step h3 { font-size: 16px; margin-bottom: 6px; }
+    .store-step p { font-size: 14px; }
+
+    /* Analytics */
+    .analytics { padding: clamp(80px, 10vw, 128px) 0; background: var(--bg-mid); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .analytics-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(40px, 5vw, 72px); align-items: center; }
+    .analytics-mockup { display: block; width: 100%; height: auto; filter: drop-shadow(0 24px 48px rgba(26,21,48,0.14)); }
+    .analytics-copy h2 { margin-bottom: 18px; }
+    .analytics-copy p { font-size: 16px; }
+    .analytics-list { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 0; }
+    .analytics-list li { font-size: 15px; color: var(--text); display: flex; align-items: center; gap: 14px; padding: 12px 0; border-top: 1px solid var(--border); }
+    .analytics-list svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--primary); }
+
+    /* Pricing */
+    .pricing { padding: clamp(88px, 11vw, 144px) 0 clamp(80px, 10vw, 128px); }
+    .price-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 56px; align-items: stretch; }
+    .price-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 36px 32px 32px;
+      display: flex; flex-direction: column;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .price-card:hover { border-color: var(--primary-border); }
+    .price-card.featured { border-color: var(--primary); box-shadow: 0 0 0 1px var(--primary), 0 24px 60px var(--glow-soft); }
+    .price-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .price-card h3 { font-size: 18px; margin-bottom: 6px; }
+    .price-card .sub { font-size: 14px; min-height: 48px; }
+    .chip {
+      background: var(--accent-soft); color: var(--accent-text);
+      font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      padding: 5px 10px; border-radius: 50px; white-space: nowrap;
+    }
+    .amount { font-family: 'Instrument Serif', serif; font-size: 60px; line-height: 1; letter-spacing: -0.02em; color: var(--text); margin: 24px 0 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+    .amount span { font-family: 'DM Sans', sans-serif; font-size: 14px; letter-spacing: 0; color: var(--text-muted); }
+    .price-card ul { list-style: none; padding: 0; margin: 0 0 28px; flex: 1; }
+    .price-card li { font-size: 14px; line-height: 2.1; color: var(--text-mid); }
+    .price-card li::before { content: '✓'; color: var(--primary); font-weight: 700; margin-right: 12px; }
+    .price-card .btn-primary { width: 100%; }
+    .pricing-note { font-size: 12px; color: var(--text-muted); margin-top: 20px; max-width: none; }
+
+    /* Signup: mirrors the home page CTA band */
+    .signup { position: relative; overflow: hidden; padding: clamp(88px, 11vw, 136px) 0; background: var(--bg-mid); border-top: 1px solid var(--border); }
+    .signup::before {
+      content: ''; position: absolute; width: 640px; height: 640px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+      top: -260px; left: -160px; pointer-events: none;
+    }
+    body.light .signup { background: linear-gradient(140deg, #3A1C87 0%, #6C3CE1 60%, #8B63F0 100%); border-top: 0; }
+    body.light .signup .section-label { color: #FFC83D; }
+    body.light .signup-copy h2, body.light .signup-copy h3 { color: #ffffff; }
+    body.light .signup-copy p { color: rgba(255,255,255,0.78); }
+    .signup .wrap { position: relative; display: grid; grid-template-columns: 1fr minmax(0, 400px) minmax(0, 280px); gap: clamp(32px, 4vw, 48px); align-items: center; }
+    .signup h2 { font-size: clamp(56px, 6.5vw, 84px); line-height: 0.95; margin-bottom: 14px; }
+    .signup-copy h3 { font-size: 22px; margin-bottom: 12px; }
+    .signup-copy p { font-size: 16px; max-width: 32ch; }
+    .signup-art { order: 3; width: 100%; height: auto; filter: drop-shadow(0 30px 50px rgba(26,21,48,0.35)); transform: rotate(2deg); }
+    .merchant-form {
+      position: relative; z-index: 1;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: 0 30px 60px rgba(26,21,48,0.25); padding: 32px;
+    }
+    .form-row { display: grid; gap: 6px; margin-bottom: 16px; }
+    .merchant-form label { font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 600; color: var(--text); }
+    .merchant-form input, .merchant-form select {
+      width: 100%; min-width: 0; height: 48px; padding: 0 18px;
+      border: 1px solid var(--border-md); border-radius: 50px;
+      background: var(--bg); color: var(--text); font-size: 15px; font-family: 'DM Sans', sans-serif;
+      outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .merchant-form select {
+      appearance: none; cursor: pointer; padding-right: 44px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%236C3CE1' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 18px center;
+    }
+    .merchant-form input::placeholder { color: var(--text-muted); }
+    .merchant-form input:hover, .merchant-form select:hover { border-color: var(--primary-border); }
+    .merchant-form input:focus, .merchant-form select:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--ring); }
+    .merchant-form input:user-invalid, .merchant-form select:user-invalid { border-color: var(--error); box-shadow: 0 0 0 3px var(--error-bg); }
+    .merchant-form .btn-primary { width: 100%; justify-content: center; margin-top: 8px; padding: 16px 26px; }
+    .form-status { font-size: 13px; color: var(--text-mid); line-height: 1.5; margin-top: 14px; display: none; padding: 12px 14px; border-radius: var(--radius-sm); background: var(--primary-faint); }
+    .form-status.show { display: block; }
+
+    @media (max-width: 900px) {
+      .wrap { width: calc(100% - 48px); }
+      .store-hero .wrap { grid-template-columns: 1fr; }
+      .hero-mockup { width: 128%; margin: -4% 0 -4% -24%; }
+      .store-hero p { max-width: 40ch; }
+      .stat-strip { grid-template-columns: repeat(2, 1fr); }
+      .strip-item { padding: 18px 16px; }
+      .strip-item:first-child, .strip-item:nth-child(3) { padding-left: 0; }
+      .strip-item:nth-child(3) { border-left: 0; }
+      .strip-item:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+      .store-features { grid-template-columns: 1fr; gap: 32px; }
+      .features-intro { position: static; }
+      .split-heading { display: block; }
+      .split-heading p { margin-top: 14px; }
+      .store-steps { grid-template-columns: 1fr; gap: 0; margin-top: 40px; }
+      .store-steps::before { top: 0; bottom: 0; left: 27px; right: auto; width: 1px; height: auto; }
+      .store-step { display: grid; grid-template-columns: 56px 1fr; column-gap: 20px; padding: 0 0 28px; }
+      .step-number { grid-row: span 2; margin-bottom: 0; }
+      .store-step h3 { align-self: end; margin-top: 8px; }
+      .analytics-grid { grid-template-columns: 1fr; }
+      .analytics-copy { order: -1; }
+      .price-grid { grid-template-columns: 1fr; max-width: 480px; }
+      .price-card .sub { min-height: 0; }
+      .signup .wrap { grid-template-columns: 1fr; }
+      .signup-art { display: none; }
+    }
+    @media (max-width: 600px) {
+      .stat-strip { grid-template-columns: 1fr; }
+      .strip-item, .strip-item:nth-child(n) { padding: 16px 0; border-left: 0; border-bottom: 1px solid var(--border); }
+      .strip-item:last-child { border-bottom: 0; }
+      .feature-row { grid-template-columns: 44px 1fr; gap: 16px; padding: 26px 0; }
+      .feature-glyph { width: 44px; height: 44px; }
+      .merchant-form { padding: 24px; }
+      .amount { font-size: 52px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-copy > *, .hero-mockup { animation: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .btn-primary, .btn-primary .arrow, .feature-glyph, .step-number { transition: none; }
+    }
+  </style>
+</head>
+<body class="light">
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <symbol id="pin" viewBox="0 0 24 28"><path fill="currentColor" d="M12 1C5.8 1 1 5.9 1 12c0 8.2 11 15.2 11 15.2S23 20.2 23 12C23 5.9 18.2 1 12 1Z"/><circle cx="12" cy="11.7" r="4.4" fill="white"/></symbol>
+    <symbol id="search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16.5 16.5 5 5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></symbol>
+    <symbol id="tag-icon" viewBox="0 0 24 24"><path d="m3 12 9 9 9-9V4H13L3 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="17" cy="8" r="1.4" fill="currentColor"/></symbol>
+    <symbol id="chart-icon" viewBox="0 0 24 24"><rect x="3" y="13" width="4" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="10" y="8" width="4" height="13" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="3" width="4" height="18" rx="1" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="package-icon" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Z M3 7v10l9 5 9-5V7 M12 12v10 M7 4.5l9 5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/></symbol>
+    <symbol id="users-icon" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M2.5 20v-2.8c0-3.3 3-5.5 6.5-5.5 3.4 0 6.5 2.2 6.5 5.5V20 M16 4c4.7 0 5.6 6.7.9 7.6M17 12c2.8 0 4.5 2.2 4.5 5.2V20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></symbol>
+    <symbol id="store-icon" viewBox="0 0 24 24"><path d="M4 9V21h16V9M3 9l2-6h14l2 6c0 3-4 4-6 1-2 3-4 3-6 0-2 3-6 2-6-1ZM10 21v-8h5v8" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/></symbol>
+    <symbol id="pin-outline" viewBox="0 0 24 24"><path d="M19 10c0 5-7 12-7 12S5 15 5 10a7 7 0 0 1 14 0Z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2" fill="none"/></symbol>
+  </svg>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="spargo-logo-nobg.png" alt="Spargo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="index.html#exclusives">Exclusives</a></li>
+        <li><a href="store.html" aria-current="page">For stores</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn-primary" href="#signup">List your store</a>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <a href="index.html#features" onclick="toggleMenu()">Features</a>
+    <a href="index.html#how" onclick="toggleMenu()">How it works</a>
+    <a href="index.html#exclusives" onclick="toggleMenu()">Exclusives</a>
+    <a href="store.html" onclick="toggleMenu()">For stores</a>
+    <a class="btn-primary" href="#signup" onclick="toggleMenu()">List your store</a>
+  </div>
+</div>
+
+  <main>
+    <section class="store-hero" aria-labelledby="hero-title">
+      <div class="hero-grid-overlay"></div>
+      <div class="wrap">
+        <div class="hero-copy">
+          <span class="section-label">Spargo for stores</span>
+          <h1 id="hero-title">Your store.<br>More shoppers.<br><em>Better insights.</em></h1>
+          <p>Put your products, prices, and exclusive deals in front of nearby shoppers.</p>
+          <a class="btn-primary" href="#signup">List your store <span class="arrow" aria-hidden="true">→</span></a>
+          <ul class="benefits"><li><span class="tick">✓</span>Reach more local shoppers</li><li><span class="tick">✓</span>Showcase your best deals</li><li><span class="tick">✓</span>Get powerful analytics</li></ul>
+        </div>
+        <img class="hero-mockup" src="Spargo-Dashboard-Laptop-nobg.png" width="1536" height="1024" alt="Illustrative Spargo merchant dashboard on a laptop, showing search appearances, deal impressions, product views and top-performing products." />
+      </div>
+    </section>
+    <div class="wrap reveal"><div class="stat-strip" aria-label="Platform benefits">
+      <div class="strip-item"><svg><use href="#store-icon"/></svg><div><strong>Local reach</strong><span>Shoppers in your area</span></div></div>
+      <div class="strip-item"><svg><use href="#pin-outline"/></svg><div><strong>More discovery</strong><span>Products shoppers search</span></div></div>
+      <div class="strip-item"><svg><use href="#users-icon"/></svg><div><strong>Growing</strong><span>Customer base</span></div></div>
+      <div class="strip-item"><svg><use href="#chart-icon"/></svg><div><strong>Real results</strong><span>For local businesses</span></div></div>
+    </div></div>
+    <section class="store-features wrap" id="features" aria-labelledby="features-title">
+      <div class="features-intro reveal"><span class="section-label">Everything you need</span><h2 id="features-title">Built for stores that want to grow.</h2><p>Manage your inventory, promote deals, and see what's working, all in one place.</p></div>
+      <ul class="feature-list">
+        <li class="feature-row reveal"><span class="feature-glyph" aria-hidden="true"><svg><use href="#package-icon"/></svg></span><div><h3>Inventory management</h3><p>Easily add products, update prices, mark items on sale, and keep your inventory fresh.</p></div></li>
+        <li class="feature-row reveal" id="offers"><span class="feature-glyph feature-glyph-text" aria-hidden="true">%</span><div><h3>Exclusive deals</h3><p>Create special offers that appear on the Spargo app and reach more nearby shoppers.</p></div></li>
+        <li class="feature-row reveal"><span class="feature-glyph" aria-hidden="true"><svg><use href="#chart-icon"/></svg></span><div><h3>Store analytics</h3><p>See how often your items appear in search, deal page impressions, product views, and store visits.</p></div></li>
+      </ul>
+    </section>
+    <section class="store-how wrap" id="how-it-works" aria-labelledby="how-title">
+      <div class="split-heading reveal"><div><span class="section-label">How it works</span><h2 id="how-title">Simple by design.</h2></div><p>Get your store on Spargo in just a few steps and start reaching local shoppers.</p></div>
+      <ol class="store-steps"><li class="store-step reveal"><div class="step-number" aria-hidden="true">1</div><h3>Register your store</h3><p>Create a store account and add your basic information.</p></li><li class="store-step reveal"><div class="step-number" aria-hidden="true">2</div><h3>Choose a plan</h3><p>Pick the plan that fits your business.</p></li><li class="store-step reveal"><div class="step-number" aria-hidden="true">3</div><h3>Upload your products</h3><p>Add your inventory and set your prices.</p></li><li class="store-step reveal"><div class="step-number" aria-hidden="true">4</div><h3>Track performance</h3><p>See how your products are performing and grow your reach.</p></li></ol>
+    </section>
+    <section class="analytics" id="analytics" aria-labelledby="analytics-title"><div class="wrap analytics-grid">
+      <img class="analytics-mockup reveal" loading="lazy" src="spargo-analytics-dashboard.png" width="917" height="695" alt="Illustrative merchant analytics dashboard with appearance, impression, click and product metrics." />
+      <div class="analytics-copy reveal"><h2 id="analytics-title">See what’s working for your store.</h2><p>Get real insights into how shoppers find your products, from search appearances and deal impressions to product views and store profile visits.</p>
+        <ul class="analytics-list"><li><svg><use href="#search-icon"/></svg>Track search appearances</li><li><svg><use href="#tag-icon"/></svg>Monitor deal performance</li><li><svg><use href="#chart-icon"/></svg>See top performing products</li><li><svg><use href="#users-icon"/></svg>Understand shopper interest</li><li><svg><use href="#pin-outline"/></svg>Grow your local presence</li></ul>
+      </div>
+    </div></section>
+    <section class="pricing wrap" id="pricing" aria-labelledby="pricing-title">
+      <div class="split-heading reveal"><div><h2 id="pricing-title">Choose a plan that works for your store.</h2></div><p>All plans include inventory management, deal listings, and analytics.</p></div>
+      <div class="price-grid">
+        <article class="price-card reveal"><h3>Starter</h3><p class="sub">Great for small stores getting started.</p><div class="amount">$29 <span>/month</span></div><ul><li>Up to 500 products</li><li>Basic analytics</li><li>Deal listings</li><li>Email support</li></ul><a href="#signup" class="btn-primary btn-ghost plan-choice" data-plan="Starter">Get started</a></article>
+        <article class="price-card featured reveal"><div class="price-heading"><h3>Growth</h3><span class="chip">MOST POPULAR</span></div><p class="sub">For growing stores with more products.</p><div class="amount">$79 <span>/month</span></div><ul><li>Up to 2,500 products</li><li>Advanced analytics</li><li>Featured deal placements</li><li>Priority support</li></ul><a href="#signup" class="btn-primary plan-choice" data-plan="Growth">Get started</a></article>
+        <article class="price-card reveal"><h3>Pro</h3><p class="sub">For larger stores with maximum visibility.</p><div class="amount">$149 <span>/month</span></div><ul><li>Unlimited products</li><li>Advanced analytics &amp; reports</li><li>Priority deal placements</li><li>Dedicated support</li></ul><a href="#signup" class="btn-primary btn-ghost plan-choice" data-plan="Pro">Get started</a></article>
+      </div><p class="pricing-note">Concept pricing in CAD. Final subscription plans and capabilities are subject to change. Dashboard figures are illustrative.</p>
+    </section>
+    <section class="signup" id="signup" aria-labelledby="signup-title"><div class="wrap">
+      <div class="signup-copy reveal"><span class="section-label">Get started today</span><h2 id="signup-title">Ready?</h2><h3>Get your store discovered.</h3><p>Join Spargo and start reaching local shoppers in just a few minutes.</p></div>
+      <img class="signup-art" loading="lazy" src="spargo-support-local-store.png" width="555" height="621" alt="Local store storefront with fresh produce display" />
+      <form id="merchant-form" class="merchant-form" novalidate>
+        <div class="form-row"><label for="store-name">Store name</label><input id="store-name" name="storeName" placeholder="e.g. Riverside Market" autocomplete="organization" required/></div>
+        <div class="form-row"><label for="business-email">Business email</label><input id="business-email" name="businessEmail" type="email" placeholder="you@yourstore.com" autocomplete="email" required/></div>
+        <div class="form-row"><label for="store-address">Store address</label><input id="store-address" name="storeAddress" placeholder="123 Main St, Calgary, AB" autocomplete="street-address" required/></div>
+        <div class="form-row"><label for="store-category">Store category</label><select id="store-category" name="storeCategory" required><option value="">Select a category</option><option>Grocery</option><option>Convenience</option><option>Pharmacy</option><option>Electronics</option><option>Home & lifestyle</option><option>Other</option></select></div>
+        <input type="hidden" id="selected-plan" name="plan" value="Growth" />
+        <button class="btn-primary" type="submit">List your store <span class="arrow" aria-hidden="true">→</span></button><p class="form-status" id="form-status" aria-live="polite"></p>
+      </form>
+    </div></section>
+  </main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo"><img src="spargo-logo-nobg.png" alt="Spargo" /></div>
+        <div class="footer-copy">Shop smarter. Save better. &copy; 2026 Spargo</div>
+        <div class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <span>·</span>
+          <a href="mailto:hello@spargo.app">Contact</a>
+        </div>
+      </div>
+      <div class="social-icons">
+        <a class="social-icon" href="https://www.instagram.com/spargo.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+          </svg>
+        </a>
+        <a class="social-icon" href="https://www.linkedin.com/company/spargo-app/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M7 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <circle cx="7" cy="7" r="1" fill="currentColor"/>
+            <path d="M11 17v-3.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M11 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script>
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+</script>
+  <script>
+    document.querySelectorAll('.plan-choice').forEach(link=>link.addEventListener('click',()=>{document.getElementById('selected-plan').value=link.dataset.plan;}));
+    const form=document.getElementById('merchant-form');
+    form.addEventListener('submit',(event)=>{
+      event.preventDefault();
+      const status=document.getElementById('form-status');
+      if(!form.reportValidity())return;
+      status.classList.add('show');
+      status.textContent='This is a design preview. Your information was not submitted. Connect this form to your registration API and Stripe checkout to accept store signups.';
+    });
+  </script>
+</body>
+</html>
