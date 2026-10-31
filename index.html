@@ -73,6 +73,7 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo"><img src="/img/spargo-logo-sm.webp" width="92" height="88" alt="Spargo" /></a>
       <ul class="nav-links">
+        <li><a href="#try">Try it</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#exclusives">Exclusives</a></li>
@@ -91,6 +92,7 @@
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-inner">
+    <a href="#try" onclick="toggleMenu()">Try it</a>
     <a href="#features" onclick="toggleMenu()">Features</a>
     <a href="#how" onclick="toggleMenu()">How it works</a>
     <a href="#exclusives" onclick="toggleMenu()">Exclusives</a>
@@ -124,6 +126,7 @@
             <button type="submit" class="btn-primary">Join the Calgary Waitlist →</button>
           </div>
           <p class="waitlist-status" role="status" aria-live="polite"></p>
+          <a class="hero-try" href="#try" data-cta="hero-try">Not sure yet? Try a search first <span aria-hidden="true">↓</span></a>
           <p class="form-note">Free to join. No credit card. By joining, you agree to receive launch updates from Spargo. Unsubscribe anytime.</p>
         </form>
 
@@ -219,6 +222,73 @@
     </ul>
   </div>
 </div>
+
+<!-- SEARCH DEMO: the app's search screen. data-source="mock" until the public API is deployed, then "live" -->
+<section class="demo" id="try" data-demo-search data-source="mock" aria-labelledby="demo-title">
+  <div class="container demo-inner">
+    <div class="demo-intro">
+      <div class="section-label reveal">Try it now</div>
+      <h2 class="section-title reveal" id="demo-title">See it compare<br>prices for you.</h2>
+      <p class="section-subtitle reveal">This is Spargo's search screen, working right here. Search for an item and watch it line up prices across nearby stores, cheapest first, with how fresh each price is.</p>
+      <form class="demo-search reveal" role="search">
+        <label for="demo-q-site" class="demo-try-label">Search for anything</label>
+        <div class="demo-search-box">
+          <svg class="demo-search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="m16.5 16.5 4.5 4.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <input id="demo-q-site" type="search" placeholder="Try &ldquo;milk&rdquo; or &ldquo;eggs&rdquo;" autocomplete="off" maxlength="60" enterkeyhint="search" />
+          <button type="submit" class="demo-search-btn">Search</button>
+        </div>
+      </form>
+      <div class="demo-try reveal">
+        <span class="demo-try-label">Or pick one</span>
+        <div class="demo-chips">
+          <button type="button" data-demo-query="milk" aria-pressed="false">Milk</button>
+          <button type="button" data-demo-query="eggs" aria-pressed="false">Eggs</button>
+          <button type="button" data-demo-query="bananas" aria-pressed="false">Bananas</button>
+          <button type="button" data-demo-query="bread" aria-pressed="false">Bread</button>
+          <button type="button" data-demo-query="butter" aria-pressed="false">Butter</button>
+          <button type="button" data-demo-query="coffee" aria-pressed="false">Coffee</button>
+        </div>
+      </div>
+      <p class="demo-status sr-only" role="status" aria-live="polite"></p>
+      <div class="demo-cta" hidden>
+        <p>Spargo can price your <strong>whole list</strong> like this and find the cheapest store.</p>
+        <a class="btn-primary" href="#waitlist-email" data-cta="demo" onclick="document.getElementById('waitlist-email').focus()">Get early access</a>
+      </div>
+      <p class="demo-note"
+         data-mock="Sample data with fictional stores, to show how search works. Live Calgary prices are coming soon."
+         data-live="Real prices for stores near downtown Calgary, confirmed within the last 14 days. If we don't have one yet, the demo checks the stores live (3 times a day per visitor). Prices can change, so check in store.">Sample data with fictional stores, to show how search works. Live Calgary prices are coming soon.</p>
+    </div>
+
+    <div class="app-phone-wrap">
+      <span class="demo-sample-flag">Sample data</span>
+      <div class="app-phone">
+        <div class="app-screen">
+          <div class="app-statusbar" aria-hidden="true"><span>9:41</span><span class="app-island"></span><span class="app-status-icons"><i></i><i></i><i></i></span></div>
+          <header class="app-header">
+            <div>
+              <strong class="app-city">Calgary, AB <span aria-hidden="true">⌄</span></strong>
+              <span class="app-tagline">The best prices near you right now</span>
+            </div>
+            <div class="app-header-icons" aria-hidden="true"><span></span><span class="has-dot"></span><span></span></div>
+          </header>
+          <form class="app-search" role="search">
+            <svg class="app-search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="m16.5 16.5 4.5 4.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+            <label for="demo-q" class="sr-only">Search for an item</label>
+            <input id="demo-q" type="search" placeholder="Search groceries, gas, hardware…" autocomplete="off" maxlength="60" enterkeyhint="search" />
+            <button type="button" class="app-search-clear" aria-label="Clear search" hidden>✕</button>
+          </form>
+          <div class="app-modes" aria-hidden="true"><span class="is-on">In store</span><span>Online</span></div>
+          <div class="app-cats" aria-hidden="true"><span class="app-filter">Filters</span><span class="is-on">All</span><span>Groceries</span><span>Produce</span><span>Dairy</span><span>Bakery</span></div>
+          <div class="app-results-head">
+            <div><strong class="app-count">Results</strong><span>Prices near Calgary, AB</span></div>
+            <span class="app-sort" aria-hidden="true">Cheapest first ⌄</span>
+          </div>
+          <div class="app-list" tabindex="0" role="region" aria-label="Search results"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- STATS BAR -->
 <section class="stats-bar">
@@ -559,5 +629,6 @@
 <script defer src="/js/waitlist.js"></script>
 <script defer src="/js/motion.js"></script>
 <script defer src="/js/main.js"></script>
+<script defer src="/js/demo-search.js"></script>
 </body>
 </html>

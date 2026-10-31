@@ -1,0 +1,531 @@
+{
+ "_note": "Fictional stores and sample prices for the website search demo. Not real Calgary data.",
+ "results": [
+  {
+   "product": {
+    "name": "2% Milk",
+    "unit": "4 L jug",
+    "imageUrl": "/img/demo/milk.svg"
+   },
+   "store": {
+    "name": "Prairie Value Foods",
+    "brand": null,
+    "address": "NE Calgary"
+   },
+   "price": 5.49,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 8.9,
+   "ageHours": 20,
+   "tags": [
+    "milk",
+    "dairy"
+   ]
+  },
+  {
+   "product": {
+    "name": "2% Milk",
+    "unit": "4 L jug",
+    "imageUrl": "/img/demo/milk.svg"
+   },
+   "store": {
+    "name": "Northgate Fresh Market",
+    "brand": null,
+    "address": "NW Calgary"
+   },
+   "price": 5.79,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 6.2,
+   "ageHours": 6,
+   "tags": [
+    "milk",
+    "dairy"
+   ]
+  },
+  {
+   "product": {
+    "name": "2% Milk",
+    "unit": "4 L jug",
+    "imageUrl": "/img/demo/milk.svg"
+   },
+   "store": {
+    "name": "Bow River Grocers",
+    "brand": null,
+    "address": "SW Calgary"
+   },
+   "price": 6.29,
+   "originalPrice": 6.79,
+   "isOnSale": true,
+   "distanceKm": 3.4,
+   "ageHours": 30,
+   "tags": [
+    "milk",
+    "dairy"
+   ]
+  },
+  {
+   "product": {
+    "name": "2% Milk",
+    "unit": "4 L jug",
+    "imageUrl": "/img/demo/milk.svg"
+   },
+   "store": {
+    "name": "Riverside Corner Market",
+    "brand": null,
+    "address": "SE Calgary"
+   },
+   "price": 6.49,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 4.1,
+   "ageHours": 50,
+   "tags": [
+    "milk",
+    "dairy"
+   ]
+  },
+  {
+   "product": {
+    "name": "Original Oat Beverage",
+    "unit": "1.75 L",
+    "imageUrl": "/img/demo/oat-milk.svg"
+   },
+   "store": {
+    "name": "Bow River Grocers",
+    "brand": null,
+    "address": "SW Calgary"
+   },
+   "price": 4.49,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 3.4,
+   "ageHours": 12,
+   "tags": [
+    "oat",
+    "oat milk",
+    "plant"
+   ]
+  },
+  {
+   "product": {
+    "name": "Original Oat Beverage",
+    "unit": "1.75 L",
+    "imageUrl": "/img/demo/oat-milk.svg"
+   },
+   "store": {
+    "name": "Northgate Fresh Market",
+    "brand": null,
+    "address": "NW Calgary"
+   },
+   "price": 4.99,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 6.2,
+   "ageHours": 26,
+   "tags": [
+    "oat",
+    "oat milk",
+    "plant"
+   ]
+  },
+  {
+   "product": {
+    "name": "Original Oat Beverage",
+    "unit": "1.75 L",
+    "imageUrl": "/img/demo/oat-milk.svg"
+   },
+   "store": {
+    "name": "Riverside Corner Market",
+    "brand": null,
+    "address": "SE Calgary"
+   },
+   "price": 5.29,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 4.1,
+   "ageHours": 70,
+   "tags": [
+    "oat",
+    "oat milk",
+    "plant"
+   ]
+  },
+  {
+   "product": {
+    "name": "Large White Eggs",
+    "unit": "12 pack",
+    "imageUrl": "/img/demo/eggs.svg"
+   },
+   "store": {
+    "name": "Prairie Value Foods",
+    "brand": null,
+    "address": "NE Calgary"
+   },
+   "price": 4.29,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 8.9,
+   "ageHours": 9,
+   "tags": [
+    "eggs",
+    "egg"
+   ]
+  },
+  {
+   "product": {
+    "name": "Large White Eggs",
+    "unit": "12 pack",
+    "imageUrl": "/img/demo/eggs.svg"
+   },
+   "store": {
+    "name": "Northgate Fresh Market",
+    "brand": null,
+    "address": "NW Calgary"
+   },
+   "price": 4.59,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 6.2,
+   "ageHours": 30,
+   "tags": [
+    "eggs",
+    "egg"
+   ]
+  },
+  {
+   "product": {
+    "name": "Large White Eggs",
+    "unit": "12 pack",
+    "imageUrl": "/img/demo/eggs.svg"
+   },
+   "store": {
+    "name": "Bow River Grocers",
+    "brand": null,
+    "address": "SW Calgary"
+   },
+   "price": 4.99,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 3.4,
+   "ageHours": 44,
+   "tags": [
+    "eggs",
+    "egg"
+   ]
+  },
+  {
+   "product": {
+    "name": "Bananas",
+    "unit": "per kg",
+    "imageUrl": "/img/demo/bananas.svg"
+   },
+   "store": {
+    "name": "Prairie Value Foods",
+    "brand": null,
+    "address": "NE Calgary"
+   },
+   "price": 1.52,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 8.9,
+   "ageHours": 4,
+   "tags": [
+    "bananas",
+    "banana",
+    "fruit"
+   ]
+  },
+  {
+   "product": {
+    "name": "Bananas",
+    "unit": "per kg",
+    "imageUrl": "/img/demo/bananas.svg"
+   },
+   "store": {
+    "name": "Northgate Fresh Market",
+    "brand": null,
+    "address": "NW Calgary"
+   },
+   "price": 1.74,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 6.2,
+   "ageHours": 22,
+   "tags": [
+    "bananas",
+    "banana",
+    "fruit"
+   ]
+  },
+  {
+   "product": {
+    "name": "Bananas",
+    "unit": "per kg",
+    "imageUrl": "/img/demo/bananas.svg"
+   },
+   "store": {
+    "name": "Riverside Corner Market",
+    "brand": null,
+    "address": "SE Calgary"
+   },
+   "price": 1.76,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 4.1,
+   "ageHours": 40,
+   "tags": [
+    "bananas",
+    "banana",
+    "fruit"
+   ]
+  },
+  {
+   "product": {
+    "name": "Bananas",
+    "unit": "per kg",
+    "imageUrl": "/img/demo/bananas.svg"
+   },
+   "store": {
+    "name": "Bow River Grocers",
+    "brand": null,
+    "address": "SW Calgary"
+   },
+   "price": 1.98,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 3.4,
+   "ageHours": 60,
+   "tags": [
+    "bananas",
+    "banana",
+    "fruit"
+   ]
+  },
+  {
+   "product": {
+    "name": "White Sliced Bread",
+    "unit": "675 g",
+    "imageUrl": "/img/demo/bread.svg"
+   },
+   "store": {
+    "name": "Prairie Value Foods",
+    "brand": null,
+    "address": "NE Calgary"
+   },
+   "price": 2.99,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 8.9,
+   "ageHours": 15,
+   "tags": [
+    "bread"
+   ]
+  },
+  {
+   "product": {
+    "name": "White Sliced Bread",
+    "unit": "675 g",
+    "imageUrl": "/img/demo/bread.svg"
+   },
+   "store": {
+    "name": "Northgate Fresh Market",
+    "brand": null,
+    "address": "NW Calgary"
+   },
+   "price": 3.49,
+   "originalPrice": 3.99,
+   "isOnSale": true,
+   "distanceKm": 6.2,
+   "ageHours": 28,
+   "tags": [
+    "bread"
+   ]
+  },
+  {
+   "product": {
+    "name": "White Sliced Bread",
+    "unit": "675 g",
+    "imageUrl": "/img/demo/bread.svg"
+   },
+   "store": {
+    "name": "Bow River Grocers",
+    "brand": null,
+    "address": "SW Calgary"
+   },
+   "price": 3.79,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 3.4,
+   "ageHours": 52,
+   "tags": [
+    "bread"
+   ]
+  },
+  {
+   "product": {
+    "name": "100% Whole Wheat Bread",
+    "unit": "675 g",
+    "imageUrl": "/img/demo/wheat-bread.svg"
+   },
+   "store": {
+    "name": "Prairie Value Foods",
+    "brand": null,
+    "address": "NE Calgary"
+   },
+   "price": 3.29,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 8.9,
+   "ageHours": 15,
+   "tags": [
+    "bread",
+    "wheat"
+   ]
+  },
+  {
+   "product": {
+    "name": "100% Whole Wheat Bread",
+    "unit": "675 g",
+    "imageUrl": "/img/demo/wheat-bread.svg"
+   },
+   "store": {
+    "name": "Bow River Grocers",
+    "brand": null,
+    "address": "SW Calgary"
+   },
+   "price": 3.79,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 3.4,
+   "ageHours": 52,
+   "tags": [
+    "bread",
+    "wheat"
+   ]
+  },
+  {
+   "product": {
+    "name": "Salted Butter",
+    "unit": "454 g",
+    "imageUrl": "/img/demo/butter.svg"
+   },
+   "store": {
+    "name": "Prairie Value Foods",
+    "brand": null,
+    "address": "NE Calgary"
+   },
+   "price": 5.99,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 8.9,
+   "ageHours": 18,
+   "tags": [
+    "butter",
+    "dairy"
+   ]
+  },
+  {
+   "product": {
+    "name": "Salted Butter",
+    "unit": "454 g",
+    "imageUrl": "/img/demo/butter.svg"
+   },
+   "store": {
+    "name": "Northgate Fresh Market",
+    "brand": null,
+    "address": "NW Calgary"
+   },
+   "price": 6.49,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 6.2,
+   "ageHours": 33,
+   "tags": [
+    "butter",
+    "dairy"
+   ]
+  },
+  {
+   "product": {
+    "name": "Salted Butter",
+    "unit": "454 g",
+    "imageUrl": "/img/demo/butter.svg"
+   },
+   "store": {
+    "name": "Riverside Corner Market",
+    "brand": null,
+    "address": "SE Calgary"
+   },
+   "price": 7.29,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 4.1,
+   "ageHours": 80,
+   "tags": [
+    "butter",
+    "dairy"
+   ]
+  },
+  {
+   "product": {
+    "name": "Medium Roast Ground Coffee",
+    "unit": "920 g",
+    "imageUrl": "/img/demo/coffee.svg"
+   },
+   "store": {
+    "name": "Northgate Fresh Market",
+    "brand": null,
+    "address": "NW Calgary"
+   },
+   "price": 12.99,
+   "originalPrice": 16.99,
+   "isOnSale": true,
+   "distanceKm": 6.2,
+   "ageHours": 10,
+   "tags": [
+    "coffee"
+   ]
+  },
+  {
+   "product": {
+    "name": "Medium Roast Ground Coffee",
+    "unit": "920 g",
+    "imageUrl": "/img/demo/coffee.svg"
+   },
+   "store": {
+    "name": "Prairie Value Foods",
+    "brand": null,
+    "address": "NE Calgary"
+   },
+   "price": 14.49,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 8.9,
+   "ageHours": 36,
+   "tags": [
+    "coffee"
+   ]
+  },
+  {
+   "product": {
+    "name": "Medium Roast Ground Coffee",
+    "unit": "920 g",
+    "imageUrl": "/img/demo/coffee.svg"
+   },
+   "store": {
+    "name": "Bow River Grocers",
+    "brand": null,
+    "address": "SW Calgary"
+   },
+   "price": 15.99,
+   "originalPrice": null,
+   "isOnSale": false,
+   "distanceKm": 3.4,
+   "ageHours": 58,
+   "tags": [
+    "coffee"
+   ]
+  }
+ ]
+}
