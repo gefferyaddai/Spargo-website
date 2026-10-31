@@ -174,20 +174,30 @@
   </div>
 </section>
 
+<!-- CATEGORY TICKER -->
+<div class="marquee" aria-label="Categories Spargo compares">
+  <div class="marquee-track">
+    <ul class="marquee-group">
+      <li>Groceries</li><li>Fresh produce</li><li>Household</li><li>Hardware</li><li>Gas</li>
+      <li>Pharmacy</li><li>Snacks &amp; drinks</li><li>Cleaning</li><li>Pet supplies</li><li>Baby care</li>
+    </ul>
+  </div>
+</div>
+
 <!-- STATS BAR -->
 <section class="stats-bar">
   <div class="container">
     <div class="stats-inner">
       <div class="stat-item">
-        <div class="stat-num">$183</div>
+        <div class="stat-num" data-count="183" data-prefix="$">$183</div>
         <div class="stat-label">In monthly savings potential for Spargo users</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">50+</div>
+        <div class="stat-num" data-count="50" data-suffix="+">50+</div>
         <div class="stat-label">Stores tracked in real time near you</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">100k+</div>
+        <div class="stat-num" data-count="100" data-suffix="k+">100k+</div>
         <div class="stat-label">Product prices monitored daily</div>
       </div>
     </div>
@@ -203,7 +213,7 @@
     </div>
     <div class="features-grid">
 
-      <div class="feature-card reveal">
+      <div class="feature-card spotlight reveal from-scale">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </div>
@@ -211,7 +221,7 @@
         <p>Search any item — groceries, gas, hardware — and see prices ranked cheapest first, filtered by your distance.</p>
       </div>
 
-      <div class="feature-card reveal reveal-delay-1">
+      <div class="feature-card spotlight reveal from-scale reveal-delay-1">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="15" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M7 10h10M7 14h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </div>
@@ -219,7 +229,7 @@
         <p>Add your whole shopping list and Spargo finds the single cheapest store — or the best split across two stops.</p>
       </div>
 
-      <div class="feature-card reveal reveal-delay-2">
+      <div class="feature-card spotlight reveal from-scale reveal-delay-2">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.2 6.5H21l-5.5 4 2 6.5L12 16l-5.5 4 2-6.5L3 9.5h6.8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
         </div>
@@ -227,7 +237,7 @@
         <p>Get early access to flash sales and partner deals before they go public. Spargo-only discounts from local stores.</p>
       </div>
 
-      <div class="feature-card reveal reveal-delay-1">
+      <div class="feature-card spotlight reveal from-scale reveal-delay-1">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
@@ -235,7 +245,7 @@
         <p>Scan or enter a price tag and get a score out of 100 — a real breakdown of whether you're actually getting a deal.</p>
       </div>
 
-      <div class="feature-card reveal reveal-delay-2">
+      <div class="feature-card spotlight reveal from-scale reveal-delay-2">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 5 5 5 9c0 6 7 13 7 13s7-7 7-13c0-4-3-7-7-7z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg>
         </div>
@@ -243,7 +253,7 @@
         <p>Sort deals and search results by distance. No point saving $0.50 if the store is 30 km away.</p>
       </div>
 
-      <div class="feature-card reveal reveal-delay-3">
+      <div class="feature-card spotlight reveal from-scale reveal-delay-3">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="2" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="2" y="14" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="14" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/></svg>
         </div>
@@ -263,28 +273,28 @@
         <div class="section-label reveal">Simple by design</div>
         <div class="section-title reveal">How Spargo<br>works</div>
         <div class="steps">
-          <div class="step reveal">
+          <div class="step reveal from-left">
             <div class="step-num">01</div>
             <div class="step-content">
               <h4>Set your location</h4>
               <p>Tell Spargo your city. We'll find deals and stores within your reach, ranked by proximity.</p>
             </div>
           </div>
-          <div class="step reveal reveal-delay-1">
+          <div class="step reveal from-left reveal-delay-1">
             <div class="step-num">02</div>
             <div class="step-content">
               <h4>Browse or search</h4>
               <p>See today's best deals near you, or search for any specific item across all nearby stores.</p>
             </div>
           </div>
-          <div class="step reveal reveal-delay-2">
+          <div class="step reveal from-left reveal-delay-2">
             <div class="step-num">03</div>
             <div class="step-content">
               <h4>Build your list</h4>
               <p>Add items and let Spargo calculate the cheapest single store — or the best split between two.</p>
             </div>
           </div>
-          <div class="step reveal reveal-delay-3">
+          <div class="step reveal from-left reveal-delay-3">
             <div class="step-num">04</div>
             <div class="step-content">
               <h4>Save, every week</h4>
@@ -293,13 +303,40 @@
           </div>
         </div>
       </div>
-      <div class="how-visual reveal">
+      <div class="how-visual reveal from-right">
         <div class="how-phone-wrap">
           <div class="how-phone">
             <div class="screen"><img src="img/screen-pricescore.webp" alt="Price Score" /></div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- APP SCREENS -->
+<section class="screens" id="screens">
+  <div class="container">
+    <div class="screens-head">
+      <div>
+        <div class="section-label reveal">Inside the app</div>
+        <div class="section-title reveal">Take a look<br>around.</div>
+      </div>
+      <p class="section-subtitle reveal">Swipe through the screens you'll use every week to find the cheapest price near you.</p>
+    </div>
+  </div>
+  <div class="carousel reveal" data-carousel data-autoplay="4000">
+    <div class="carousel-track" tabindex="0" role="region" aria-label="Spargo app screens, use arrow keys to browse">
+      <figure class="carousel-slide"><img src="img/screen-dealspage.webp" width="660" height="1434" loading="lazy" alt="Spargo deals screen" /><figcaption>Deals<span>Today's best prices near you</span></figcaption></figure>
+      <figure class="carousel-slide"><img src="img/screen-searchpage.webp" width="660" height="1434" loading="lazy" alt="Spargo search screen" /><figcaption>Search<span>Any item, ranked cheapest first</span></figcaption></figure>
+      <figure class="carousel-slide"><img src="img/screen-cheapeststores.webp" width="660" height="1434" loading="lazy" alt="Spargo cheapest stores screen" /><figcaption>Cheapest stores<span>The best store for your whole list</span></figcaption></figure>
+      <figure class="carousel-slide"><img src="img/screen-pricescore.webp" width="660" height="1434" loading="lazy" alt="Spargo price score screen" /><figcaption>Price score<span>Is it really a deal? Out of 100</span></figcaption></figure>
+      <figure class="carousel-slide"><img src="img/screen-openitemdealspage.webp" width="660" height="1434" loading="lazy" alt="Spargo deal detail screen" /><figcaption>Deal detail<span>Price, store, distance and savings</span></figcaption></figure>
+    </div>
+    <div class="carousel-controls">
+      <button type="button" class="carousel-btn" data-prev aria-label="Previous screen">←</button>
+      <div class="carousel-dots"></div>
+      <button type="button" class="carousel-btn" data-next aria-label="Next screen">→</button>
     </div>
   </div>
 </section>
@@ -314,7 +351,7 @@
         <p class="section-subtitle reveal">Spargo partners with local stores to bring you exclusive discounts, early access to flash sales, and limited-time offers that never make it to the public flyer.</p>
 
         <div class="excl-cards">
-          <div class="excl-card reveal">
+          <div class="excl-card spotlight reveal from-left">
             <div class="excl-icon-wrap">
               <svg width="22" height="22" viewBox="0 0 26 26" fill="none"><path d="M13 3l2.5 7.5H23L17 15l2.5 8L13 19l-6.5 4 2.5-8L3 10.5h7.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
             </div>
@@ -325,7 +362,7 @@
             </div>
           </div>
 
-          <div class="excl-card reveal reveal-delay-1">
+          <div class="excl-card spotlight reveal from-left reveal-delay-1">
             <div class="excl-icon-wrap">
               <svg width="22" height="22" viewBox="0 0 26 26" fill="none"><path d="M5 13c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z" stroke="currentColor" stroke-width="1.5"/><path d="M13 9v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             </div>
@@ -336,7 +373,7 @@
             </div>
           </div>
 
-          <div class="excl-card reveal reveal-delay-2">
+          <div class="excl-card spotlight reveal from-left reveal-delay-2">
             <div class="excl-icon-wrap">
               <svg width="22" height="22" viewBox="0 0 26 26" fill="none"><path d="M6 12l5 5 9-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
@@ -349,7 +386,7 @@
         </div>
       </div>
 
-      <div class="excl-card-panel reveal">
+      <div class="excl-card-panel reveal from-right">
         <div class="excl-panel-head">
           <div class="excl-panel-title">Exclusives</div>
           <div class="excl-panel-sub">Spargo-only deals from partner stores</div>
@@ -436,6 +473,7 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/motion.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

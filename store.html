@@ -61,7 +61,9 @@
       content: ''; position: absolute; width: 760px; height: 760px; border-radius: 50%;
       background: radial-gradient(circle, var(--glow-soft) 0%, transparent 70%);
       top: -240px; right: -160px; pointer-events: none;
+      animation: glowDrift 14s ease-in-out infinite alternate;
     }
+    @keyframes glowDrift { to { translate: -120px 80px; scale: 1.15; } }
     .store-hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr); gap: clamp(24px, 3vw, 40px); align-items: center; }
     .hero-copy { position: relative; z-index: 1; }
     .hero-copy > * { animation: fadeSlideUp 0.7s var(--ease-out) both; }
@@ -121,6 +123,18 @@
     .split-heading h2 { margin-top: 0; }
     .store-steps { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 56px; position: relative; }
     .store-steps::before { content: ''; position: absolute; left: 0; right: 0; top: 27px; height: 1px; background: var(--border-md); }
+    /* Timeline draws across, then each number lights up in turn */
+    .store-steps::after {
+      content: ''; position: absolute; left: 0; right: 0; top: 27px; height: 2px; margin-top: -0.5px; background: var(--primary);
+      transform: scaleX(0); transform-origin: left; transition: transform 1.6s var(--ease-out) 0.2s;
+    }
+    .store-steps.in-view::after { transform: scaleX(1); }
+    .store-step .step-number { z-index: 1; }
+    .store-steps.in-view .step-number { animation: stepPop 0.5s var(--ease-out) both; }
+    .store-steps.in-view .store-step:nth-child(2) .step-number { animation-delay: 0.45s; }
+    .store-steps.in-view .store-step:nth-child(3) .step-number { animation-delay: 0.85s; }
+    .store-steps.in-view .store-step:nth-child(4) .step-number { animation-delay: 1.25s; }
+    @keyframes stepPop { 50% { background: var(--primary-fill); color: var(--on-primary); scale: 1.12; } }
     .store-step { position: relative; padding-right: 28px; }
     .step-number {
       position: relative; width: 56px; height: 56px; border-radius: 50%;
@@ -151,9 +165,9 @@
       background: var(--bg-card); border: 1px solid var(--border);
       border-radius: var(--radius-lg); padding: 36px 32px 32px;
       display: flex; flex-direction: column;
-      transition: border-color 0.25s, box-shadow 0.25s;
+      transition: border-color 0.25s, box-shadow 0.25s, translate 0.35s var(--ease-out);
     }
-    .price-card:hover { border-color: var(--primary-border); }
+    .price-card:hover { border-color: var(--primary-border); translate: 0 -6px; }
     .price-card.featured { border-color: var(--primary); box-shadow: 0 0 0 1px var(--primary), 0 24px 60px var(--glow-soft); }
     .price-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
     .price-card h3 { font-size: 18px; margin-bottom: 6px; }
@@ -230,6 +244,8 @@
       .split-heading p { margin-top: 14px; }
       .store-steps { grid-template-columns: 1fr; gap: 0; margin-top: 40px; }
       .store-steps::before { top: 0; bottom: 0; left: 27px; right: auto; width: 1px; height: auto; }
+      .store-steps::after { top: 0; bottom: 0; left: 27px; right: auto; width: 2px; height: auto; margin: 0 0 0 -0.5px; transform: scaleY(0); transform-origin: top; }
+      .store-steps.in-view::after { transform: scaleY(1); }
       .store-step { display: grid; grid-template-columns: 56px 1fr; column-gap: 20px; padding: 0 0 28px; }
       .step-number { grid-row: span 2; margin-bottom: 0; }
       .store-step h3 { align-self: end; margin-top: 8px; }
@@ -250,7 +266,9 @@
       .amount { font-size: 52px; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .hero-copy > *, .hero-mockup { animation: none; }
+      .hero-copy > *, .hero-mockup, .store-hero::before, .store-steps.in-view .step-number { animation: none; }
+      .store-steps::after { transform: none; transition: none; }
+      .price-card { transition: none; }
       .reveal { opacity: 1; transform: none; transition: none; }
       .btn-primary, .btn-primary .arrow, .feature-glyph, .step-number { transition: none; }
     }
@@ -314,6 +332,11 @@
         <img class="hero-mockup" src="img/store-dashboard-laptop.webp" width="1536" height="1024" alt="Illustrative Spargo merchant dashboard on a laptop, showing search appearances, deal impressions, product views and top-performing products." />
       </div>
     </section>
+    <div class="marquee" aria-label="Store types on Spargo">
+      <div class="marquee-track">
+        <ul class="marquee-group"><li>Grocers</li><li>Corner stores</li><li>Pharmacies</li><li>Produce markets</li><li>Bakeries</li><li>Butchers</li><li>Hardware stores</li><li>Gas stations</li><li>Specialty food</li><li>Convenience</li></ul>
+      </div>
+    </div>
     <div class="wrap reveal"><div class="stat-strip" aria-label="Platform benefits">
       <div class="strip-item"><svg><use href="#store-icon"/></svg><div><strong>Local reach</strong><span>Shoppers in your area</span></div></div>
       <div class="strip-item"><svg><use href="#pin-outline"/></svg><div><strong>More discovery</strong><span>Products shoppers search</span></div></div>
@@ -321,35 +344,52 @@
       <div class="strip-item"><svg><use href="#chart-icon"/></svg><div><strong>Real results</strong><span>For local businesses</span></div></div>
     </div></div>
     <section class="store-features wrap" id="features" aria-labelledby="features-title">
-      <div class="features-intro reveal"><span class="section-label">Everything you need</span><h2 id="features-title">Built for stores that want to grow.</h2><p>Manage your inventory, promote deals, and see what's working, all in one place.</p></div>
+      <div class="features-intro reveal from-left"><span class="section-label">Everything you need</span><h2 id="features-title">Built for stores that want to grow.</h2><p>Manage your inventory, promote deals, and see what's working, all in one place.</p></div>
       <ul class="feature-list">
-        <li class="feature-row reveal"><span class="feature-glyph" aria-hidden="true"><svg><use href="#package-icon"/></svg></span><div><h3>Inventory management</h3><p>Easily add products, update prices, mark items on sale, and keep your inventory fresh.</p></div></li>
-        <li class="feature-row reveal" id="offers"><span class="feature-glyph feature-glyph-text" aria-hidden="true">%</span><div><h3>Exclusive deals</h3><p>Create special offers that appear on the Spargo app and reach more nearby shoppers.</p></div></li>
-        <li class="feature-row reveal"><span class="feature-glyph" aria-hidden="true"><svg><use href="#chart-icon"/></svg></span><div><h3>Store analytics</h3><p>See how often your items appear in search, deal page impressions, product views, and store visits.</p></div></li>
+        <li class="feature-row reveal from-right"><span class="feature-glyph" aria-hidden="true"><svg><use href="#package-icon"/></svg></span><div><h3>Inventory management</h3><p>Easily add products, update prices, mark items on sale, and keep your inventory fresh.</p></div></li>
+        <li class="feature-row reveal from-right" id="offers"><span class="feature-glyph feature-glyph-text" aria-hidden="true">%</span><div><h3>Exclusive deals</h3><p>Create special offers that appear on the Spargo app and reach more nearby shoppers.</p></div></li>
+        <li class="feature-row reveal from-right"><span class="feature-glyph" aria-hidden="true"><svg><use href="#chart-icon"/></svg></span><div><h3>Store analytics</h3><p>See how often your items appear in search, deal page impressions, product views, and store visits.</p></div></li>
       </ul>
     </section>
     <section class="store-how wrap" id="how-it-works" aria-labelledby="how-title">
       <div class="split-heading reveal"><div><span class="section-label">How it works</span><h2 id="how-title">Simple by design.</h2></div><p>Get your store on Spargo in just a few steps and start reaching local shoppers.</p></div>
-      <ol class="store-steps"><li class="store-step reveal"><div class="step-number" aria-hidden="true">1</div><h3>Register your store</h3><p>Create a store account and add your basic information.</p></li><li class="store-step reveal"><div class="step-number" aria-hidden="true">2</div><h3>Choose a plan</h3><p>Pick the plan that fits your business.</p></li><li class="store-step reveal"><div class="step-number" aria-hidden="true">3</div><h3>Upload your products</h3><p>Add your inventory and set your prices.</p></li><li class="store-step reveal"><div class="step-number" aria-hidden="true">4</div><h3>Track performance</h3><p>See how your products are performing and grow your reach.</p></li></ol>
+      <ol class="store-steps" data-animate><li class="store-step reveal"><div class="step-number" aria-hidden="true">1</div><h3>Register your store</h3><p>Create a store account and add your basic information.</p></li><li class="store-step reveal"><div class="step-number" aria-hidden="true">2</div><h3>Choose a plan</h3><p>Pick the plan that fits your business.</p></li><li class="store-step reveal"><div class="step-number" aria-hidden="true">3</div><h3>Upload your products</h3><p>Add your inventory and set your prices.</p></li><li class="store-step reveal"><div class="step-number" aria-hidden="true">4</div><h3>Track performance</h3><p>See how your products are performing and grow your reach.</p></li></ol>
+    </section>
+    <section class="screens" id="shopper-view" aria-labelledby="screens-title">
+      <div class="wrap screens-head reveal"><div><span class="section-label">What shoppers see</span><h2 id="screens-title">Your deals, right where they look.</h2></div><p>Your products and offers show up across the Spargo app, from today's deals to search results and store rankings.</p></div>
+      <div class="carousel reveal" data-carousel data-autoplay="4000">
+        <div class="carousel-track" tabindex="0" role="region" aria-label="Spargo app screens, use arrow keys to browse">
+          <figure class="carousel-slide"><img src="img/screen-dealspage.webp" width="660" height="1434" loading="lazy" alt="Spargo deals screen" /><figcaption>Deals page<span>Your offers next to nearby shoppers</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="img/screen-searchpage.webp" width="660" height="1434" loading="lazy" alt="Spargo search screen" /><figcaption>Search results<span>Your products when shoppers search</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="img/screen-cheapeststores.webp" width="660" height="1434" loading="lazy" alt="Spargo cheapest stores screen" /><figcaption>Store rankings<span>Win the trip for a whole list</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="img/screen-openitemdealspage.webp" width="660" height="1434" loading="lazy" alt="Spargo deal detail screen" /><figcaption>Deal detail<span>Your store, price and distance</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="img/screen-pricescore.webp" width="660" height="1434" loading="lazy" alt="Spargo price score screen" /><figcaption>Price score<span>Fair prices get recognized</span></figcaption></figure>
+        </div>
+        <div class="carousel-controls">
+          <button type="button" class="carousel-btn" data-prev aria-label="Previous screen">←</button>
+          <div class="carousel-dots"></div>
+          <button type="button" class="carousel-btn" data-next aria-label="Next screen">→</button>
+        </div>
+      </div>
     </section>
     <section class="analytics" id="analytics" aria-labelledby="analytics-title"><div class="wrap analytics-grid">
-      <img class="analytics-mockup reveal" loading="lazy" src="img/store-analytics-dashboard.webp" width="917" height="695" alt="Illustrative merchant analytics dashboard with appearance, impression, click and product metrics." />
-      <div class="analytics-copy reveal"><h2 id="analytics-title">See what’s working for your store.</h2><p>Get real insights into how shoppers find your products, from search appearances and deal impressions to product views and store profile visits.</p>
+      <img class="analytics-mockup reveal from-left" loading="lazy" src="img/store-analytics-dashboard.webp" width="917" height="695" alt="Illustrative merchant analytics dashboard with appearance, impression, click and product metrics." />
+      <div class="analytics-copy reveal from-right"><h2 id="analytics-title">See what’s working for your store.</h2><p>Get real insights into how shoppers find your products, from search appearances and deal impressions to product views and store profile visits.</p>
         <ul class="analytics-list"><li><svg><use href="#search-icon"/></svg>Track search appearances</li><li><svg><use href="#tag-icon"/></svg>Monitor deal performance</li><li><svg><use href="#chart-icon"/></svg>See top performing products</li><li><svg><use href="#users-icon"/></svg>Understand shopper interest</li><li><svg><use href="#pin-outline"/></svg>Grow your local presence</li></ul>
       </div>
     </div></section>
     <section class="pricing wrap" id="pricing" aria-labelledby="pricing-title">
       <div class="split-heading reveal"><div><h2 id="pricing-title">Choose a plan that works for your store.</h2></div><p>All plans include inventory management, deal listings, and analytics.</p></div>
       <div class="price-grid">
-        <article class="price-card reveal"><h3>Starter</h3><p class="sub">Great for small stores getting started.</p><div class="amount">$99 <span>/month</span><small>single location</small></div><ul><li>Up to 500 products</li><li>Basic analytics</li><li>Deal listings</li><li>Email support</li></ul><a href="#signup" class="btn-primary btn-ghost plan-choice" data-plan="Starter">Get started</a></article>
-        <article class="price-card featured reveal"><div class="price-heading"><h3>Growth</h3><span class="chip">MOST POPULAR</span></div><p class="sub">For growing stores with more products.</p><div class="amount">$249 <span>/month</span><small>single location</small></div><ul><li>Up to 2,500 products</li><li>Advanced analytics</li><li>Featured deal placements</li><li>Priority support</li></ul><a href="#signup" class="btn-primary plan-choice" data-plan="Growth">Get started</a></article>
-        <article class="price-card reveal"><h3>Pro</h3><p class="sub">For multi-location stores and franchises.</p><div class="amount">$499 <span>/month</span><small>first location, +$149/month per additional location</small></div><ul><li>Unlimited products</li><li>Multi-location management</li><li>Advanced analytics &amp; reports</li><li>Priority deal placements</li><li>Dedicated support</li></ul><a href="#signup" class="btn-primary btn-ghost plan-choice" data-plan="Pro">Get started</a></article>
+        <article class="price-card spotlight reveal from-scale"><h3>Starter</h3><p class="sub">Great for small stores getting started.</p><div class="amount">$99 <span>/month</span><small>single location</small></div><ul><li>Up to 500 products</li><li>Basic analytics</li><li>Deal listings</li><li>Email support</li></ul><a href="#signup" class="btn-primary btn-ghost plan-choice" data-plan="Starter">Get started</a></article>
+        <article class="price-card featured spotlight reveal from-scale reveal-delay-1"><div class="price-heading"><h3>Growth</h3><span class="chip">MOST POPULAR</span></div><p class="sub">For growing stores with more products.</p><div class="amount">$249 <span>/month</span><small>single location</small></div><ul><li>Up to 2,500 products</li><li>Advanced analytics</li><li>Featured deal placements</li><li>Priority support</li></ul><a href="#signup" class="btn-primary plan-choice" data-plan="Growth">Get started</a></article>
+        <article class="price-card spotlight reveal from-scale reveal-delay-2"><h3>Pro</h3><p class="sub">For multi-location stores and franchises.</p><div class="amount">$499 <span>/month</span><small>first location, +$149/month per additional location</small></div><ul><li>Unlimited products</li><li>Multi-location management</li><li>Advanced analytics &amp; reports</li><li>Priority deal placements</li><li>Dedicated support</li></ul><a href="#signup" class="btn-primary btn-ghost plan-choice" data-plan="Pro">Get started</a></article>
       </div><p class="pricing-note">Concept pricing in CAD. Final subscription plans and capabilities are subject to change. Dashboard figures are illustrative.</p>
     </section>
     <section class="signup" id="signup" aria-labelledby="signup-title"><div class="wrap">
-      <div class="signup-copy reveal"><span class="section-label">Get started today</span><h2 id="signup-title">Ready?</h2><h3>Get your store discovered.</h3><p>Join Spargo and start reaching local shoppers in just a few minutes.</p></div>
+      <div class="signup-copy reveal from-left"><span class="section-label">Get started today</span><h2 id="signup-title">Ready?</h2><h3>Get your store discovered.</h3><p>Join Spargo and start reaching local shoppers in just a few minutes.</p></div>
       <img class="signup-art" loading="lazy" src="img/store-local-storefront.webp" width="555" height="621" alt="Local store storefront with fresh produce display" />
-      <form id="merchant-form" class="merchant-form" novalidate>
+      <form id="merchant-form" class="merchant-form reveal from-right" novalidate>
         <div class="form-row"><label for="store-name">Store name</label><input id="store-name" name="storeName" placeholder="e.g. Riverside Market" autocomplete="organization" required/></div>
         <div class="form-row"><label for="business-email">Business email</label><input id="business-email" name="businessEmail" type="email" placeholder="you@yourstore.com" autocomplete="email" required/></div>
         <div class="form-row"><label for="store-address">Store address</label><input id="store-address" name="storeAddress" placeholder="123 Main St, Calgary, AB" autocomplete="street-address" required/></div>
@@ -398,6 +438,7 @@
 </footer>
 
 <script src="js/nav.js"></script>
+<script src="js/motion.js"></script>
 <script>
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
