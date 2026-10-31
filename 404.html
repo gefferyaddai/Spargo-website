@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found — Spargo</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#6C3CE1" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48.png" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    .not-found { position: relative; min-height: calc(100vh - 160px); display: grid; place-items: center; padding: 140px 16px 80px; overflow: hidden; }
+    .not-found-inner { position: relative; max-width: 560px; text-align: center; }
+    .not-found h1 { font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(44px, 7vw, 72px); line-height: 1.02; color: var(--text); margin: 0 0 18px; text-wrap: balance; }
+    .not-found h1 em { color: var(--primary); }
+    .not-found p { color: var(--text-mid); line-height: 1.7; margin: 0 auto 32px; max-width: 42ch; }
+    .not-found-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    a.btn-primary { text-decoration: none; }
+    .btn-ghost { background: transparent; color: var(--primary); box-shadow: inset 0 0 0 1px var(--primary-border); }
+    .btn-ghost:hover { background: var(--primary-faint); color: var(--primary); box-shadow: inset 0 0 0 1px var(--primary); }
+  </style>
+</head>
+<body class="light">
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><img src="/img/spargo-logo-sm.webp" width="92" height="88" alt="Spargo" /></a>
+      <ul class="nav-links">
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/#how">How it works</a></li>
+        <li><a href="/#exclusives">Exclusives</a></li>
+        <li><a href="/for-stores">For stores</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn-primary" href="/#waitlist-email">Join Waitlist</a>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <a href="/#features" onclick="toggleMenu()">Features</a>
+    <a href="/#how" onclick="toggleMenu()">How it works</a>
+    <a href="/#exclusives" onclick="toggleMenu()">Exclusives</a>
+    <a href="/for-stores" onclick="toggleMenu()">For stores</a>
+    <a class="btn-primary" href="/#waitlist-email" onclick="toggleMenu()">Join Waitlist</a>
+  </div>
+</div>
+
+<main class="not-found">
+  <div class="hero-grid-overlay" aria-hidden="true"></div>
+  <div class="not-found-inner">
+    <span class="section-label">404</span>
+    <h1>This aisle is <em>empty.</em></h1>
+    <p>The page you’re looking for has moved or never existed. The best prices are still where we left them.</p>
+    <div class="not-found-actions">
+      <a class="btn-primary" href="/">Back to home</a>
+      <a class="btn-primary btn-ghost" href="/for-stores">Spargo for Stores</a>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo"><img src="/img/spargo-logo-sm.webp" width="92" height="88" alt="Spargo" /></div>
+        <div class="footer-copy">Shop smarter. Save better. &copy; 2026 Spargo</div>
+        <div class="footer-legal">
+          <a href="/privacy">Privacy Policy</a>
+          <span>·</span>
+          <a href="/terms">Terms</a>
+          <span>·</span>
+          <a href="mailto:hello@spargo.app">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav.js"></script>
+</body>
+</html>

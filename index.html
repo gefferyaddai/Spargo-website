@@ -3,30 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spargo — Shop Smarter. Save Better.</title>
-  <meta name="description" content="Spargo finds the cheapest prices on groceries, produce, household items, hardware, and gas near you. Build your list, we'll find the best store." />
+  <title>Compare Grocery &amp; Store Prices in Calgary | Spargo</title>
+  <meta name="description" content="Compare grocery, gas and everyday prices at nearby Calgary stores. Find the cheapest store for your whole shopping list and get early access to Spargo." />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://savewithspargo.com/" />
-  <meta property="og:title"       content="Spargo — Shop Smarter. Save Better." />
-  <meta property="og:description" content="Spargo finds the cheapest prices on groceries, produce, hardware, and gas near you. Build your list, we'll find the best store." />
-  <meta property="og:image"       content="https://savewithspargo.com/spargofullogo.png" />
+  <meta property="og:site_name"   content="Spargo" />
+  <meta property="og:locale"      content="en_CA" />
+  <meta property="og:url"         content="https://www.savewithspargo.com/" />
+  <meta property="og:title"       content="Compare Grocery &amp; Store Prices in Calgary | Spargo" />
+  <meta property="og:description" content="Compare grocery, gas and everyday prices at nearby Calgary stores and find the cheapest store for your whole list." />
+  <meta property="og:image"       content="https://www.savewithspargo.com/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"   content="Spargo logo: Shop smarter" />
 
   <!-- Twitter / X -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Spargo — Shop Smarter. Save Better." />
-  <meta name="twitter:description" content="Spargo finds the cheapest prices on groceries, produce, hardware, and gas near you. Build your list, we'll find the best store." />
-  <meta name="twitter:image"       content="https://savewithspargo.com/spargofulllogo.png" />
+  <meta name="twitter:title"       content="Compare Grocery &amp; Store Prices in Calgary | Spargo" />
+  <meta name="twitter:description" content="Compare grocery, gas and everyday prices at nearby Calgary stores and find the cheapest store for your whole list." />
+  <meta name="twitter:image"       content="https://www.savewithspargo.com/img/og-image.jpg" />
 
-    <link rel="canonical" href="https://savewithspargo.com/" />
+  <link rel="canonical" href="https://www.savewithspargo.com/" />
   <meta name="theme-color" content="#6C3CE1" />
-  <link rel="icon" type="image/png" href="spargo-logo.png" />
-  <link rel="apple-touch-icon" href="spargo-logo.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48.png" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.savewithspargo.com/#organization",
+        "name": "Spargo",
+        "url": "https://www.savewithspargo.com/",
+        "logo": "https://www.savewithspargo.com/img/icon-512.png",
+        "email": "hello@spargo.app",
+        "areaServed": { "@type": "City", "name": "Calgary", "containedInPlace": { "@type": "AdministrativeArea", "name": "Alberta, Canada" } },
+        "sameAs": [
+          "https://www.instagram.com/spargo.app/",
+          "https://www.linkedin.com/company/spargo-app/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.savewithspargo.com/#website",
+        "name": "Spargo",
+        "url": "https://www.savewithspargo.com/",
+        "inLanguage": "en-CA",
+        "publisher": { "@id": "https://www.savewithspargo.com/#organization" }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
@@ -38,15 +71,15 @@
 <nav id="mainNav">
   <div class="container">
     <div class="nav-inner">
-      <a href="#" class="nav-logo"><img src="spargo-logo-nobg.png" alt="Spargo" /></a>
+      <a href="#" class="nav-logo"><img src="/img/spargo-logo-sm.webp" width="92" height="88" alt="Spargo" /></a>
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#exclusives">Exclusives</a></li>
-        <li><a href="store.html">For stores</a></li>
+        <li><a href="/for-stores">For stores</a></li>
       </ul>
       <div class="nav-cta">
-        <button class="btn-primary" onclick="document.getElementById('waitlist-email').focus()">Join Waitlist</button>
+        <a class="btn-primary" href="#waitlist-email" data-cta="nav" onclick="document.getElementById('waitlist-email').focus()">Join Waitlist</a>
       </div>
       <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -61,7 +94,7 @@
     <a href="#features" onclick="toggleMenu()">Features</a>
     <a href="#how" onclick="toggleMenu()">How it works</a>
     <a href="#exclusives" onclick="toggleMenu()">Exclusives</a>
-    <a href="store.html" onclick="toggleMenu()">For stores</a>
+    <a href="/for-stores" onclick="toggleMenu()">For stores</a>
     <button class="btn-primary" onclick="toggleMenu(); document.getElementById('waitlist-email').focus()">Join Waitlist</button>
   </div>
 </div>
@@ -76,19 +109,22 @@
 
 
         <h1 class="hero-h1">
-          Stop paying<br>
-          <em>so much</em><br>
-          for everyday items.
+          Compare prices.<br>
+          <em>Spend less</em><br>
+          on every shop.
         </h1>
 
-        <p class="hero-sub">Spargo scans nearby stores and surfaces the cheapest price on anything — groceries, produce, hardware, gas. Build a list, we'll find you the best store.</p>
+        <p class="hero-sub">Spargo compares grocery, household, hardware and gas prices across nearby Calgary stores, then shows you the cheapest place to buy your whole list.</p>
 
-        <form class="hero-form" onsubmit="handleWaitlist(event)">
+        <form class="hero-form" data-waitlist="hero" novalidate>
+          <div class="hp-field" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off" /></label></div>
+          <label for="waitlist-email" class="sr-only">Email address</label>
           <div class="form-field">
             <input id="waitlist-email" type="email" placeholder="your@email.com" autocomplete="email" required />
-            <button type="submit" class="btn-primary">Get Early Access →</button>
+            <button type="submit" class="btn-primary">Join the Calgary Waitlist →</button>
           </div>
-          <p class="form-note">No spam. No credit card. Just early access.</p>
+          <p class="waitlist-status" role="status" aria-live="polite"></p>
+          <p class="form-note">Free to join. No credit card. By joining, you agree to receive launch updates from Spargo. Unsubscribe anytime.</p>
         </form>
 
         <div class="social-proof">
@@ -108,13 +144,13 @@
 
           <!-- Back phone -->
           <div class="phone phone-back">
-            <div class="screen"><img src="pricescore.png" alt="Price Score" /></div>
+            <div class="screen"><img src="/img/screen-pricescore-400.webp" srcset="/img/screen-pricescore-400.webp 400w, /img/screen-pricescore.webp 660w" sizes="280px" alt="Price Score" /></div>
           </div>
 
           <!-- Back2 phone: My List (matches real app) -->
           <!-- Back2 phone -->
           <div class="phone phone-back2">
-            <div class="screen"><img src="searchpage 2.png" alt="Search" /></div>
+            <div class="screen"><img src="/img/screen-searchpage-400.webp" srcset="/img/screen-searchpage-400.webp 400w, /img/screen-searchpage.webp 660w" sizes="280px" alt="Search" /></div>
           </div>
 
           <!-- Main phone: clickable carousel -->
@@ -123,22 +159,22 @@
 
               <!-- SCREEN 0: Deals -->
               <div class="carousel-screen">
-                <div class="screen"><img src="dealspage.png" alt="Deals" /></div>
+                <div class="screen"><img src="/img/screen-dealspage-400.webp" srcset="/img/screen-dealspage-400.webp 400w, /img/screen-dealspage.webp 660w" sizes="280px" alt="Deals" /></div>
               </div>
 
               <!-- SCREEN 1: Search -->
               <div class="carousel-screen">
-                <div class="screen"><img src="searchpage 2.png" alt="Search" /></div>
+                <div class="screen"><img src="/img/screen-searchpage-400.webp" srcset="/img/screen-searchpage-400.webp 400w, /img/screen-searchpage.webp 660w" sizes="280px" loading="lazy" alt="Search" /></div>
               </div>
 
               <!-- SCREEN 2: Cheapest Stores -->
               <div class="carousel-screen">
-                <div class="screen"><img src="cheapeststores.png" alt="Cheapest Stores" /></div>
+                <div class="screen"><img src="/img/screen-cheapeststores-400.webp" srcset="/img/screen-cheapeststores-400.webp 400w, /img/screen-cheapeststores.webp 660w" sizes="280px" loading="lazy" alt="Cheapest Stores" /></div>
               </div>
 
               <!-- SCREEN 3: Deal Detail -->
               <div class="carousel-screen">
-                <div class="screen"><img src="openitemdealspage.png" alt="Deal Detail" /></div>
+                <div class="screen"><img src="/img/screen-openitemdealspage-400.webp" srcset="/img/screen-openitemdealspage-400.webp 400w, /img/screen-openitemdealspage.webp 660w" sizes="280px" loading="lazy" alt="Deal Detail" /></div>
               </div>
 
             </div>
@@ -159,7 +195,7 @@
 
           <!-- Floating cards -->
           <div class="float-card float-1">
-            <div class="float-label">Weekly savings</div>
+            <div class="float-label">Example weekly savings</div>
             <div class="float-value">$92<span style="font-size:14px">.40</span></div>
             <div class="float-sub">vs avg. Calgary prices</div>
           </div>
@@ -174,20 +210,30 @@
   </div>
 </section>
 
+<!-- CATEGORY TICKER -->
+<div class="marquee" aria-label="Categories Spargo compares">
+  <div class="marquee-track">
+    <ul class="marquee-group">
+      <li>Groceries</li><li>Fresh produce</li><li>Household</li><li>Hardware</li><li>Gas</li>
+      <li>Pharmacy</li><li>Snacks &amp; drinks</li><li>Cleaning</li><li>Pet supplies</li><li>Baby care</li>
+    </ul>
+  </div>
+</div>
+
 <!-- STATS BAR -->
 <section class="stats-bar">
   <div class="container">
     <div class="stats-inner">
       <div class="stat-item">
-        <div class="stat-num">$183</div>
+        <div class="stat-num" data-count="183" data-prefix="$">$183</div>
         <div class="stat-label">In monthly savings potential for Spargo users</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">50+</div>
+        <div class="stat-num" data-count="50" data-suffix="+">50+</div>
         <div class="stat-label">Stores tracked in real time near you</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">100k+</div>
+        <div class="stat-num" data-count="100" data-suffix="k+">100k+</div>
         <div class="stat-label">Product prices monitored daily</div>
       </div>
     </div>
@@ -199,27 +245,29 @@
   <div class="container">
     <div class="features-head">
       <div class="section-label reveal">Everything you need</div>
-      <div class="section-title reveal">Built for people<br>who hate overpaying.</div>
+      <h2 class="section-title reveal">Built for people<br>who hate overpaying.</h2>
     </div>
     <div class="features-grid">
 
-      <div class="feature-card reveal">
+      <div class="feature-card spotlight reveal from-scale">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </div>
         <h3>Price search</h3>
         <p>Search any item — groceries, gas, hardware — and see prices ranked cheapest first, filtered by your distance.</p>
+        <a class="feature-link" href="/grocery-price-comparison-app">How price comparison works <span aria-hidden="true">→</span></a>
       </div>
 
-      <div class="feature-card reveal reveal-delay-1">
+      <div class="feature-card spotlight reveal from-scale reveal-delay-1">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="15" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M7 10h10M7 14h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </div>
         <h3>List optimizer</h3>
         <p>Add your whole shopping list and Spargo finds the single cheapest store — or the best split across two stops.</p>
+        <a class="feature-link" href="/features/grocery-list-optimizer">See the list optimizer <span aria-hidden="true">→</span></a>
       </div>
 
-      <div class="feature-card reveal reveal-delay-2">
+      <div class="feature-card spotlight reveal from-scale reveal-delay-2">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.2 6.5H21l-5.5 4 2 6.5L12 16l-5.5 4 2-6.5L3 9.5h6.8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
         </div>
@@ -227,15 +275,16 @@
         <p>Get early access to flash sales and partner deals before they go public. Spargo-only discounts from local stores.</p>
       </div>
 
-      <div class="feature-card reveal reveal-delay-1">
+      <div class="feature-card spotlight reveal from-scale reveal-delay-1">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h3>Price score</h3>
         <p>Scan or enter a price tag and get a score out of 100 — a real breakdown of whether you're actually getting a deal.</p>
+        <a class="feature-link" href="/features/price-tracking">Price score &amp; tracking <span aria-hidden="true">→</span></a>
       </div>
 
-      <div class="feature-card reveal reveal-delay-2">
+      <div class="feature-card spotlight reveal from-scale reveal-delay-2">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2C8 2 5 5 5 9c0 6 7 13 7 13s7-7 7-13c0-4-3-7-7-7z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg>
         </div>
@@ -243,7 +292,7 @@
         <p>Sort deals and search results by distance. No point saving $0.50 if the store is 30 km away.</p>
       </div>
 
-      <div class="feature-card reveal reveal-delay-3">
+      <div class="feature-card spotlight reveal from-scale reveal-delay-3">
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="2" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="2" y="14" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="14" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.8"/></svg>
         </div>
@@ -261,45 +310,72 @@
     <div class="how-inner">
       <div>
         <div class="section-label reveal">Simple by design</div>
-        <div class="section-title reveal">How Spargo<br>works</div>
+        <h2 class="section-title reveal">How Spargo<br>works</h2>
         <div class="steps">
-          <div class="step reveal">
+          <div class="step reveal from-left">
             <div class="step-num">01</div>
             <div class="step-content">
-              <h4>Set your location</h4>
+              <h3>Set your location</h3>
               <p>Tell Spargo your city. We'll find deals and stores within your reach, ranked by proximity.</p>
             </div>
           </div>
-          <div class="step reveal reveal-delay-1">
+          <div class="step reveal from-left reveal-delay-1">
             <div class="step-num">02</div>
             <div class="step-content">
-              <h4>Browse or search</h4>
+              <h3>Browse or search</h3>
               <p>See today's best deals near you, or search for any specific item across all nearby stores.</p>
             </div>
           </div>
-          <div class="step reveal reveal-delay-2">
+          <div class="step reveal from-left reveal-delay-2">
             <div class="step-num">03</div>
             <div class="step-content">
-              <h4>Build your list</h4>
+              <h3>Build your list</h3>
               <p>Add items and let Spargo calculate the cheapest single store — or the best split between two.</p>
             </div>
           </div>
-          <div class="step reveal reveal-delay-3">
+          <div class="step reveal from-left reveal-delay-3">
             <div class="step-num">04</div>
             <div class="step-content">
-              <h4>Save, every week</h4>
+              <h3>Save, every week</h3>
               <p>Get directions, check hours, and shop smarter. Spargo users can save up to $183 a month.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="how-visual reveal">
+      <div class="how-visual reveal from-right">
         <div class="how-phone-wrap">
           <div class="how-phone">
-            <div class="screen"><img src="pricescore.png" alt="Price Score" /></div>
+            <div class="screen"><img src="/img/screen-pricescore-400.webp" srcset="/img/screen-pricescore-400.webp 400w, /img/screen-pricescore.webp 660w" sizes="280px" alt="Price Score" /></div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- APP SCREENS -->
+<section class="screens" id="screens">
+  <div class="container">
+    <div class="screens-head">
+      <div>
+        <div class="section-label reveal">Inside the app</div>
+        <h2 class="section-title reveal">Take a look<br>around.</h2>
+      </div>
+      <p class="section-subtitle reveal">Swipe through the screens you'll use every week to find the cheapest price near you.</p>
+    </div>
+  </div>
+  <div class="carousel reveal" data-carousel data-autoplay="4000">
+    <div class="carousel-track" tabindex="0" role="region" aria-label="Spargo app screens, use arrow keys to browse">
+      <figure class="carousel-slide"><img src="/img/screen-dealspage-400.webp" srcset="/img/screen-dealspage-400.webp 400w, /img/screen-dealspage.webp 660w" sizes="280px" width="660" height="1434" loading="lazy" alt="Spargo deals screen" /><figcaption>Deals<span>Today's best prices near you</span></figcaption></figure>
+      <figure class="carousel-slide"><img src="/img/screen-searchpage-400.webp" srcset="/img/screen-searchpage-400.webp 400w, /img/screen-searchpage.webp 660w" sizes="280px" width="660" height="1434" loading="lazy" alt="Spargo search screen" /><figcaption>Search<span>Any item, ranked cheapest first</span></figcaption></figure>
+      <figure class="carousel-slide"><img src="/img/screen-cheapeststores-400.webp" srcset="/img/screen-cheapeststores-400.webp 400w, /img/screen-cheapeststores.webp 660w" sizes="280px" width="660" height="1434" loading="lazy" alt="Spargo cheapest stores screen" /><figcaption>Cheapest stores<span>The best store for your whole list</span></figcaption></figure>
+      <figure class="carousel-slide"><img src="/img/screen-pricescore-400.webp" srcset="/img/screen-pricescore-400.webp 400w, /img/screen-pricescore.webp 660w" sizes="280px" width="660" height="1434" loading="lazy" alt="Spargo price score screen" /><figcaption>Price score<span>Is it really a deal? Out of 100</span></figcaption></figure>
+      <figure class="carousel-slide"><img src="/img/screen-openitemdealspage-400.webp" srcset="/img/screen-openitemdealspage-400.webp 400w, /img/screen-openitemdealspage.webp 660w" sizes="280px" width="660" height="1434" loading="lazy" alt="Spargo deal detail screen" /><figcaption>Deal detail<span>Price, store, distance and savings</span></figcaption></figure>
+    </div>
+    <div class="carousel-controls">
+      <button type="button" class="carousel-btn" data-prev aria-label="Previous screen">←</button>
+      <div class="carousel-dots"></div>
+      <button type="button" class="carousel-btn" data-next aria-label="Next screen">→</button>
     </div>
   </div>
 </section>
@@ -310,46 +386,46 @@
     <div class="excl-inner">
       <div>
         <div class="section-label reveal">Members only</div>
-        <div class="section-title reveal">Deals you won't<br>find anywhere else.</div>
+        <h2 class="section-title reveal">Deals you won't<br>find anywhere else.</h2>
         <p class="section-subtitle reveal">Spargo partners with local stores to bring you exclusive discounts, early access to flash sales, and limited-time offers that never make it to the public flyer.</p>
 
         <div class="excl-cards">
-          <div class="excl-card reveal">
+          <div class="excl-card spotlight reveal from-left">
             <div class="excl-icon-wrap">
               <svg width="22" height="22" viewBox="0 0 26 26" fill="none"><path d="M13 3l2.5 7.5H23L17 15l2.5 8L13 19l-6.5 4 2.5-8L3 10.5h7.5z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
             </div>
             <div>
               <div class="excl-tag">EXCLUSIVE</div>
-              <h4>Early flash sale access</h4>
+              <h3>Early flash sale access</h3>
               <p>See limited deals up to 24 hours before they go live to the public.</p>
             </div>
           </div>
 
-          <div class="excl-card reveal reveal-delay-1">
+          <div class="excl-card spotlight reveal from-left reveal-delay-1">
             <div class="excl-icon-wrap">
               <svg width="22" height="22" viewBox="0 0 26 26" fill="none"><path d="M5 13c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z" stroke="currentColor" stroke-width="1.5"/><path d="M13 9v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             </div>
             <div>
               <div class="excl-tag">PARTNER DEAL</div>
-              <h4>Partner store discounts</h4>
+              <h3>Partner store discounts</h3>
               <p>Store-specific deals available only to Spargo members — no coupon clipping needed.</p>
             </div>
           </div>
 
-          <div class="excl-card reveal reveal-delay-2">
+          <div class="excl-card spotlight reveal from-left reveal-delay-2">
             <div class="excl-icon-wrap">
               <svg width="22" height="22" viewBox="0 0 26 26" fill="none"><path d="M6 12l5 5 9-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div>
               <div class="excl-tag">COMING SOON</div>
-              <h4>Loyalty rewards</h4>
+              <h3>Loyalty rewards</h3>
               <p>Earn points on every deal you use. Redeem for extra savings at partner locations.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="excl-card-panel reveal">
+      <div class="excl-card-panel reveal from-right">
         <div class="excl-panel-head">
           <div class="excl-panel-title">Exclusives</div>
           <div class="excl-panel-sub">Spargo-only deals from partner stores</div>
@@ -375,7 +451,7 @@
               Deals from your favourite local stores
             </div>
           </div>
-          <button class="btn-primary" style="width:100%;justify-content:center;margin-top:20px" onclick="document.getElementById('cta-email').focus()">
+          <button class="btn-primary" style="width:100%;justify-content:center;margin-top:20px" data-cta="exclusives" onclick="document.getElementById('cta-email').focus()">
             Join Waitlist for Early Access →
           </button>
         </div>
@@ -384,17 +460,53 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="container faq-inner">
+    <div>
+      <div class="section-label reveal">Good questions</div>
+      <h2 class="section-title reveal" id="faq-title">Before you join.</h2>
+      <p class="section-subtitle reveal">Where Spargo is today, what it will cost, and how prices are kept honest.</p>
+    </div>
+    <div class="faq-list reveal">
+      <details>
+        <summary>Is Spargo available yet?</summary>
+        <p>Not yet. Spargo is in pre-launch and opens in Calgary first, then other Canadian cities. Join the waitlist and we'll email you the day it's ready.</p>
+      </details>
+      <details>
+        <summary>Is the waitlist free? Will the app cost money?</summary>
+        <p>Joining the waitlist is free and needs no credit card. At launch, Spargo will be a monthly subscription with a free trial. We'll share pricing with the waitlist before anyone is asked to pay.</p>
+      </details>
+      <details>
+        <summary>Which stores does Spargo compare?</summary>
+        <p>We're building coverage of Calgary grocery chains, independent grocers, pharmacies, hardware stores and gas stations. We'll publish the full list of supported stores at launch. <a href="/calgary/grocery-prices">How Calgary grocery price comparison will work</a>.</p>
+      </details>
+      <details>
+        <summary>How fresh are the prices?</summary>
+        <p>Every price in Spargo shows when it was last confirmed, so you can see at a glance how current it is before you make the trip.</p>
+      </details>
+      <details>
+        <summary>I run a store. Can I list my products?</summary>
+        <p>Yes. Local stores can list products, prices and deals and see how shoppers find them. <a href="/for-stores">Learn about Spargo for stores</a>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
-<section class="cta-section">
+<section class="cta-section" id="waitlist">
   <div class="cta-content">
     <div class="cta-label">Ready?</div>
     <h2 class="cta-title">Stop overpaying.<br>Start saving today.</h2>
     <p class="cta-sub">Join the waitlist and be first to download Spargo when it launches.</p>
-    <form class="cta-form" onsubmit="handleWaitlist(event)">
+    <form class="cta-form" data-waitlist="footer-cta" novalidate>
+      <div class="hp-field" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off" /></label></div>
+      <label for="cta-email" class="sr-only">Email address</label>
       <input id="cta-email" type="email" placeholder="your@email.com" autocomplete="email" required />
       <button type="submit" class="btn-solid">Get Early Access →</button>
+      <p class="waitlist-status" role="status" aria-live="polite"></p>
     </form>
-    <p class="cta-note">No spam. No credit card. Just early access.</p>
+    <p class="cta-note">By joining, you agree to receive launch updates from Spargo. No spam. Unsubscribe anytime. <a href="/privacy" style="color:inherit">Privacy policy</a></p>
   </div>
 </section>
 
@@ -403,13 +515,22 @@
   <div class="container">
     <div class="footer-inner">
       <div>
-        <div class="footer-logo"><img src="spargo-logo-nobg.png" alt="Spargo" /></div>
+        <div class="footer-logo"><img src="/img/spargo-logo-sm.webp" width="92" height="88" alt="Spargo" /></div>
         <div class="footer-copy">Shop smarter. Save better. &copy; 2026 Spargo</div>
         <div class="footer-legal">
-          <a href="privacy.html">Privacy Policy</a>
+          <a href="/privacy">Privacy Policy</a>
+          <span>·</span>
+          <a href="/terms">Terms</a>
           <span>·</span>
           <a href="mailto:hello@spargo.app">Contact</a>
         </div>
+        <nav class="footer-links" aria-label="Explore Spargo">
+          <a href="/calgary/grocery-prices">Calgary grocery prices</a>
+          <a href="/grocery-price-comparison-app">Price comparison app</a>
+          <a href="/features/grocery-list-optimizer">List optimizer</a>
+          <a href="/features/price-tracking">Price tracking</a>
+          <a href="/for-stores">For stores</a>
+        </nav>
       </div>
       <div class="social-icons">
         <a class="social-icon" href="https://www.instagram.com/spargo.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -433,7 +554,10 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script src="js/main.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script defer src="/js/nav.js"></script>
+<script defer src="/js/waitlist.js"></script>
+<script defer src="/js/motion.js"></script>
+<script defer src="/js/main.js"></script>
 </body>
 </html>
