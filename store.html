@@ -165,6 +165,7 @@
     }
     .amount { font-family: 'Instrument Serif', serif; font-size: 60px; line-height: 1; letter-spacing: -0.02em; color: var(--text); margin: 24px 0 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
     .amount span { font-family: 'DM Sans', sans-serif; font-size: 14px; letter-spacing: 0; color: var(--text-muted); }
+    .amount small { display: block; margin-top: 10px; font-family: 'DM Sans', sans-serif; font-size: 13px; letter-spacing: 0; color: var(--text-muted); }
     .price-card ul { list-style: none; padding: 0; margin: 0 0 28px; flex: 1; }
     .price-card li { font-size: 14px; line-height: 2.1; color: var(--text-mid); }
     .price-card li::before { content: '✓'; color: var(--primary); font-weight: 700; margin-right: 12px; }
@@ -340,9 +341,9 @@
     <section class="pricing wrap" id="pricing" aria-labelledby="pricing-title">
       <div class="split-heading reveal"><div><h2 id="pricing-title">Choose a plan that works for your store.</h2></div><p>All plans include inventory management, deal listings, and analytics.</p></div>
       <div class="price-grid">
-        <article class="price-card reveal"><h3>Starter</h3><p class="sub">Great for small stores getting started.</p><div class="amount">$29 <span>/month</span></div><ul><li>Up to 500 products</li><li>Basic analytics</li><li>Deal listings</li><li>Email support</li></ul><a href="#signup" class="btn-primary btn-ghost plan-choice" data-plan="Starter">Get started</a></article>
-        <article class="price-card featured reveal"><div class="price-heading"><h3>Growth</h3><span class="chip">MOST POPULAR</span></div><p class="sub">For growing stores with more products.</p><div class="amount">$79 <span>/month</span></div><ul><li>Up to 2,500 products</li><li>Advanced analytics</li><li>Featured deal placements</li><li>Priority support</li></ul><a href="#signup" class="btn-primary plan-choice" data-plan="Growth">Get started</a></article>
-        <article class="price-card reveal"><h3>Pro</h3><p class="sub">For larger stores with maximum visibility.</p><div class="amount">$149 <span>/month</span></div><ul><li>Unlimited products</li><li>Advanced analytics &amp; reports</li><li>Priority deal placements</li><li>Dedicated support</li></ul><a href="#signup" class="btn-primary btn-ghost plan-choice" data-plan="Pro">Get started</a></article>
+        <article class="price-card reveal"><h3>Starter</h3><p class="sub">Great for small stores getting started.</p><div class="amount">$99 <span>/month</span><small>single location</small></div><ul><li>Up to 500 products</li><li>Basic analytics</li><li>Deal listings</li><li>Email support</li></ul><a href="#signup" class="btn-primary btn-ghost plan-choice" data-plan="Starter">Get started</a></article>
+        <article class="price-card featured reveal"><div class="price-heading"><h3>Growth</h3><span class="chip">MOST POPULAR</span></div><p class="sub">For growing stores with more products.</p><div class="amount">$249 <span>/month</span><small>single location</small></div><ul><li>Up to 2,500 products</li><li>Advanced analytics</li><li>Featured deal placements</li><li>Priority support</li></ul><a href="#signup" class="btn-primary plan-choice" data-plan="Growth">Get started</a></article>
+        <article class="price-card reveal"><h3>Pro</h3><p class="sub">For multi-location stores and franchises.</p><div class="amount">$499 <span>/month</span><small>first location, +$149/month per additional location</small></div><ul><li>Unlimited products</li><li>Multi-location management</li><li>Advanced analytics &amp; reports</li><li>Priority deal placements</li><li>Dedicated support</li></ul><a href="#signup" class="btn-primary btn-ghost plan-choice" data-plan="Pro">Get started</a></article>
       </div><p class="pricing-note">Concept pricing in CAD. Final subscription plans and capabilities are subject to change. Dashboard figures are illustrative.</p>
     </section>
     <section class="signup" id="signup" aria-labelledby="signup-title"><div class="wrap">
