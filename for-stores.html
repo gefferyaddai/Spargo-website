@@ -3,30 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spargo for Stores — Your store. More shoppers. Better insights.</title>
-  <meta name="description" content="List your local store on Spargo. Manage product inventory, share offers and see how shoppers discover your products." />
+  <title>List Your Store on Spargo | Reach Calgary Shoppers</title>
+  <meta name="description" content="Put your store's products, prices and deals in front of nearby Calgary shoppers. Manage inventory, promote offers and see what's working with Spargo for stores." />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://savewithspargo.com/store" />
-  <meta property="og:title"       content="Spargo for Stores — Your store. More shoppers. Better insights." />
-  <meta property="og:description" content="List your local store on Spargo. Manage product inventory, share offers and see how shoppers discover your products." />
-  <meta property="og:image"       content="https://savewithspargo.com/spargofullogo.png" />
+  <meta property="og:site_name"   content="Spargo" />
+  <meta property="og:locale"      content="en_CA" />
+  <meta property="og:url"         content="https://www.savewithspargo.com/for-stores" />
+  <meta property="og:title"       content="List Your Store on Spargo | Reach Calgary Shoppers" />
+  <meta property="og:description" content="Put your products, prices and deals in front of nearby shoppers, and see how they find you." />
+  <meta property="og:image"       content="https://www.savewithspargo.com/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <!-- Twitter / X -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="Spargo for Stores — Your store. More shoppers. Better insights." />
-  <meta name="twitter:description" content="List your local store on Spargo. Manage product inventory, share offers and see how shoppers discover your products." />
-  <meta name="twitter:image"       content="https://savewithspargo.com/spargofullogo.png" />
+  <meta name="twitter:title"       content="List Your Store on Spargo | Reach Calgary Shoppers" />
+  <meta name="twitter:description" content="Put your products, prices and deals in front of nearby shoppers, and see how they find you." />
+  <meta name="twitter:image"       content="https://www.savewithspargo.com/img/og-image.jpg" />
 
-  <link rel="canonical" href="https://savewithspargo.com/store" />
+  <link rel="canonical" href="https://www.savewithspargo.com/for-stores" />
   <meta name="theme-color" content="#6C3CE1" />
-  <link rel="icon" type="image/png" href="spargo-logo.png" />
-  <link rel="apple-touch-icon" href="spargo-logo.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48.png" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.savewithspargo.com/" },
+      { "@type": "ListItem", "position": 2, "name": "For stores", "item": "https://www.savewithspargo.com/for-stores" }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
@@ -68,6 +82,7 @@
     .hero-copy { position: relative; z-index: 1; }
     .hero-copy > * { animation: fadeSlideUp 0.7s var(--ease-out) both; }
     .hero-copy > :nth-child(2) { animation-delay: 0.06s; }
+    .hero-copy > h1 { animation-name: slideUp; } /* LCP element: no fade */
     .hero-copy > :nth-child(3) { animation-delay: 0.14s; }
     .hero-copy > :nth-child(4) { animation-delay: 0.22s; }
     .hero-copy > :nth-child(5) { animation-delay: 0.3s; }
@@ -290,12 +305,12 @@
 <nav id="mainNav">
   <div class="container">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><img src="img/spargo-logo.webp" width="185" height="176" alt="Spargo" /></a>
+      <a href="/" class="nav-logo"><img src="/img/spargo-logo-sm.webp" width="92" height="88" alt="Spargo" /></a>
       <ul class="nav-links">
-        <li><a href="index.html#features">Features</a></li>
-        <li><a href="index.html#how">How it works</a></li>
-        <li><a href="index.html#exclusives">Exclusives</a></li>
-        <li><a href="store.html" aria-current="page">For stores</a></li>
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/#how">How it works</a></li>
+        <li><a href="/#exclusives">Exclusives</a></li>
+        <li><a href="/for-stores" aria-current="page">For stores</a></li>
       </ul>
       <div class="nav-cta">
         <a class="btn-primary" href="#signup">List your store</a>
@@ -310,10 +325,10 @@
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-inner">
-    <a href="index.html#features" onclick="toggleMenu()">Features</a>
-    <a href="index.html#how" onclick="toggleMenu()">How it works</a>
-    <a href="index.html#exclusives" onclick="toggleMenu()">Exclusives</a>
-    <a href="store.html" onclick="toggleMenu()">For stores</a>
+    <a href="/#features" onclick="toggleMenu()">Features</a>
+    <a href="/#how" onclick="toggleMenu()">How it works</a>
+    <a href="/#exclusives" onclick="toggleMenu()">Exclusives</a>
+    <a href="/for-stores" onclick="toggleMenu()">For stores</a>
     <a class="btn-primary" href="#signup" onclick="toggleMenu()">List your store</a>
   </div>
 </div>
@@ -326,10 +341,10 @@
           <span class="section-label">Spargo for stores</span>
           <h1 id="hero-title">Your store.<br>More shoppers.<br><em>Better insights.</em></h1>
           <p>Put your products, prices, and exclusive deals in front of nearby shoppers.</p>
-          <a class="btn-primary" href="#signup">List your store <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn-primary" href="#signup" data-cta="stores-hero">List your store <span class="arrow" aria-hidden="true">→</span></a>
           <ul class="benefits"><li><span class="tick">✓</span>Reach more local shoppers</li><li><span class="tick">✓</span>Showcase your best deals</li><li><span class="tick">✓</span>Get powerful analytics</li></ul>
         </div>
-        <img class="hero-mockup" src="img/store-dashboard-laptop.webp" width="1536" height="1024" alt="Illustrative Spargo merchant dashboard on a laptop, showing search appearances, deal impressions, product views and top-performing products." />
+        <img class="hero-mockup" fetchpriority="high" src="/img/store-dashboard-laptop.webp" width="1536" height="1024" alt="Illustrative Spargo merchant dashboard on a laptop, showing search appearances, deal impressions, product views and top-performing products." />
       </div>
     </section>
     <div class="marquee" aria-label="Store types on Spargo">
@@ -359,11 +374,11 @@
       <div class="wrap screens-head reveal"><div><span class="section-label">What shoppers see</span><h2 id="screens-title">Your deals, right where they look.</h2></div><p>Your products and offers show up across the Spargo app, from today's deals to search results and store rankings.</p></div>
       <div class="carousel reveal" data-carousel data-autoplay="4000">
         <div class="carousel-track" tabindex="0" role="region" aria-label="Spargo app screens, use arrow keys to browse">
-          <figure class="carousel-slide"><img src="img/screen-dealspage.webp" width="660" height="1434" loading="lazy" alt="Spargo deals screen" /><figcaption>Deals page<span>Your offers next to nearby shoppers</span></figcaption></figure>
-          <figure class="carousel-slide"><img src="img/screen-searchpage.webp" width="660" height="1434" loading="lazy" alt="Spargo search screen" /><figcaption>Search results<span>Your products when shoppers search</span></figcaption></figure>
-          <figure class="carousel-slide"><img src="img/screen-cheapeststores.webp" width="660" height="1434" loading="lazy" alt="Spargo cheapest stores screen" /><figcaption>Store rankings<span>Win the trip for a whole list</span></figcaption></figure>
-          <figure class="carousel-slide"><img src="img/screen-openitemdealspage.webp" width="660" height="1434" loading="lazy" alt="Spargo deal detail screen" /><figcaption>Deal detail<span>Your store, price and distance</span></figcaption></figure>
-          <figure class="carousel-slide"><img src="img/screen-pricescore.webp" width="660" height="1434" loading="lazy" alt="Spargo price score screen" /><figcaption>Price score<span>Fair prices get recognized</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="/img/screen-dealspage-400.webp" srcset="/img/screen-dealspage-400.webp 400w, /img/screen-dealspage.webp 660w" sizes="280px" width="660" height="1434" loading="lazy" alt="Spargo deals screen" /><figcaption>Deals page<span>Your offers next to nearby shoppers</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="/img/screen-searchpage-400.webp" srcset="/img/screen-searchpage-400.webp 400w, /img/screen-searchpage.webp 660w" sizes="280px" width="660" height="1434" loading="lazy" alt="Spargo search screen" /><figcaption>Search results<span>Your products when shoppers search</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="/img/screen-cheapeststores-400.webp" srcset="/img/screen-cheapeststores-400.webp 400w, /img/screen-cheapeststores.webp 660w" sizes="280px" width="660" height="1434" loading="lazy" alt="Spargo cheapest stores screen" /><figcaption>Store rankings<span>Win the trip for a whole list</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="/img/screen-openitemdealspage-400.webp" srcset="/img/screen-openitemdealspage-400.webp 400w, /img/screen-openitemdealspage.webp 660w" sizes="280px" width="660" height="1434" loading="lazy" alt="Spargo deal detail screen" /><figcaption>Deal detail<span>Your store, price and distance</span></figcaption></figure>
+          <figure class="carousel-slide"><img src="/img/screen-pricescore-400.webp" srcset="/img/screen-pricescore-400.webp 400w, /img/screen-pricescore.webp 660w" sizes="280px" width="660" height="1434" loading="lazy" alt="Spargo price score screen" /><figcaption>Price score<span>Fair prices get recognized</span></figcaption></figure>
         </div>
         <div class="carousel-controls">
           <button type="button" class="carousel-btn" data-prev aria-label="Previous screen">←</button>
@@ -373,7 +388,7 @@
       </div>
     </section>
     <section class="analytics" id="analytics" aria-labelledby="analytics-title"><div class="wrap analytics-grid">
-      <img class="analytics-mockup reveal from-left" loading="lazy" src="img/store-analytics-dashboard.webp" width="917" height="695" alt="Illustrative merchant analytics dashboard with appearance, impression, click and product metrics." />
+      <img class="analytics-mockup reveal from-left" loading="lazy" src="/img/store-analytics-dashboard.webp" width="917" height="695" alt="Illustrative merchant analytics dashboard with appearance, impression, click and product metrics." />
       <div class="analytics-copy reveal from-right"><h2 id="analytics-title">See what’s working for your store.</h2><p>Get real insights into how shoppers find your products, from search appearances and deal impressions to product views and store profile visits.</p>
         <ul class="analytics-list"><li><svg><use href="#search-icon"/></svg>Track search appearances</li><li><svg><use href="#tag-icon"/></svg>Monitor deal performance</li><li><svg><use href="#chart-icon"/></svg>See top performing products</li><li><svg><use href="#users-icon"/></svg>Understand shopper interest</li><li><svg><use href="#pin-outline"/></svg>Grow your local presence</li></ul>
       </div>
@@ -388,7 +403,7 @@
     </section>
     <section class="signup" id="signup" aria-labelledby="signup-title"><div class="wrap">
       <div class="signup-copy reveal from-left"><span class="section-label">Get started today</span><h2 id="signup-title">Ready?</h2><h3>Get your store discovered.</h3><p>Join Spargo and start reaching local shoppers in just a few minutes.</p></div>
-      <img class="signup-art" loading="lazy" src="img/store-local-storefront.webp" width="555" height="621" alt="Local store storefront with fresh produce display" />
+      <img class="signup-art" loading="lazy" src="/img/store-local-storefront.webp" width="555" height="621" alt="Local store storefront with fresh produce display" />
       <form id="merchant-form" class="merchant-form reveal from-right" novalidate>
         <div class="form-row"><label for="store-name">Store name</label><input id="store-name" name="storeName" placeholder="e.g. Riverside Market" autocomplete="organization" required/></div>
         <div class="form-row"><label for="business-email">Business email</label><input id="business-email" name="businessEmail" type="email" placeholder="you@yourstore.com" autocomplete="email" required/></div>
@@ -405,15 +420,22 @@
   <div class="container">
     <div class="footer-inner">
       <div>
-        <div class="footer-logo"><img src="img/spargo-logo.webp" width="185" height="176" alt="Spargo" /></div>
+        <div class="footer-logo"><img src="/img/spargo-logo-sm.webp" width="92" height="88" alt="Spargo" /></div>
         <div class="footer-copy">Shop smarter. Save better. &copy; 2026 Spargo</div>
         <div class="footer-legal">
-          <a href="privacy.html">Privacy Policy</a>
+          <a href="/privacy">Privacy Policy</a>
           <span>·</span>
-          <a href="terms.html">Terms</a>
+          <a href="/terms">Terms</a>
           <span>·</span>
           <a href="mailto:hello@spargo.app">Contact</a>
         </div>
+        <nav class="footer-links" aria-label="Explore Spargo">
+          <a href="/calgary/grocery-prices">Calgary grocery prices</a>
+          <a href="/grocery-price-comparison-app">Price comparison app</a>
+          <a href="/features/grocery-list-optimizer">List optimizer</a>
+          <a href="/features/price-tracking">Price tracking</a>
+          <a href="/for-stores">For stores</a>
+        </nav>
       </div>
       <div class="social-icons">
         <a class="social-icon" href="https://www.instagram.com/spargo.app/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -437,8 +459,8 @@
   </div>
 </footer>
 
-<script src="js/nav.js"></script>
-<script src="js/motion.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/motion.js"></script>
 <script>
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
@@ -446,14 +468,15 @@
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 </script>
   <script>
-    document.querySelectorAll('.plan-choice').forEach(link=>link.addEventListener('click',()=>{document.getElementById('selected-plan').value=link.dataset.plan;}));
+    document.querySelectorAll('.plan-choice').forEach(link=>link.addEventListener('click',()=>{document.getElementById('selected-plan').value=link.dataset.plan;track('plan_choice',{plan:link.dataset.plan});}));
     const form=document.getElementById('merchant-form');
     form.addEventListener('submit',(event)=>{
       event.preventDefault();
       const status=document.getElementById('form-status');
       if(!form.reportValidity())return;
       status.classList.add('show');
-      status.textContent='This is a design preview. Your information was not submitted. Connect this form to your registration API and Stripe checkout to accept store signups.';
+      status.textContent='Thanks! Online store signup opens soon. To get set up now, email hello@spargo.app with your store name and address, and we\'ll be in touch.';
+      track('merchant_form_submit',{plan:document.getElementById('selected-plan').value});
     });
   </script>
 </body>
