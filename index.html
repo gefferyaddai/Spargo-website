@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compare Grocery &amp; Store Prices in Calgary | Spargo</title>
+  <meta name="description" content="Compare grocery, gas and everyday prices at nearby Calgary stores. Search real prices right on this page, find the cheapest store for your whole list and get early access to Spargo." />
+  <!-- Preview of the redesigned homepage. Not indexed until it replaces index.html, so search engines don't see two copies of the homepage. -->
+  <meta name="robots" content="noindex, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Spargo" />
+  <meta property="og:locale"      content="en_CA" />
+  <meta property="og:url"         content="https://www.savewithspargo.com/" />
+  <meta property="og:title"       content="Compare Grocery &amp; Store Prices in Calgary | Spargo" />
+  <meta property="og:description" content="Compare grocery, gas and everyday prices at nearby Calgary stores and find the cheapest store for your whole list." />
+  <meta property="og:image"       content="https://www.savewithspargo.com/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"   content="Spargo logo: Shop smarter" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Compare Grocery &amp; Store Prices in Calgary | Spargo" />
+  <meta name="twitter:description" content="Compare grocery, gas and everyday prices at nearby Calgary stores and find the cheapest store for your whole list." />
+  <meta name="twitter:image"       content="https://www.savewithspargo.com/img/og-image.jpg" />
+
+  <link rel="canonical" href="https://www.savewithspargo.com/" />
+  <meta name="theme-color" content="#F5F3EE" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48.png" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.savewithspargo.com/#organization",
+        "name": "Spargo",
+        "url": "https://www.savewithspargo.com/",
+        "logo": "https://www.savewithspargo.com/img/icon-512.png",
+        "email": "hello@spargo.app",
+        "areaServed": { "@type": "City", "name": "Calgary", "containedInPlace": { "@type": "AdministrativeArea", "name": "Alberta, Canada" } },
+        "sameAs": [
+          "https://www.instagram.com/spargo.app/",
+          "https://www.linkedin.com/company/spargo-app/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.savewithspargo.com/#website",
+        "name": "Spargo",
+        "url": "https://www.savewithspargo.com/",
+        "inLanguage": "en-CA",
+        "publisher": { "@id": "https://www.savewithspargo.com/#organization" }
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="/img/spargo-fox-phone-480.webp" imagesrcset="/img/spargo-fox-phone-480.webp 480w, /img/spargo-fox-phone-640.webp 640w, /img/spargo-fox-phone-960.webp 960w" imagesizes="(max-width: 900px) 260px, 440px" fetchpriority="high" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- NAV -->
+<nav id="mainNav" aria-label="Main">
+  <div class="wrap nav-inner">
+    <a href="#top" class="nav-logo" aria-label="Spargo, back to top">
+      <img src="/img/spargo-logo-sm.webp" width="46" height="44" alt="" />
+      <span>spargo</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#how" data-nav="how">How it works</a></li>
+      <li><a href="#features" data-nav="features">Features</a></li>
+      <li><a href="#everywhere" data-nav="everywhere">Categories</a></li>
+      <li><a href="#try" data-nav="try">Try Spargo</a></li>
+      <li><a href="for-stores.html">For stores</a></li>
+    </ul>
+    <a class="btn btn-orange nav-cta" href="#join" data-cta="nav" data-focus-email>Get early access</a>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU (toggleMenu() in js/nav.js) -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <a href="#how">How it works</a>
+    <a href="#features">Features</a>
+    <a href="#everywhere">Categories</a>
+    <a href="#try">Try Spargo</a>
+    <a href="/for-stores">For stores</a>
+    <a class="btn btn-orange" href="#join" data-cta="mobile-menu" data-focus-email>Get early access</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- 01 · HERO -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="chapter" data-hero-in><span>01</span>Calgary price comparison · early access</p>
+      <h1 class="hero-title" id="hero-title">
+        <span class="line" data-hero-in>Stop overpaying.</span>
+        <span class="line" data-hero-in><em>Start Spargo.</em></span>
+      </h1>
+      <p class="hero-sub" data-hero-in>Compare grocery, gas, electronics and everyday prices across the stores Spargo supports in Calgary, discover better deals, and make every shopping trip smarter.</p>
+      <div class="hero-ctas" data-hero-in>
+        <a class="btn btn-orange btn-lg" href="#try" data-cta="hero-try">Try Spargo live</a>
+        <a class="btn btn-ghost btn-lg" href="#join" data-cta="hero-join" data-focus-email>Get early access</a>
+      </div>
+      <p class="hero-cats" data-hero-in>Groceries · Gas · Electronics · Household · Hardware · Pharmacy</p>
+    </div>
+
+    <!-- The mascot in front of the Spargo bag. The bag is a CSS 3D object; the fox is the official 2D artwork -->
+    <div class="hero-stage">
+      <div class="stage-scroll" aria-hidden="true">
+        <div class="stage-float">
+          <div class="rig">
+            <div class="bag">
+              <div class="bag-face bag-inner"></div>
+              <img class="bag-item bag-item-bread" src="/img/story/bread.svg" width="200" height="200" alt="" />
+              <img class="bag-item bag-item-milk" src="/img/story/milk.svg" width="200" height="200" alt="" />
+              <div class="bag-face bag-back"></div>
+              <div class="bag-face bag-left"></div>
+              <div class="bag-face bag-right"></div>
+              <div class="bag-face bag-front">
+                <img src="/img/spargo-mark-white.webp" width="414" height="520" alt="" />
+                <span class="bag-word">spargo</span>
+              </div>
+              <div class="bag-handle bag-handle-front"></div>
+              <div class="bag-handle bag-handle-back"></div>
+              <svg class="bag-stamp" viewBox="0 0 120 120">
+                <defs><path id="stampPath" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs>
+                <circle cx="60" cy="60" r="58" fill="#F97316"/>
+                <text font-family="Syne, sans-serif" font-size="13" font-weight="700" letter-spacing="3.6" fill="#1A1206"><textPath href="#stampPath">SHOP SMARTER · SHOP SMARTER ·</textPath></text>
+                <circle cx="60" cy="60" r="16" fill="#1A1206"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fox-wrap">
+        <div class="fox-shadow" aria-hidden="true"></div>
+        <img class="fox" src="/img/spargo-fox-phone-480.webp" srcset="/img/spargo-fox-phone-480.webp 480w, /img/spargo-fox-phone-640.webp 640w, /img/spargo-fox-phone-960.webp 960w" sizes="(max-width: 900px) 260px, 440px" width="480" height="582" fetchpriority="high" alt="Spargo's blue fox mascot in a Spargo hoodie, pointing to a phone that compares prices" />
+      </div>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#how" aria-label="Scroll to how it works"><span></span>Scroll</a>
+</section>
+
+<!-- 02 · THE SHOPPING PROBLEM. Pinned and scrubbed on wide screens (js/home.js); the Single store / Split by store switch also lives there, and without it both views show -->
+<section class="problem" id="how" aria-labelledby="problem-title">
+  <div class="problem-sticky">
+    <div class="wrap problem-grid">
+      <div class="problem-copy">
+        <p class="chapter"><span>02</span>The problem</p>
+        <h2 class="display" id="problem-title">Same shopping list. <em>Different prices.</em></h2>
+        <p class="lede">Different stores can charge different prices for similar products. Finding the better option shouldn't require checking every store yourself.</p>
+        <p class="problem-turn"><strong>Spargo checks for you,</strong> then lines everything up: cheapest first, for one item or your whole list.</p>
+      </div>
+
+      <img class="problem-fox" src="/img/spargo-fox-presenting-400.webp" srcset="/img/spargo-fox-presenting-400.webp 400w, /img/spargo-fox-presenting-640.webp 640w" sizes="(max-width: 900px) 200px, 300px" width="400" height="515" loading="lazy" alt="Spargo's fox mascot presenting the price comparison" />
+
+      <div class="shelf">
+        <p class="shelf-scribble" aria-hidden="true">
+          <span>Same items.<br>Different stores.<br>Big differences.</span>
+          <svg viewBox="0 0 60 50"><path d="M8 4c-2 14 2 26 12 30 7 3 12-3 8-8-4-4-11 0-9 7 2 8 14 12 30 10m0 0-8-6m8 6-7 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </p>
+        <div class="shelf-items">
+            <figure class="item">
+              <span class="item-cat">Milk</span>
+              <img src="/img/story/milk.svg" width="200" height="200" alt="Illustration of a 4 litre jug of 2% milk" />
+              <figcaption>2% milk, 4 L</figcaption>
+              <ul class="tags" aria-label="Prices for 2% milk, 4 L">
+                <li class="tag"><span class="store-mark store-a" aria-hidden="true">A</span><span class="tag-store">Store A</span><b>$6.49</b></li>
+                <li class="tag is-low"><span class="store-mark store-b" aria-hidden="true">B</span><span class="tag-store">Store B</span><b>$5.79</b><i class="tag-badge">Lowest</i></li>
+                <li class="tag"><span class="store-mark store-c" aria-hidden="true">C</span><span class="tag-store">Store C</span><b>$6.99</b></li>
+              </ul>
+            </figure>
+            <figure class="item">
+              <span class="item-cat">Eggs</span>
+              <img src="/img/story/eggs.svg" width="200" height="200" alt="Illustration of a carton of 12 large eggs" />
+              <figcaption>Large eggs, 12</figcaption>
+              <ul class="tags" aria-label="Prices for large eggs, 12">
+                <li class="tag"><span class="store-mark store-a" aria-hidden="true">A</span><span class="tag-store">Store A</span><b>$4.99</b></li>
+                <li class="tag is-low"><span class="store-mark store-b" aria-hidden="true">B</span><span class="tag-store">Store B</span><b>$4.29</b><i class="tag-badge">Lowest</i></li>
+                <li class="tag"><span class="store-mark store-c" aria-hidden="true">C</span><span class="tag-store">Store C</span><b>$5.49</b></li>
+              </ul>
+            </figure>
+            <figure class="item">
+              <span class="item-cat">Bread</span>
+              <img src="/img/story/bread.svg" width="200" height="200" alt="Illustration of a 675 gram loaf of white bread" />
+              <figcaption>White bread, 675 g</figcaption>
+              <ul class="tags" aria-label="Prices for white bread, 675 g">
+                <li class="tag"><span class="store-mark store-a" aria-hidden="true">A</span><span class="tag-store">Store A</span><b>$3.79</b></li>
+                <li class="tag"><span class="store-mark store-b" aria-hidden="true">B</span><span class="tag-store">Store B</span><b>$3.49</b></li>
+                <li class="tag is-low"><span class="store-mark store-c" aria-hidden="true">C</span><span class="tag-store">Store C</span><b>$2.99</b><i class="tag-badge">Lowest</i></li>
+              </ul>
+            </figure>
+        </div>
+
+        <div class="tally">
+          <div class="tally-head">
+            <span class="tally-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 4h2.2l2.1 10.2a1.6 1.6 0 0 0 1.6 1.3h8.3a1.6 1.6 0 0 0 1.6-1.2L20.5 8H6.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19.5" r="1.5" fill="currentColor"/><circle cx="17" cy="19.5" r="1.5" fill="currentColor"/></svg></span>
+            <div>
+              <h3 class="tally-title" id="tally-title">Your list, lined up by Spargo</h3>
+              <p class="tally-sub">Cheapest single store option, or a split across stores.</p>
+            </div>
+            <div class="tally-switch" role="tablist" aria-label="How to shop your list" hidden>
+              <button type="button" role="tab" id="tally-tab-single" aria-controls="tally-single" aria-selected="true">Single store</button>
+              <button type="button" role="tab" id="tally-tab-split" aria-controls="tally-split" aria-selected="false" tabindex="-1">Split by store</button>
+            </div>
+          </div>
+
+          <div class="tally-views">
+            <div class="tally-view" id="tally-single">
+              <table>
+                <caption class="sr-only">Whole list total at each store</caption>
+                <thead><tr><th scope="col">Store</th><th scope="col">Whole list total</th></tr></thead>
+                <tbody>
+                  <tr class="is-best"><th scope="row"><span class="store-mark store-b" aria-hidden="true">B</span>Store B <span class="tally-flag">Cheapest</span></th><td>$13.57</td></tr>
+                  <tr><th scope="row"><span class="store-mark store-a" aria-hidden="true">A</span>Store A</th><td>$15.27</td></tr>
+                  <tr><th scope="row"><span class="store-mark store-c" aria-hidden="true">C</span>Store C</th><td>$15.47</td></tr>
+                </tbody>
+              </table>
+              <div class="tally-save">
+                <svg class="tally-coins" viewBox="0 0 64 52" aria-hidden="true"><g fill="#FDBA4D" stroke="#E08A12" stroke-width="1.5"><ellipse cx="40" cy="42" rx="18" ry="6"/><path d="M22 42v-6c0 3.3 8 6 18 6s18-2.7 18-6v6"/><ellipse cx="40" cy="36" rx="18" ry="6"/><path d="M22 36v-6c0 3.3 8 6 18 6s18-2.7 18-6v6"/><ellipse cx="40" cy="30" rx="18" ry="6"/><path d="M22 30v-6c0 3.3 8 6 18 6s18-2.7 18-6v6"/><ellipse cx="40" cy="24" rx="18" ry="6"/><ellipse cx="16" cy="40" rx="12" ry="9" transform="rotate(-20 16 40)"/></g></svg>
+                <p>Save up to <strong>$1.90</strong> on this shopping list at Store B.</p>
+              </div>
+            </div>
+
+            <div class="tally-view" id="tally-split">
+              <table>
+                <caption class="sr-only">The cheapest store for each item</caption>
+                <thead><tr><th scope="col">Item</th><th scope="col">Cheapest at</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row"><span class="store-mark store-b" aria-hidden="true">B</span>2% milk, 4 L <span class="tally-at">Store B</span></th><td>$5.79</td></tr>
+                  <tr><th scope="row"><span class="store-mark store-b" aria-hidden="true">B</span>Large eggs, 12 <span class="tally-at">Store B</span></th><td>$4.29</td></tr>
+                  <tr><th scope="row"><span class="store-mark store-c" aria-hidden="true">C</span>White bread, 675 g <span class="tally-at">Store C</span></th><td>$2.99</td></tr>
+                </tbody>
+              </table>
+              <div class="tally-save">
+                <svg class="tally-coins" viewBox="0 0 64 52" aria-hidden="true"><g fill="#FDBA4D" stroke="#E08A12" stroke-width="1.5"><ellipse cx="40" cy="42" rx="18" ry="6"/><path d="M22 42v-6c0 3.3 8 6 18 6s18-2.7 18-6v6"/><ellipse cx="40" cy="36" rx="18" ry="6"/><path d="M22 36v-6c0 3.3 8 6 18 6s18-2.7 18-6v6"/><ellipse cx="40" cy="30" rx="18" ry="6"/><path d="M22 30v-6c0 3.3 8 6 18 6s18-2.7 18-6v6"/><ellipse cx="40" cy="24" rx="18" ry="6"/><ellipse cx="16" cy="40" rx="12" ry="9" transform="rotate(-20 16 40)"/></g></svg>
+                <p>Save up to <strong>$2.40</strong> on this shopping list with two stops.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tally-split">
+            <span class="tally-bulb" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p><strong>Or split it across stores</strong> For this list: milk and eggs at Store B, bread at Store C.</p>
+            <span class="tally-total"><b>$13.07</b> total <small>Lowest overall cost</small></span>
+            <button type="button" class="tally-go" data-show-split aria-label="Show the split across stores" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </div>
+        <p class="shelf-note">Example prices at example stores, to show the idea, not live Calgary data. Real prices are in the live search below.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · THE SPARGO SOLUTION -->
+<section class="solution" id="features" aria-labelledby="solution-title">
+  <div class="solution-sticky">
+    <div class="wrap solution-grid">
+      <div class="solution-copy">
+        <p class="chapter"><span>03</span>The app</p>
+        <h2 class="display" id="solution-title">One app.<br><em>Smarter shopping.</em></h2>
+        <p class="lede">Search products, compare stores, and discover more efficient ways to shop.</p>
+
+        <ol class="scenes">
+          <li class="scene is-active">
+            <span class="scene-num" aria-hidden="true">A</span>
+            <div>
+              <h3>Search any product</h3>
+              <p>Type what you need and see prices at nearby stores, cheapest first, with how fresh each price is.</p>
+            </div>
+            <img class="scene-shot" src="/img/screen-searchpage-400.webp" width="400" height="869" loading="lazy" alt="Spargo search screen: results ranked cheapest first, with the best price highlighted" />
+          </li>
+          <li class="scene">
+            <span class="scene-num" aria-hidden="true">B</span>
+            <div>
+              <h3>Compare the store, not just the sticker</h3>
+              <p>Open a deal to see the price, the regular price, the store, its distance and how long the deal lasts.</p>
+            </div>
+            <img class="scene-shot" src="/img/screen-pricescore-400.webp" width="400" height="869" loading="lazy" alt="Spargo deal detail screen: price, original price, savings, store and deal end date" />
+          </li>
+          <li class="scene">
+            <span class="scene-num" aria-hidden="true">C</span>
+            <div>
+              <h3>Price your whole list</h3>
+              <p>Add items to your list and Spargo finds the single cheapest store, or the best split across two stops.</p>
+            </div>
+            <img class="scene-shot" src="/img/screen-cheapeststores-400.webp" width="400" height="869" loading="lazy" alt="Spargo grocery list screen with a Find cheapest stores button" />
+          </li>
+          <li class="scene">
+            <span class="scene-num" aria-hidden="true">D</span>
+            <div>
+              <h3>Know a deal when you see one</h3>
+              <p>Scan or enter a price tag and Price Score rates it out of 100 against prices at nearby stores.</p>
+            </div>
+            <img class="scene-shot" src="/img/screen-openitemdealspage-400.webp" width="400" height="869" loading="lazy" alt="Spargo Price Score screen showing a score of 88 out of 100" />
+          </li>
+        </ol>
+        <p class="feature-links">
+          <a href="/grocery-price-comparison-app">How price comparison works</a>
+          <a href="/features/grocery-list-optimizer">The list optimizer</a>
+          <a href="/features/price-tracking">Price Score and tracking</a>
+        </p>
+      </div>
+
+      <!-- Decorative: the same screens as the list on the left, shown on one phone as you scroll -->
+      <div class="phone-stage" aria-hidden="true">
+        <div class="phone3d">
+          <div class="phone-depth"></div>
+          <div class="phone-body">
+            <div class="phone-screen">
+              <img class="pscreen is-on" src="/img/screen-searchpage.webp" width="660" height="1434" alt="" />
+              <img class="pscreen" src="/img/screen-pricescore.webp" width="660" height="1434" loading="lazy" alt="" />
+              <img class="pscreen" src="/img/screen-cheapeststores.webp" width="660" height="1434" loading="lazy" alt="" />
+              <img class="pscreen" src="/img/screen-openitemdealspage.webp" width="660" height="1434" loading="lazy" alt="" />
+              <span class="phone-island"></span>
+              <span class="phone-glare"></span>
+            </div>
+          </div>
+        </div>
+        <div class="phone-rail"><span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 · BEYOND GROCERIES: wide artwork, then a category showcase (tabs built by js/home.js; without it the panels simply stack) -->
+<section class="everywhere" id="everywhere" aria-labelledby="everywhere-title">
+  <div class="wrap everywhere-head">
+    <p class="chapter"><span>04</span>Shop smarter, everywhere</p>
+    <h2 class="display" id="everywhere-title">Groceries are just <em>the beginning.</em></h2>
+    <p class="lede">From your weekly grocery run and filling up your tank to new tech, clothes, tools and furniture, Spargo helps you discover better prices across the stores and categories it supports.</p>
+  </div>
+
+  <figure class="market-art">
+    <img class="art" src="/img/art/marketplace-960.webp" srcset="/img/art/marketplace-960.webp 960w, /img/art/marketplace-1672.webp 1672w" sizes="(max-width: 1400px) 100vw, 1400px" width="1672" height="941" loading="lazy" alt="Illustration of Spargo's fox mascot leaning on a shopping cart full of groceries, surrounded by a gas pump, headphones, earbuds, a game controller and a parcel" />
+  </figure>
+
+  <div class="wrap cats" data-cats>
+    <div class="cats-head">
+      <h3 class="cats-title">One app. <em>More ways to save.</em></h3>
+      <div class="cats-tabs" role="tablist" aria-label="Shopping categories" hidden>
+        <span class="cats-indicator" aria-hidden="true"></span>
+        <button type="button" role="tab" id="cat-tab-groceries" aria-controls="cat-groceries" aria-selected="true" data-cat="groceries">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2.2l2.1 10.2a1.6 1.6 0 0 0 1.6 1.3h8.3a1.6 1.6 0 0 0 1.6-1.2L20.5 8H6.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19.5" r="1.5" fill="currentColor"/><circle cx="17" cy="19.5" r="1.5" fill="currentColor"/></svg>
+          Everyday items
+        </button>
+        <button type="button" role="tab" id="cat-tab-gas" aria-controls="cat-gas" aria-selected="false" tabindex="-1" data-cat="gas">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M3.5 21h13M7.5 7.5h5M15 9h1.5a1.5 1.5 0 0 1 1.5 1.5V16a1.5 1.5 0 0 0 3 0V8.5L18 5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Gas prices
+        </button>
+        <button type="button" role="tab" id="cat-tab-electronics" aria-controls="cat-electronics" aria-selected="false" tabindex="-1" data-cat="electronics">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4.5" width="16" height="11" rx="1.6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 19.5h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Electronics
+        </button>
+        <button type="button" role="tab" id="cat-tab-clothes" aria-controls="cat-clothes" aria-selected="false" tabindex="-1" data-cat="clothes">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 3.5 4 5.8 2.5 10l3 1.3V20.5h13v-9.2l3-1.3L20 5.8l-4.5-2.3a3.5 3.5 0 0 1-7 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          Clothes
+        </button>
+        <button type="button" role="tab" id="cat-tab-hardware" aria-controls="cat-hardware" aria-selected="false" tabindex="-1" data-cat="hardware">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5 4 17a2.1 2.1 0 0 0 3 3L17.5 9.5M13 4.5l2.2-1.4a3 3 0 0 1 3.4.2l2.8 2.3-3.9 3.9-1.6-1.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Hardware
+        </button>
+        <button type="button" role="tab" id="cat-tab-furniture" aria-controls="cat-furniture" aria-selected="false" tabindex="-1" data-cat="furniture">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3M3.5 11.5a1.5 1.5 0 0 1 3 0V14h11v-2.5a1.5 1.5 0 0 1 3 0V17a1 1 0 0 1-1 1h-15a1 1 0 0 1-1-1ZM6 18v2M18 18v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Furniture
+        </button>
+      </div>
+    </div>
+
+    <div class="cats-panels">
+      <article class="cat-panel" id="cat-groceries" aria-labelledby="cat-h-groceries">
+        <figure class="cat-art">
+          <img class="art" src="/img/art/groceries-600.webp" srcset="/img/art/groceries-600.webp 600w, /img/art/groceries-1122.webp 1122w" sizes="(max-width: 900px) 92vw, 520px" width="600" height="750" loading="lazy" alt="Illustration of milk, eggs and bread on display stands, each with three store price tags and the lowest one highlighted" />
+          <figcaption class="art-note">Illustration. Stores and prices shown are examples, not current offers.</figcaption>
+        </figure>
+        <div class="cat-copy">
+          <p class="cat-kicker">Groceries</p>
+          <h3 class="cat-title" id="cat-h-groceries">Your grocery list. <em>Smarter prices.</em></h3>
+          <p class="cat-desc">Compare grocery prices across supported stores, check unit prices, and discover better options for your shopping list.</p>
+          <ul class="cat-points">
+            <li>Grocery price comparisons</li>
+            <li>Unit price comparison</li>
+            <li>Shopping-list optimization</li>
+            <li>Deals and discounts</li>
+          </ul>
+          <div class="cat-actions">
+            <a class="btn btn-orange btn-lg" href="#try" data-cat-cta="groceries" data-demo-run="milk">Try grocery search</a>
+            <a class="arrow-link" href="/calgary/grocery-prices">Calgary grocery prices <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="cat-aside">Runs a real search for milk at Calgary stores, just below.</p>
+        </div>
+      </article>
+
+      <article class="cat-panel" id="cat-gas" aria-labelledby="cat-h-gas">
+        <figure class="cat-art">
+          <img class="art" src="/img/art/gas-600.webp" srcset="/img/art/gas-600.webp 600w, /img/art/gas-1122.webp 1122w" sizes="(max-width: 900px) 92vw, 520px" width="600" height="750" loading="lazy" alt="Illustration of a phone listing nearby gas stations by price above a small map with fuel pins, beside a gas pump" />
+          <figcaption class="art-note">Illustration. Stations, prices and distances shown are examples, not current prices.</figcaption>
+        </figure>
+        <div class="cat-copy">
+          <p class="cat-kicker">Gas prices</p>
+          <h3 class="cat-title" id="cat-h-gas">Find better prices <em>at the pump.</em></h3>
+          <p class="cat-desc">Compare available gas prices at nearby stations and make more informed decisions before filling up.</p>
+          <ul class="cat-points">
+            <li>Nearby gas stations</li>
+            <li>Price comparisons between stations</li>
+            <li>Location-based results</li>
+            <li>Available fuel price information</li>
+          </ul>
+          <div class="cat-actions">
+            <a class="btn btn-orange btn-lg" href="#join" data-cat-cta="gas" data-focus-email>Get early access</a>
+          </div>
+          <p class="cat-aside">Gas prices aren't part of this web demo. They're coming with the Spargo app.</p>
+        </div>
+      </article>
+
+      <article class="cat-panel" id="cat-electronics" aria-labelledby="cat-h-electronics">
+        <figure class="cat-art">
+          <img class="art" src="/img/art/electronics-600.webp" srcset="/img/art/electronics-600.webp 600w, /img/art/electronics-1122.webp 1122w" sizes="(max-width: 900px) 92vw, 520px" width="600" height="750" loading="lazy" alt="Illustration of a phone, laptop, headphones, game controller and smartwatch, each with a card comparing three retailer prices" />
+          <figcaption class="art-note">Illustration. Retailers and prices shown are examples, not current offers.</figcaption>
+        </figure>
+        <div class="cat-copy">
+          <p class="cat-kicker">Electronics</p>
+          <h3 class="cat-title" id="cat-h-electronics">Compare tech <em>before you buy.</em></h3>
+          <p class="cat-desc">From headphones and smartphones to laptops and gaming accessories, discover how prices compare across supported retailers.</p>
+          <ul class="cat-points">
+            <li>Electronics price comparisons</li>
+            <li>Offers from multiple retailers</li>
+            <li>Product search</li>
+            <li>Better purchasing decisions</li>
+          </ul>
+          <div class="cat-actions">
+            <a class="btn btn-orange btn-lg" href="#try" data-cat-cta="electronics" data-demo-run="headphones">Try an electronics search</a>
+          </div>
+          <p class="cat-aside">Runs a real search for headphones, just below.</p>
+        </div>
+      </article>
+
+      <article class="cat-panel" id="cat-clothes" aria-labelledby="cat-h-clothes">
+        <figure class="cat-art">
+          <img class="art" src="/img/art/clothes-600.webp" srcset="/img/art/clothes-600.webp 600w, /img/art/clothes-1122.webp 1122w" sizes="(max-width: 900px) 92vw, 520px" width="600" height="591" loading="lazy" alt="Illustration of a jacket and cap, a hoodie, a folded denim jacket and sneakers on display stands, with three store prices for the jacket, hoodie and sneakers and the lowest one highlighted" />
+          <figcaption class="art-note">Illustration. Stores and prices shown are examples, not current offers.</figcaption>
+        </figure>
+        <div class="cat-copy">
+          <p class="cat-kicker">Clothes</p>
+          <h3 class="cat-title" id="cat-h-clothes">Same style. <em>Better price.</em></h3>
+          <p class="cat-desc">From jackets and hoodies to sneakers, see how prices for the same item compare across supported clothing and shoe stores.</p>
+          <ul class="cat-points">
+            <li>Clothing and footwear price comparisons</li>
+            <li>Offers from multiple stores</li>
+            <li>Sale prices side by side</li>
+            <li>Better purchasing decisions</li>
+          </ul>
+          <div class="cat-actions">
+            <a class="btn btn-orange btn-lg" href="#join" data-cat-cta="clothes" data-focus-email>Get early access</a>
+          </div>
+          <p class="cat-aside">Clothes aren't part of this web demo. They're coming with the Spargo app.</p>
+        </div>
+      </article>
+
+      <article class="cat-panel" id="cat-hardware" aria-labelledby="cat-h-hardware">
+        <figure class="cat-art">
+          <img class="art" src="/img/art/hardware-600.webp" srcset="/img/art/hardware-600.webp 600w, /img/art/hardware-1122.webp 1122w" sizes="(max-width: 900px) 92vw, 520px" width="600" height="551" loading="lazy" alt="Illustration of a cordless drill kit, a toolbox and hammer, a screwdriver set and a measuring tape, each with three store prices and the lowest one highlighted" />
+          <figcaption class="art-note">Illustration. Stores and prices shown are examples, not current offers.</figcaption>
+        </figure>
+        <div class="cat-copy">
+          <p class="cat-kicker">Hardware</p>
+          <h3 class="cat-title" id="cat-h-hardware">Tools and supplies, <em>for less.</em></h3>
+          <p class="cat-desc">Planning a project? Compare prices on tools and supplies across supported hardware stores before you head out.</p>
+          <ul class="cat-points">
+            <li>Hardware and tool price comparisons</li>
+            <li>Offers from multiple stores</li>
+            <li>Project supplies in one search</li>
+            <li>Better purchasing decisions</li>
+          </ul>
+          <div class="cat-actions">
+            <a class="btn btn-orange btn-lg" href="#join" data-cat-cta="hardware" data-focus-email>Get early access</a>
+          </div>
+          <p class="cat-aside">Hardware isn't part of this web demo. It's coming with the Spargo app.</p>
+        </div>
+      </article>
+
+      <article class="cat-panel" id="cat-furniture" aria-labelledby="cat-h-furniture">
+        <figure class="cat-art">
+          <img class="art" src="/img/art/furniture-600.webp" srcset="/img/art/furniture-600.webp 600w, /img/art/furniture-1122.webp 1122w" sizes="(max-width: 900px) 92vw, 520px" width="600" height="551" loading="lazy" alt="Illustration of an accent chair, a three-seat sofa and a round coffee table on display stands, each with three store prices and the lowest one highlighted" />
+          <figcaption class="art-note">Illustration. Stores and prices shown are examples, not current offers.</figcaption>
+        </figure>
+        <div class="cat-copy">
+          <p class="cat-kicker">Furniture</p>
+          <h3 class="cat-title" id="cat-h-furniture">Furnish your home <em>for less.</em></h3>
+          <p class="cat-desc">Big purchases deserve a second look. Compare furniture and home prices across supported stores before you commit.</p>
+          <ul class="cat-points">
+            <li>Furniture and home price comparisons</li>
+            <li>Offers from multiple stores</li>
+            <li>Big-ticket items compared</li>
+            <li>Better purchasing decisions</li>
+          </ul>
+          <div class="cat-actions">
+            <a class="btn btn-orange btn-lg" href="#join" data-cat-cta="furniture" data-focus-email>Get early access</a>
+          </div>
+          <p class="cat-aside">Furniture isn't part of this web demo. It's coming with the Spargo app.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 05 · TRY SPARGO: live search (js/demo-search.js). data-source="mock" uses sample data, "live" the real API -->
+<section class="demo" id="try" data-demo-search data-source="live" aria-labelledby="demo-title">
+  <div class="wrap demo-grid">
+    <div class="demo-intro">
+      <p class="chapter"><span>05</span>Try it now</p>
+      <h2 class="display" id="demo-title">Don't just take our word for it. <em>Try Spargo.</em></h2>
+      <p class="lede">Search for a grocery item or a gadget and compare available prices across supported Calgary stores, cheapest first, with how fresh each price is.</p>
+      <form class="demo-search" role="search">
+        <label for="demo-q-site" class="demo-label">Search for a product</label>
+        <div class="demo-search-box">
+          <svg class="demo-search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="m16.5 16.5 4.5 4.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <input id="demo-q-site" type="search" placeholder="Try &ldquo;milk&rdquo; or &ldquo;eggs&rdquo;" autocomplete="off" maxlength="60" enterkeyhint="search" />
+          <button type="submit" class="demo-search-btn">Search</button>
+        </div>
+      </form>
+      <div class="demo-try">
+        <span class="demo-label" id="popular-label">Popular searches</span>
+        <div class="demo-chips" role="group" aria-labelledby="popular-label">
+          <button type="button" data-demo-query="milk" aria-pressed="false">Milk</button>
+          <button type="button" data-demo-query="eggs" aria-pressed="false">Eggs</button>
+          <button type="button" data-demo-query="bananas" aria-pressed="false">Bananas</button>
+          <button type="button" data-demo-query="bread" aria-pressed="false">Bread</button>
+          <button type="button" data-demo-query="butter" aria-pressed="false">Butter</button>
+          <button type="button" data-demo-query="coffee" aria-pressed="false">Coffee</button>
+          <button type="button" data-demo-query="headphones" aria-pressed="false">Headphones</button>
+        </div>
+      </div>
+      <p class="demo-status sr-only" role="status" aria-live="polite"></p>
+      <div class="demo-cta" hidden>
+        <p>Spargo can price your <strong>whole list</strong> like this and find the cheapest store.</p>
+        <a class="btn btn-orange" href="#join" data-cta="demo" data-focus-email>Get early access</a>
+      </div>
+      <p class="demo-note"
+         data-mock="Sample data with fictional stores, to show how search works. Live Calgary prices are coming soon."
+         data-live="Real prices for stores near downtown Calgary, confirmed within the last 14 days. If we don't have one yet, the demo checks the stores live (3 times a day per visitor). Prices can change, so check in store.">Real prices for stores near downtown Calgary, confirmed within the last 14 days. If we don't have one yet, the demo checks the stores live (3 times a day per visitor). Prices can change, so check in store.</p>
+    </div>
+
+    <div class="app-phone-wrap">
+      <span class="demo-sample-flag">Sample data</span>
+      <div class="app-phone">
+        <div class="app-screen">
+          <div class="app-statusbar" aria-hidden="true"><span>9:41</span><span class="app-island"></span><span class="app-status-icons"><i></i><i></i><i></i></span></div>
+          <header class="app-header">
+            <div>
+              <strong class="app-city">Calgary, AB <span aria-hidden="true">⌄</span></strong>
+              <span class="app-tagline">The best prices near you right now</span>
+            </div>
+            <div class="app-header-icons" aria-hidden="true"><span></span><span class="has-dot"></span><span></span></div>
+          </header>
+          <form class="app-search" role="search">
+            <svg class="app-search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="m16.5 16.5 4.5 4.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+            <label for="demo-q" class="sr-only">Search for an item</label>
+            <input id="demo-q" type="search" placeholder="Search groceries, gas, hardware…" autocomplete="off" maxlength="60" enterkeyhint="search" />
+            <button type="button" class="app-search-clear" aria-label="Clear search" hidden>✕</button>
+          </form>
+          <div class="app-modes" aria-hidden="true"><span class="is-on">In store</span><span>Online</span></div>
+          <div class="app-cats" aria-hidden="true"><span class="app-filter">Filters</span><span class="is-on">All</span><span>Groceries</span><span>Produce</span><span>Dairy</span><span>Bakery</span></div>
+          <div class="app-results-head">
+            <div><strong class="app-count">Results</strong><span>Prices near Calgary, AB</span></div>
+            <span class="app-sort" aria-hidden="true">Cheapest first ⌄</span>
+          </div>
+          <div class="app-list" tabindex="0" role="region" aria-label="Search results"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div>
+      <p class="chapter"><span>?</span>Good questions</p>
+      <h2 class="display display-sm" id="faq-title">Before you join.</h2>
+      <p class="lede">Where Spargo is today, what it will cost, and how prices are kept honest.</p>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>Is Spargo available yet?</summary>
+        <p>Not yet. Spargo is in pre-launch and opens in Calgary first, then other Canadian cities. Join the waitlist and we'll email you the day it's ready.</p>
+      </details>
+      <details>
+        <summary>Is the waitlist free? Will the app cost money?</summary>
+        <p>Joining the waitlist is free and needs no credit card. The app will be free to use too, and optional Premium features add extras, like unlimited voice control with your very own Spargo AI agent.</p>
+      </details>
+      <details>
+        <summary>Which stores does Spargo compare?</summary>
+        <p>We're building coverage of Calgary grocery chains, independent grocers, pharmacies, hardware stores, gas stations and electronics retailers. We'll publish the full list of supported stores at launch. <a href="/calgary/grocery-prices">How Calgary grocery price comparison will work</a>.</p>
+      </details>
+      <details>
+        <summary>How fresh are the prices?</summary>
+        <p>Every price in Spargo shows when it was last confirmed, so you can see at a glance how current it is before you make the trip.</p>
+      </details>
+      <details>
+        <summary>I run a store. Can I list my products?</summary>
+        <p>Yes. Local stores can list products, prices and deals and see how shoppers find them. <a href="/for-stores">Learn about Spargo for stores</a>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 06 · EARLY ACCESS -->
+<section class="join" id="join" aria-labelledby="join-title">
+  <div class="wrap join-grid">
+    <div class="join-card">
+      <p class="chapter chapter-light"><span>06</span>Early access</p>
+      <h2 class="display" id="join-title">Shop smarter. <em>Save better.</em></h2>
+      <p class="lede">Groceries, gas, electronics and more. Join the waitlist to hear the day Spargo opens in Calgary and be among the first to compare prices with it.</p>
+      <form class="join-form" data-waitlist="home-join" novalidate>
+        <div class="hp-field" aria-hidden="true"><label>Company<input type="text" name="company" tabindex="-1" autocomplete="off" /></label></div>
+        <label for="waitlist-email" class="join-label">Email address</label>
+        <div class="join-field">
+          <input id="waitlist-email" type="email" inputmode="email" placeholder="you@example.com" autocomplete="email" enterkeyhint="send" required aria-describedby="join-note" />
+          <button type="submit" class="btn btn-orange btn-lg">Join the waitlist</button>
+        </div>
+        <p class="waitlist-status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="join-note" id="join-note">The waitlist is free, with no credit card. The app will be free to use too, and optional Premium features add extras, like unlimited voice control with your very own Spargo AI agent. You'll get launch updates from Spargo and can unsubscribe anytime. <a href="/privacy">Privacy policy</a></p>
+    </div>
+    <div class="join-art" aria-hidden="true">
+      <img class="art" src="/img/art/fox-cart-560.webp" srcset="/img/art/fox-cart-560.webp 560w, /img/art/fox-cart-1000.webp 1000w" sizes="(max-width: 900px) 280px, 460px" width="560" height="700" loading="lazy" alt="" />
+    </div>
+  </div>
+</section>
+
+<!-- FOR STORES -->
+<section class="stores-band" aria-labelledby="stores-title">
+  <div class="wrap stores-inner">
+    <h2 id="stores-title">Run a local store?</h2>
+    <p>List your products and deals, get found by nearby shoppers already searching for them, and see what's working.</p>
+    <a class="arrow-link" href="/for-stores">Spargo for stores <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <a href="#top" class="nav-logo footer-logo" aria-label="Spargo, back to top">
+        <img src="/img/spargo-logo-sm.webp" width="46" height="44" alt="" loading="lazy" />
+        <span>spargo</span>
+      </a>
+      <p class="footer-copy">Shop smarter. Save better. &copy; 2026 Spargo</p>
+    </div>
+    <nav class="footer-links" aria-label="Explore Spargo">
+      <a href="/calgary/grocery-prices">Calgary grocery prices</a>
+      <a href="/grocery-price-comparison-app">Price comparison app</a>
+      <a href="/features/grocery-list-optimizer">List optimizer</a>
+      <a href="/features/price-tracking">Price tracking</a>
+      <a href="/for-stores">For stores</a>
+    </nav>
+    <div class="footer-end">
+      <div class="footer-legal">
+        <a href="/privacy">Privacy policy</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:hello@spargo.app">Contact</a>
+      </div>
+      <div class="social-icons">
+        <a class="social-icon" href="https://www.instagram.com/spargo.app/" target="_blank" rel="noopener noreferrer" aria-label="Spargo on Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+        </a>
+        <a class="social-icon" href="https://www.linkedin.com/company/spargo-app/" target="_blank" rel="noopener noreferrer" aria-label="Spargo on LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="7" cy="7" r="1" fill="currentColor"/><path d="M11 17v-3.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script defer src="/js/nav.js"></script>
+<script defer src="/js/waitlist.js"></script>
+<script defer src="/js/demo-search.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script defer src="/js/home.js"></script>
+</body>
+</html>
