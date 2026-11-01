@@ -192,6 +192,7 @@ function initDemo(section) {
   }
   const mock = section.dataset.source !== 'live';
   let controller = null;
+  let searched = false; // once anything has searched, the opening search below stands down
 
   section.classList.toggle('is-mock', mock);
   const note = section.querySelector('.demo-note');
@@ -208,6 +209,7 @@ function initDemo(section) {
   }
 
   async function run(query, via) {
+    searched = true;
     query = query.trim();
     if (query.length < 2) {
       status.textContent = 'Type at least 2 letters, like "milk".';
@@ -320,7 +322,9 @@ function initDemo(section) {
     setQuery(first.dataset.demoQuery);
     first.setAttribute('aria-pressed', 'true');
     new IntersectionObserver((entries, obs) => {
-      if (entries[0].isIntersecting) { obs.disconnect(); run(first.dataset.demoQuery, 'auto'); }
+      if (!entries[0].isIntersecting) return;
+      obs.disconnect();
+      if (!searched) run(first.dataset.demoQuery, 'auto');
     }, { rootMargin: '200px' }).observe(section);
   }
 }
