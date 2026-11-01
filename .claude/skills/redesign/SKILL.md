@@ -1,6 +1,6 @@
 ---
 name: redesign
-description: Recreate index.html as a premium 3D redesign in home.html using installed design skills
+description: Recreate index.html as a premium 3D redesign in index.html using installed design skills
 ---
 
 # Redesign Skill
