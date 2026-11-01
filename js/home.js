@@ -82,7 +82,7 @@ function initCategories(root) {
   };
   new ResizeObserver(placeIndicator).observe(tablist);
 
-  function select(i) {
+  function select(i, instant = false) {
     if (i === current) return;
     const from = panels[current];
     const to = panels[i];
@@ -94,13 +94,13 @@ function initCategories(root) {
     placeIndicator();
     // Narrow screens: keep the chosen tab in view inside the scrolling bar
     if (tablist.scrollWidth > tablist.clientWidth) {
-      tablist.scrollTo({ left: tabs[i].offsetLeft - 24, behavior: prefersReduced.matches ? 'auto' : 'smooth' });
+      tablist.scrollTo({ left: tabs[i].offsetLeft - 24, behavior: instant || prefersReduced.matches ? 'auto' : 'smooth' });
     }
     track('category_select', { category: tabs[i].dataset.cat, page: location.pathname });
 
     const { gsap } = window;
     swap?.progress(1).kill();
-    if (!gsap || prefersReduced.matches) { show(from, false); show(to, true); return; }
+    if (!gsap || instant || prefersReduced.matches) { show(from, false); show(to, true); return; }
 
     const parts = (panel) => [panel.querySelector('.cat-art'), ...panel.querySelectorAll('.cat-copy > *')];
     swap = gsap.timeline({ defaults: { ease: 'power3.out' } })
@@ -125,6 +125,27 @@ function initCategories(root) {
     select(next);
     tabs[next].focus();
   });
+
+  // Links like /#cat-clothes (from the stores page) open that tab. The browser scrolls to the panel
+  // itself, so the panel's scroll margin covers the title and tabs above it and they stay in view.
+  // ScrollTrigger re-measures the pinned chapters after load, so scroll again once it has.
+  const openFromHash = () => {
+    const i = panels.findIndex(p => `#${p.id}` === location.hash);
+    if (i < 0) return;
+    select(i, true);
+    const reveal = () => requestAnimationFrame(() => {
+      panels[i].style.scrollMarginTop = `${panels[i].getBoundingClientRect().top - root.getBoundingClientRect().top}px`;
+      panels[i].scrollIntoView({ block: 'start' });
+    });
+    reveal();
+    if (document.readyState !== 'complete') addEventListener('load', reveal, { once: true });
+    window.ScrollTrigger?.addEventListener('refresh', function again() {
+      window.ScrollTrigger.removeEventListener('refresh', again);
+      reveal();
+    });
+  };
+  openFromHash();
+  addEventListener('hashchange', openFromHash);
 }
 const categories = document.querySelector('[data-cats]');
 if (categories) initCategories(categories);
@@ -395,4 +416,21 @@ function initStory() {
   document.fonts?.ready.then(() => ScrollTrigger.refresh());
 }
 
-if (window.gsap && window.ScrollTrigger) initStory();
+// ── Links to a section (/#everywhere, /for-stores#signup) ──
+// The browser jumps to the section before ScrollTrigger has measured the page, and ScrollTrigger's
+// first refresh puts the old scroll position back, so jump there again once it has.
+function landOnHash(skip) {
+  const target = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (!target || (skip && target.matches(skip))) return;
+  const land = () => target.scrollIntoView({ behavior: 'instant', block: 'start' });
+  window.ScrollTrigger.addEventListener('refresh', function once() {
+    window.ScrollTrigger.removeEventListener('refresh', once);
+    land();
+    document.fonts.ready.then(() => requestAnimationFrame(land)); // late web fonts rewrap headings above it
+  });
+}
+
+if (window.gsap && window.ScrollTrigger) {
+  initStory();
+  landOnHash('.cat-panel'); // category panels have their own handling in initCategories
+}
