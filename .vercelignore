@@ -1,0 +1,13 @@
+# Not part of the website: keep these out of the deployment so they aren't served publicly.
+
+# Source artwork and screenshots (the site uses the optimised copies in img/)
+/*.png
+
+# Notes, plans and tooling
+/*.md
+/docs
+/skills-lock.json
+/.agents
+/.claude
+/.idea
+/.env

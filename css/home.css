@@ -660,16 +660,31 @@ button { font: inherit; }
 .app-search-clear:hover { background: var(--a-bg); }
 .app-search-clear[hidden] { display: none; }
 .app-modes { display: flex; margin: 10px 14px 0; padding: 4px; border-radius: 14px; background: #E7EAF8; }
-.app-modes span { flex: 1; text-align: center; padding: 7px 0; font-size: 13px; font-weight: 700; color: var(--a-muted); border-radius: 10px; }
-.app-modes .is-on { background: var(--a-primary); color: #fff; }
-.app-cats { display: flex; gap: 6px; padding: 10px 14px 0; overflow: hidden; white-space: nowrap; }
-.app-cats span { padding: 6px 12px; border-radius: 50px; font-size: 12px; font-weight: 600; color: var(--a-muted); background: var(--a-card); border: 1px solid var(--a-border); }
-.app-cats .is-on { background: var(--a-primary); border-color: var(--a-primary); color: #fff; }
-.app-cats .app-filter { color: var(--a-ink); }
-.app-results-head { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px 8px; }
+.app-modes button {
+    flex: 1; padding: 7px 0; border: 0; border-radius: 10px; background: transparent; cursor: pointer;
+    font: inherit; font-size: 13px; font-weight: 700; color: var(--a-muted); transition: background-color 200ms ease, color 200ms ease;
+}
+.app-modes button[aria-pressed="true"] { background: var(--a-primary); color: #fff; }
+.app-cats { display: flex; gap: 6px; padding: 10px 14px 2px; overflow-x: auto; white-space: nowrap; scrollbar-width: none; overscroll-behavior-x: contain; }
+.app-cats::-webkit-scrollbar { display: none; }
+.app-cats[hidden] { display: none; }
+.app-cats button {
+    flex-shrink: 0; padding: 6px 12px; border-radius: 50px; cursor: pointer; font: inherit; font-size: 12px; font-weight: 600;
+    color: var(--a-muted); background: var(--a-card); border: 1px solid var(--a-border); transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+.app-cats button[aria-pressed="true"] { background: var(--a-primary); border-color: var(--a-primary); color: #fff; }
+.app-modes button:active, .app-cats button:active { transform: scale(0.97); }
+.app-modes button:focus-visible, .app-cats button:focus-visible, .app-sort:focus-within { outline: 2px solid var(--a-primary); outline-offset: 2px; }
+.app-results-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 16px 8px; }
 .app-count { display: block; font-size: 16px; font-weight: 800; }
-.app-results-head span { font-size: 11px; color: var(--a-muted); }
-.app-results-head .app-sort { padding: 6px 10px; border-radius: 50px; background: var(--a-card); border: 1px solid var(--a-border); font-weight: 700; color: var(--a-ink); }
+.app-results-head .app-area { font-size: 11px; color: var(--a-muted); }
+.app-sort { position: relative; flex-shrink: 0; border-radius: 50px; background: var(--a-card); border: 1px solid var(--a-border); }
+.app-sort[hidden] { display: none; }
+.app-sort select {
+    appearance: none; border: 0; background: transparent; cursor: pointer; padding: 6px 24px 6px 10px; border-radius: 50px;
+    font: inherit; font-size: 11px; font-weight: 700; color: var(--a-ink); outline: none;
+}
+.app-sort::after { content: '⌄'; position: absolute; right: 10px; top: 2px; font-size: 12px; font-weight: 700; color: var(--a-ink); pointer-events: none; }
 .app-list { flex: 1; overflow-y: auto; overscroll-behavior: contain; padding: 2px 12px 16px; display: flex; flex-direction: column; gap: 10px; scrollbar-width: none; outline: none; }
 .app-list::-webkit-scrollbar { display: none; }
 .app-list:focus-visible { box-shadow: inset 0 0 0 3px rgba(47, 63, 207, 0.25); }
@@ -713,6 +728,25 @@ button { font: inherit; }
 @keyframes demoShimmer { to { background-position: -200% 0; } }
 .app-state { text-align: center; padding: 48px 20px; color: var(--a-muted); }
 .app-live-note { flex-shrink: 0; margin: 2px 4px 0; font-size: 11.5px; line-height: 1.5; color: var(--a-muted); text-align: center; }
+.app-checking { flex-shrink: 0; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 6px 4px; font-size: 12px; font-weight: 600; color: var(--a-muted); }
+.app-checking::before { content: ''; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--a-border); border-top-color: var(--a-primary); animation: appSpin 800ms linear infinite; }
+@keyframes appSpin { to { rotate: 360deg; } }
+
+/* The app's online result card: picture on top, retailer and rating, price, a link out */
+.app-online { flex-shrink: 0; display: block; overflow: hidden; border-radius: 16px; background: var(--a-card); border: 1px solid var(--a-border); color: inherit; text-decoration: none; animation: riseIn 400ms var(--ease-out) both; }
+.app-online-img { display: grid; place-items: center; height: 120px; background: #F4F6FD; }
+.app-online-img img { max-width: 100%; max-height: 120px; object-fit: contain; }
+.app-online-img .app-icon { width: 30px; height: 30px; color: var(--a-primary); opacity: 0.25; }
+.app-online-row { display: flex; align-items: center; gap: 10px; padding: 12px 14px; }
+.app-online-row > div:first-child { flex: 1; min-width: 0; }
+.app-online-name { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 13.5px; font-weight: 600; color: var(--a-ink); }
+.app-online-meta { margin-top: 2px; font-size: 12px; color: var(--a-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.app-online-meta .app-star { color: #f59e0b; }
+.app-online-price { text-align: right; flex-shrink: 0; }
+.app-online-price s { display: block; font-size: 11.5px; color: var(--a-muted); }
+.app-online-price strong { font-size: 17px; font-weight: 800; color: var(--a-ink); }
+.app-online:focus-visible { outline: 2px solid var(--a-primary); outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) { .app-online:hover { border-color: var(--a-primary); } }
 .app-state-icon { width: 34px; height: 34px; color: var(--a-primary); opacity: 0.35; margin-bottom: 10px; }
 .app-state strong { display: block; font-size: 15px; color: var(--a-ink); margin-bottom: 4px; }
 .app-state p { font-size: 13px; line-height: 1.5; }
@@ -912,7 +946,7 @@ button { font: inherit; }
     html { scroll-behavior: auto; }
     [data-hero-in], .stage-scroll,
     .stage-float, .fox, .fox-shadow, .bag-stamp, .scroll-cue span::after,
-    .app-search, .app-card, .app-skeleton, .demo-cta { animation: none; }
+    .app-search, .app-card, .app-online, .app-skeleton, .demo-cta { animation: none; }
     .app-search { box-shadow: 0 0 0 3px rgba(47, 63, 207, 0.18), 0 0 14px 1px rgba(47, 63, 207, 0.25); }
     .btn, .demo-chips button, .demo-search-btn, .hamburger span, .mobile-menu, .nav-links a::after, .cats-tabs button, .cats-indicator, .tally-switch button { transition: none; }
     .btn:active, .demo-chips button:active, .demo-search-btn:active { transform: none; }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Compare Grocery &amp; Store Prices in Calgary | Spargo</title>
-  <meta name="description" content="Compare grocery, gas and everyday prices at nearby Calgary stores. Search real prices right on this page, find the cheapest store for your whole list and get early access to Spargo." />
+  <meta name="description" content="Compare grocery, gas, electronics and everyday prices at Calgary stores. Try a live price search, find the cheapest store for your list and join early access." />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
@@ -58,8 +58,8 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
-  <link rel="preload" as="image" href="/img/spargo-fox-phone-480.webp" imagesrcset="/img/spargo-fox-phone-480.webp 480w, /img/spargo-fox-phone-640.webp 640w, /img/spargo-fox-phone-960.webp 960w" imagesizes="(max-width: 900px) 260px, 440px" fetchpriority="high" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="/img/spargo-fox-phone-480.webp" imagesrcset="/img/spargo-fox-phone-480.webp 480w, /img/spargo-fox-phone-640.webp 640w, /img/spargo-fox-phone-960.webp 960w" imagesizes="(max-width: 900px) 300px, 490px" fetchpriority="high" />
   <link rel="stylesheet" href="/css/home.css" />
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -82,7 +82,7 @@
       <li><a href="#features" data-nav="features">Features</a></li>
       <li><a href="#everywhere" data-nav="everywhere">Categories</a></li>
       <li><a href="#try" data-nav="try">Try Spargo</a></li>
-      <li><a href="for-stores.html">For stores</a></li>
+      <li><a href="/for-stores">For stores</a></li>
     </ul>
     <a class="btn btn-orange nav-cta" href="#join" data-cta="nav" data-focus-email>Get early access</a>
     <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -152,7 +152,7 @@
       </div>
       <div class="fox-wrap">
         <div class="fox-shadow" aria-hidden="true"></div>
-        <img class="fox" src="/img/spargo-fox-phone-480.webp" srcset="/img/spargo-fox-phone-480.webp 480w, /img/spargo-fox-phone-640.webp 640w, /img/spargo-fox-phone-960.webp 960w" sizes="(max-width: 900px) 260px, 440px" width="480" height="582" fetchpriority="high" alt="Spargo's blue fox mascot in a Spargo hoodie, pointing to a phone that compares prices" />
+        <img class="fox" src="/img/spargo-fox-phone-480.webp" srcset="/img/spargo-fox-phone-480.webp 480w, /img/spargo-fox-phone-640.webp 640w, /img/spargo-fox-phone-960.webp 960w" sizes="(max-width: 900px) 300px, 490px" width="480" height="582" fetchpriority="high" alt="Spargo's blue fox mascot in a Spargo hoodie, pointing to a phone that compares prices" />
       </div>
     </div>
   </div>
@@ -326,10 +326,10 @@
           <div class="phone-depth"></div>
           <div class="phone-body">
             <div class="phone-screen">
-              <img class="pscreen is-on" src="/img/screen-searchpage.webp" width="660" height="1434" alt="" />
-              <img class="pscreen" src="/img/screen-pricescore.webp" width="660" height="1434" loading="lazy" alt="" />
-              <img class="pscreen" src="/img/screen-cheapeststores.webp" width="660" height="1434" loading="lazy" alt="" />
-              <img class="pscreen" src="/img/screen-openitemdealspage.webp" width="660" height="1434" loading="lazy" alt="" />
+              <img class="pscreen is-on" src="/img/screen-searchpage.webp" srcset="/img/screen-searchpage-400.webp 400w, /img/screen-searchpage.webp 660w" sizes="320px" width="660" height="1434" loading="lazy" alt="" />
+              <img class="pscreen" src="/img/screen-pricescore.webp" srcset="/img/screen-pricescore-400.webp 400w, /img/screen-pricescore.webp 660w" sizes="320px" width="660" height="1434" loading="lazy" alt="" />
+              <img class="pscreen" src="/img/screen-cheapeststores.webp" srcset="/img/screen-cheapeststores-400.webp 400w, /img/screen-cheapeststores.webp 660w" sizes="320px" width="660" height="1434" loading="lazy" alt="" />
+              <img class="pscreen" src="/img/screen-openitemdealspage.webp" srcset="/img/screen-openitemdealspage-400.webp 400w, /img/screen-openitemdealspage.webp 660w" sizes="320px" width="660" height="1434" loading="lazy" alt="" />
               <span class="phone-island"></span>
               <span class="phone-glare"></span>
             </div>
@@ -561,7 +561,7 @@
       </div>
       <p class="demo-note"
          data-mock="Sample data with fictional stores, to show how search works. Live Calgary prices are coming soon."
-         data-live="Real prices for stores near downtown Calgary, confirmed within the last 14 days. If we don't have one yet, the demo checks the stores live (3 times a day per visitor). Prices can change, so check in store.">Real prices for stores near downtown Calgary, confirmed within the last 14 days. If we don't have one yet, the demo checks the stores live (3 times a day per visitor). Prices can change, so check in store.</p>
+         data-live="Real prices near downtown Calgary from the same search the app uses, each showing how fresh it is. If we don't have a price yet, the demo checks the stores live, 3 times a day per visitor. Online compares Canadian retailers, also 3 searches a day. Prices can change, so check before you buy.">Real prices near downtown Calgary from the same search the app uses, each showing how fresh it is. If we don't have a price yet, the demo checks the stores live, 3 times a day per visitor. Online compares Canadian retailers, also 3 searches a day. Prices can change, so check before you buy.</p>
     </div>
 
     <div class="app-phone-wrap">
@@ -582,11 +582,38 @@
             <input id="demo-q" type="search" placeholder="Search groceries, gas, hardware…" autocomplete="off" maxlength="60" enterkeyhint="search" />
             <button type="button" class="app-search-clear" aria-label="Clear search" hidden>✕</button>
           </form>
-          <div class="app-modes" aria-hidden="true"><span class="is-on">In store</span><span>Online</span></div>
-          <div class="app-cats" aria-hidden="true"><span class="app-filter">Filters</span><span class="is-on">All</span><span>Groceries</span><span>Produce</span><span>Dairy</span><span>Bakery</span></div>
+          <!-- The app's own controls (QuickFilterRow, SortControl): js/demo-search.js searches again when one changes -->
+          <div class="app-modes" role="group" aria-label="Compare prices">
+            <button type="button" data-demo-mode="in_store" aria-pressed="true">In store</button>
+            <button type="button" data-demo-mode="online" aria-pressed="false">Online</button>
+          </div>
+          <div class="app-cats" role="group" aria-label="Category">
+            <button type="button" data-demo-cat="" aria-pressed="true">All</button>
+            <button type="button" data-demo-cat="grocery" aria-pressed="false">Groceries</button>
+            <button type="button" data-demo-cat="produce" aria-pressed="false">Produce</button>
+            <button type="button" data-demo-cat="dairy" aria-pressed="false">Dairy</button>
+            <button type="button" data-demo-cat="meat" aria-pressed="false">Meat</button>
+            <button type="button" data-demo-cat="bakery" aria-pressed="false">Bakery</button>
+            <button type="button" data-demo-cat="household" aria-pressed="false">Household</button>
+            <button type="button" data-demo-cat="electronics" aria-pressed="false">Electronics</button>
+            <button type="button" data-demo-cat="hardware" aria-pressed="false">Hardware</button>
+            <button type="button" data-demo-cat="fashion" aria-pressed="false">Fashion</button>
+            <button type="button" data-demo-cat="home" aria-pressed="false">Home</button>
+            <button type="button" data-demo-cat="books_toys" aria-pressed="false">Books &amp; Toys</button>
+            <button type="button" data-demo-cat="pets" aria-pressed="false">Pets</button>
+            <button type="button" data-demo-cat="liquor" aria-pressed="false">Liquor</button>
+            <button type="button" data-demo-cat="sports" aria-pressed="false">Sports</button>
+          </div>
           <div class="app-results-head">
-            <div><strong class="app-count">Results</strong><span>Prices near Calgary, AB</span></div>
-            <span class="app-sort" aria-hidden="true">Cheapest first ⌄</span>
+            <div><strong class="app-count">Results</strong><span class="app-area">Prices near Calgary, AB</span></div>
+            <label class="app-sort">
+              <span class="sr-only">Sort results</span>
+              <select data-demo-sort>
+                <option value="cheapest">Cheapest first</option>
+                <option value="closest">Closest first</option>
+                <option value="discount">Biggest discount</option>
+              </select>
+            </label>
           </div>
           <div class="app-list" tabindex="0" role="region" aria-label="Search results"></div>
         </div>
