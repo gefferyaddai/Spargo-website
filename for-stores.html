@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>List Your Store on Spargo | Reach Calgary Shoppers</title>
+  <meta name="description" content="Put your store's products, prices and deals in front of nearby Calgary shoppers. List inventory, promote offers and see how shoppers find you." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Spargo" />
+  <meta property="og:locale"      content="en_CA" />
+  <meta property="og:url"         content="https://www.savewithspargo.com/for-stores" />
+  <meta property="og:title"       content="List Your Store on Spargo | Reach Calgary Shoppers" />
+  <meta property="og:description" content="Put your products, prices and deals in front of nearby shoppers, and see how they find you." />
+  <meta property="og:image"       content="https://www.savewithspargo.com/img/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"   content="Spargo logo: Shop smarter" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="List Your Store on Spargo | Reach Calgary Shoppers" />
+  <meta name="twitter:description" content="Put your products, prices and deals in front of nearby shoppers, and see how they find you." />
+  <meta name="twitter:image"       content="https://www.savewithspargo.com/img/og-image.jpg" />
+
+  <link rel="canonical" href="https://www.savewithspargo.com/for-stores" />
+  <meta name="theme-color" content="#F5F3EE" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48.png" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.savewithspargo.com/" },
+      { "@type": "ListItem", "position": 2, "name": "For stores", "item": "https://www.savewithspargo.com/for-stores" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="/img/store-dashboard-laptop.webp" fetchpriority="high" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/stores.css" />
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- NAV (same bar as the homepage; its section links go back to it) -->
+<nav id="mainNav" aria-label="Main">
+  <div class="wrap nav-inner">
+    <a href="/" class="nav-logo" aria-label="Spargo home">
+      <img src="/img/spargo-logo-sm.webp" width="46" height="44" alt="" />
+      <span>spargo</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">For shoppers</a></li>
+      <li><a href="/#everywhere">Categories</a></li>
+      <li><a href="/#features">Features</a></li>
+      <li><a href="#pricing" data-nav="pricing">Plans</a></li>
+      <li><a href="/for-stores" aria-current="page" class="is-active">For stores</a></li>
+    </ul>
+    <a class="btn btn-orange nav-cta" href="#signup" data-cta="stores-nav" data-focus-store>List your store</a>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU (toggleMenu() in js/nav.js) -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <a href="/">For shoppers</a>
+    <a href="/#everywhere">Categories</a>
+    <a href="/#features">Features</a>
+    <a href="#pricing">Plans</a>
+    <a href="/for-stores" aria-current="page">For stores</a>
+    <a class="btn btn-orange" href="#signup" data-cta="stores-mobile-menu" data-focus-store>List your store</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- 01 · HERO -->
+<section class="s-hero" id="top" aria-labelledby="hero-title">
+  <div class="wrap s-hero-grid">
+    <div class="s-hero-copy">
+      <p class="chapter" data-in><span>01</span>Spargo for stores</p>
+      <h1 class="hero-title" id="hero-title">
+        <span class="line" data-in>Your store.</span>
+        <span class="line" data-in>More shoppers.</span>
+        <span class="line" data-in><em>Better insights.</em></span>
+      </h1>
+      <p class="hero-sub" data-in>Put your products, prices and exclusive deals in front of nearby Calgary shoppers who are already comparing, then see exactly how they find you.</p>
+      <div class="hero-ctas" data-in>
+        <a class="btn btn-orange btn-lg" href="#signup" data-cta="stores-hero" data-focus-store>List your store</a>
+        <a class="btn btn-ghost btn-lg" href="#pricing" data-cta="stores-hero-plans">See plans</a>
+      </div>
+      <ul class="s-benefits" data-in>
+        <li>Reach more local shoppers</li>
+        <li>Showcase your best deals</li>
+        <li>See what's working</li>
+      </ul>
+    </div>
+    <div class="s-hero-art">
+      <img class="s-laptop" src="/img/store-dashboard-laptop.webp" width="1536" height="1024" fetchpriority="high" alt="Illustrative Spargo merchant dashboard on a laptop, showing search appearances, deal impressions, product views and top-performing products" />
+    </div>
+  </div>
+</section>
+
+<!-- 02 · EVERY KIND OF STORE: the homepage's six categories, from the store's side. Each card opens that tab on the homepage -->
+<section class="s-kinds" id="stores" aria-labelledby="kinds-title">
+  <div class="wrap">
+    <div class="s-head" data-reveal>
+      <div>
+        <p class="chapter"><span>02</span>Every kind of store</p>
+        <h2 class="display" id="kinds-title">Wherever shoppers compare, <em>you can show up.</em></h2>
+      </div>
+      <p class="lede">Spargo shoppers compare prices across six categories. If you sell in one of them, your products and deals can appear right where they're looking.</p>
+    </div>
+    <ul class="kinds" role="list">
+      <li class="kind" data-reveal>
+        <img class="art" src="/img/art/groceries-600.webp" width="600" height="750" loading="lazy" alt="" />
+        <div class="kind-body">
+          <h3>Grocers &amp; markets</h3>
+          <p>Supermarkets, independent grocers, produce markets, bakeries and butchers.</p>
+          <div class="kind-links">
+            <a class="arrow-link" href="#signup" data-store-cat="Grocery" data-focus-store>List a grocery store <span aria-hidden="true">→</span></a>
+            <a class="kind-see" href="/#cat-groceries">What shoppers see</a>
+          </div>
+        </div>
+      </li>
+      <li class="kind" data-reveal>
+        <img class="art" src="/img/art/gas-600.webp" width="600" height="750" loading="lazy" alt="" />
+        <div class="kind-body">
+          <h3>Gas stations</h3>
+          <p>Independent stations and chains. Fuel prices sit next to the stations around them.</p>
+          <div class="kind-links">
+            <a class="arrow-link" href="#signup" data-store-cat="Gas station" data-focus-store>List a gas station <span aria-hidden="true">→</span></a>
+            <a class="kind-see" href="/#cat-gas">What shoppers see</a>
+          </div>
+        </div>
+      </li>
+      <li class="kind" data-reveal>
+        <img class="art" src="/img/art/electronics-600.webp" width="600" height="750" loading="lazy" alt="" />
+        <div class="kind-body">
+          <h3>Electronics</h3>
+          <p>Phones, laptops, audio, gaming and accessories, compared model for model.</p>
+          <div class="kind-links">
+            <a class="arrow-link" href="#signup" data-store-cat="Electronics" data-focus-store>List an electronics store <span aria-hidden="true">→</span></a>
+            <a class="kind-see" href="/#cat-electronics">What shoppers see</a>
+          </div>
+        </div>
+      </li>
+      <li class="kind" data-reveal>
+        <img class="art" src="/img/art/clothes-600.webp" width="600" height="591" loading="lazy" alt="" />
+        <div class="kind-body">
+          <h3>Clothing &amp; shoes</h3>
+          <p>Fashion, footwear and sportswear, with your sale prices side by side.</p>
+          <div class="kind-links">
+            <a class="arrow-link" href="#signup" data-store-cat="Clothing &amp; shoes" data-focus-store>List a clothing store <span aria-hidden="true">→</span></a>
+            <a class="kind-see" href="/#cat-clothes">What shoppers see</a>
+          </div>
+        </div>
+      </li>
+      <li class="kind" data-reveal>
+        <img class="art" src="/img/art/hardware-600.webp" width="600" height="551" loading="lazy" alt="" />
+        <div class="kind-body">
+          <h3>Hardware</h3>
+          <p>Tools, paint and project supplies for shoppers planning their next job.</p>
+          <div class="kind-links">
+            <a class="arrow-link" href="#signup" data-store-cat="Hardware" data-focus-store>List a hardware store <span aria-hidden="true">→</span></a>
+            <a class="kind-see" href="/#cat-hardware">What shoppers see</a>
+          </div>
+        </div>
+      </li>
+      <li class="kind" data-reveal>
+        <img class="art" src="/img/art/furniture-600.webp" width="600" height="551" loading="lazy" alt="" />
+        <div class="kind-body">
+          <h3>Furniture &amp; home</h3>
+          <p>Sofas, tables, lighting and decor, where a second look matters most.</p>
+          <div class="kind-links">
+            <a class="arrow-link" href="#signup" data-store-cat="Furniture &amp; home" data-focus-store>List a furniture store <span aria-hidden="true">→</span></a>
+            <a class="kind-see" href="/#cat-furniture">What shoppers see</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <p class="art-note kinds-note">Illustrations. Stores and prices shown are examples, not current offers. Pharmacies, convenience and specialty stores are welcome too.</p>
+  </div>
+</section>
+
+<!-- 03 · FEATURES -->
+<section class="s-features" id="features" aria-labelledby="features-title">
+  <div class="wrap s-features-grid">
+    <div class="s-features-intro" data-reveal>
+      <p class="chapter"><span>03</span>Everything you need</p>
+      <h2 class="display" id="features-title">Built for stores that <em>want to grow.</em></h2>
+      <p class="lede">Manage your inventory, promote deals and see what's working, all in one place.</p>
+    </div>
+    <ul class="s-feature-list" role="list">
+      <li class="s-feature" data-reveal>
+        <span class="s-glyph" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2.5 8.5 4.75-8.5 4.75-8.5-4.75L12 2.5ZM3.5 7.25v9.5L12 21.5l8.5-4.75v-9.5M12 12v9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+        <div><h3>Inventory management</h3><p>Add products, update prices, mark items on sale and keep your listings fresh.</p></div>
+      </li>
+      <li class="s-feature" id="offers" data-reveal>
+        <span class="s-glyph s-glyph-text" aria-hidden="true">%</span>
+        <div><h3>Exclusive deals</h3><p>Create special offers that appear in the Spargo app and reach more nearby shoppers.</p></div>
+      </li>
+      <li class="s-feature" data-reveal>
+        <span class="s-glyph" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="13" width="4" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="10" y="8" width="4" height="13" rx="1" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="3" width="4" height="18" rx="1" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+        <div><h3>Store analytics</h3><p>See how often your items appear in search, deal impressions, product views and store visits.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 04 · HOW IT WORKS -->
+<section class="s-how" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="s-head" data-reveal>
+      <div>
+        <p class="chapter"><span>04</span>How it works</p>
+        <h2 class="display display-sm" id="how-title">Simple by design.</h2>
+      </div>
+      <p class="lede">Get your store on Spargo in a few steps and start reaching local shoppers.</p>
+    </div>
+    <ol class="s-steps" data-steps>
+      <li class="s-step"><span class="s-step-n" aria-hidden="true">1</span><h3>Register your store</h3><p>Create a store account and add your basic information.</p></li>
+      <li class="s-step"><span class="s-step-n" aria-hidden="true">2</span><h3>Choose a plan</h3><p>Pick the plan that fits your business.</p></li>
+      <li class="s-step"><span class="s-step-n" aria-hidden="true">3</span><h3>Upload your products</h3><p>Add your inventory and set your prices.</p></li>
+      <li class="s-step"><span class="s-step-n" aria-hidden="true">4</span><h3>Track performance</h3><p>See how your products perform and grow your reach.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 05 · WHAT SHOPPERS SEE: real app screens on a sideways rail -->
+<section class="s-screens" id="shopper-view" aria-labelledby="screens-title">
+  <div class="wrap s-head" data-reveal>
+    <div>
+      <p class="chapter"><span>05</span>What shoppers see</p>
+      <h2 class="display display-sm" id="screens-title">Your deals, <em>right where they look.</em></h2>
+    </div>
+    <p class="lede">Your products and offers show up across the Spargo app, from today's deals to search results and store rankings.</p>
+  </div>
+  <div class="s-rail" tabindex="0" role="region" aria-label="Spargo app screens. Scroll sideways to see more">
+    <figure class="s-shot"><img src="/img/screen-dealspage-400.webp" srcset="/img/screen-dealspage-400.webp 400w, /img/screen-dealspage.webp 660w" sizes="240px" width="660" height="1434" loading="lazy" alt="Spargo deals screen" /><figcaption><strong>Deals page</strong>Your offers next to nearby shoppers</figcaption></figure>
+    <figure class="s-shot"><img src="/img/screen-searchpage-400.webp" srcset="/img/screen-searchpage-400.webp 400w, /img/screen-searchpage.webp 660w" sizes="240px" width="660" height="1434" loading="lazy" alt="Spargo search results screen" /><figcaption><strong>Search results</strong>Your products when shoppers search</figcaption></figure>
+    <figure class="s-shot"><img src="/img/screen-cheapeststores-400.webp" srcset="/img/screen-cheapeststores-400.webp 400w, /img/screen-cheapeststores.webp 660w" sizes="240px" width="660" height="1434" loading="lazy" alt="Spargo cheapest stores ranking screen" /><figcaption><strong>Store rankings</strong>Win the trip for a whole list</figcaption></figure>
+    <figure class="s-shot"><img src="/img/screen-openitemdealspage-400.webp" srcset="/img/screen-openitemdealspage-400.webp 400w, /img/screen-openitemdealspage.webp 660w" sizes="240px" width="660" height="1434" loading="lazy" alt="Spargo deal detail screen" /><figcaption><strong>Deal detail</strong>Your store, price and distance</figcaption></figure>
+    <figure class="s-shot"><img src="/img/screen-pricescore-400.webp" srcset="/img/screen-pricescore-400.webp 400w, /img/screen-pricescore.webp 660w" sizes="240px" width="660" height="1434" loading="lazy" alt="Spargo price score screen" /><figcaption><strong>Price score</strong>Fair prices get recognized</figcaption></figure>
+  </div>
+</section>
+
+<!-- ANALYTICS -->
+<section class="s-analytics" id="analytics" aria-labelledby="analytics-title">
+  <div class="wrap s-analytics-grid">
+    <img class="s-analytics-img" data-reveal src="/img/store-analytics-dashboard.webp" width="917" height="695" loading="lazy" alt="Illustrative merchant analytics dashboard with appearance, impression, click and product metrics" />
+    <div data-reveal>
+      <h2 class="display display-sm" id="analytics-title">See what's working <em>for your store.</em></h2>
+      <p class="lede">Real insight into how shoppers find your products, from search appearances and deal impressions to product views and store profile visits.</p>
+      <ul class="s-checks" role="list">
+        <li>Track search appearances</li>
+        <li>Monitor deal performance</li>
+        <li>See your top performing products</li>
+        <li>Understand shopper interest</li>
+        <li>Grow your local presence</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="s-pricing" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <div class="s-head" data-reveal>
+      <div>
+        <p class="chapter"><span>06</span>Plans</p>
+        <h2 class="display display-sm" id="pricing-title">A plan that works <em>for your store.</em></h2>
+      </div>
+      <p class="lede">Every plan includes inventory management, deal listings and analytics.</p>
+    </div>
+    <div class="plans">
+      <article class="plan" data-reveal>
+        <h3>Starter</h3>
+        <p class="plan-sub">Great for small stores getting started.</p>
+        <p class="plan-amount">$99<span>/month</span><small>single location</small></p>
+        <ul role="list"><li>Up to 500 products</li><li>Basic analytics</li><li>Deal listings</li><li>Email support</li></ul>
+        <a href="#signup" class="btn btn-ghost plan-choice" data-plan="Starter" data-focus-store>Get started</a>
+      </article>
+      <article class="plan plan-featured" data-reveal>
+        <div class="plan-heading"><h3>Growth</h3><span class="plan-chip">Most popular</span></div>
+        <p class="plan-sub">For growing stores with more products.</p>
+        <p class="plan-amount">$249<span>/month</span><small>single location</small></p>
+        <ul role="list"><li>Up to 2,500 products</li><li>Advanced analytics</li><li>Featured deal placements</li><li>Priority support</li></ul>
+        <a href="#signup" class="btn btn-orange plan-choice" data-plan="Growth" data-focus-store>Get started</a>
+      </article>
+      <article class="plan" data-reveal>
+        <h3>Pro</h3>
+        <p class="plan-sub">For multi-location stores and franchises.</p>
+        <p class="plan-amount">$499<span>/month</span><small>first location, +$149/month per additional location</small></p>
+        <ul role="list"><li>Unlimited products</li><li>Multi-location management</li><li>Advanced analytics &amp; reports</li><li>Priority deal placements</li><li>Dedicated support</li></ul>
+        <a href="#signup" class="btn btn-ghost plan-choice" data-plan="Pro" data-focus-store>Get started</a>
+      </article>
+    </div>
+    <p class="plans-note">Concept pricing in CAD. Final plans and capabilities are subject to change. Dashboard figures are illustrative.</p>
+  </div>
+</section>
+
+<!-- SIGN UP: the same indigo card as the homepage's early access -->
+<section class="join s-signup" id="signup" aria-labelledby="signup-title">
+  <div class="wrap join-grid">
+    <div class="join-card">
+      <p class="chapter chapter-light"><span>07</span>Get started today</p>
+      <h2 class="display" id="signup-title">Get your store <em>discovered.</em></h2>
+      <p class="lede">Join Spargo and start reaching local shoppers in a few minutes.</p>
+      <form id="merchant-form" class="merchant-form" novalidate>
+        <div class="m-row"><label for="store-name">Store name</label><input id="store-name" name="storeName" placeholder="e.g. Riverside Market" autocomplete="organization" required /></div>
+        <div class="m-row"><label for="business-email">Business email</label><input id="business-email" name="businessEmail" type="email" inputmode="email" placeholder="you@yourstore.com" autocomplete="email" required /></div>
+        <div class="m-row m-wide"><label for="store-address">Store address</label><input id="store-address" name="storeAddress" placeholder="123 Main St, Calgary, AB" autocomplete="street-address" required /></div>
+        <div class="m-row"><label for="store-category">Store category</label>
+          <select id="store-category" name="storeCategory" required>
+            <option value="">Select a category</option>
+            <option>Grocery</option>
+            <option>Gas station</option>
+            <option>Electronics</option>
+            <option>Clothing &amp; shoes</option>
+            <option>Hardware</option>
+            <option>Furniture &amp; home</option>
+            <option>Pharmacy</option>
+            <option>Convenience</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="m-row"><label for="selected-plan">Plan</label>
+          <select id="selected-plan" name="plan">
+            <option>Starter</option>
+            <option selected>Growth</option>
+            <option>Pro</option>
+          </select>
+        </div>
+        <button class="btn btn-orange btn-lg m-wide" type="submit">List your store</button>
+        <p class="m-status m-wide" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="join-art s-signup-art" aria-hidden="true">
+      <img src="/img/spargo-fox-presenting-400.webp" srcset="/img/spargo-fox-presenting-400.webp 400w, /img/spargo-fox-presenting-640.webp 640w" sizes="(max-width: 900px) 220px, 380px" width="400" height="515" loading="lazy" alt="" />
+    </div>
+  </div>
+</section>
+
+<!-- BACK TO SHOPPERS -->
+<section class="stores-band" aria-labelledby="shoppers-title">
+  <div class="wrap stores-inner">
+    <h2 id="shoppers-title">Shopping, not selling?</h2>
+    <p>Compare prices across Calgary stores right now, and join the waitlist for the Spargo app.</p>
+    <a class="arrow-link" href="/#try">Try Spargo live <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <a href="/" class="nav-logo footer-logo" aria-label="Spargo home">
+        <img src="/img/spargo-logo-sm.webp" width="46" height="44" alt="" loading="lazy" />
+        <span>spargo</span>
+      </a>
+      <p class="footer-copy">Shop smarter. Save better. &copy; 2026 Spargo</p>
+    </div>
+    <nav class="footer-links" aria-label="Explore Spargo">
+      <a href="/calgary/grocery-prices">Calgary grocery prices</a>
+      <a href="/grocery-price-comparison-app">Price comparison app</a>
+      <a href="/features/grocery-list-optimizer">List optimizer</a>
+      <a href="/features/price-tracking">Price tracking</a>
+      <a href="/for-stores" aria-current="page">For stores</a>
+    </nav>
+    <div class="footer-end">
+      <div class="footer-legal">
+        <a href="/privacy">Privacy policy</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:hello@spargo.app">Contact</a>
+      </div>
+      <div class="social-icons">
+        <a class="social-icon" href="https://www.instagram.com/spargo.app/" target="_blank" rel="noopener noreferrer" aria-label="Spargo on Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+        </a>
+        <a class="social-icon" href="https://www.linkedin.com/company/spargo-app/" target="_blank" rel="noopener noreferrer" aria-label="Spargo on LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="7" cy="7" r="1" fill="currentColor"/><path d="M11 17v-3.5c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5V17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11 10v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script defer src="/js/nav.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script defer src="/js/stores.js"></script>
+</body>
+</html>

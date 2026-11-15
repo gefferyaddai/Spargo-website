@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found | Spargo</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#F5F3EE" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48.png" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    /* Top-aligned rather than centred, so the late web fonts don't move everything when they arrive */
+    .not-found { min-height: 100dvh; padding: calc(var(--nav-h) + clamp(40px, 10vh, 120px)) 0 72px; }
+    .not-found-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: clamp(24px, 5vw, 72px); }
+    .not-found-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+    .not-found-fox { width: min(300px, 32vw); height: auto; filter: drop-shadow(0 22px 24px rgba(27, 35, 144, 0.18)); }
+    @media (max-width: 700px) {
+      .not-found-grid { grid-template-columns: minmax(0, 1fr); }
+      .not-found-fox { order: -1; width: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav id="mainNav" aria-label="Main">
+  <div class="wrap nav-inner">
+    <a href="/" class="nav-logo" aria-label="Spargo home">
+      <img src="/img/spargo-logo-sm.webp" width="46" height="44" alt="" />
+      <span>spargo</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#how">How it works</a></li>
+      <li><a href="/#everywhere">Categories</a></li>
+      <li><a href="/#try">Try Spargo</a></li>
+      <li><a href="/for-stores">For stores</a></li>
+    </ul>
+    <a class="btn btn-orange nav-cta" href="/#join">Get early access</a>
+    <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMenu(); this.setAttribute('aria-expanded', document.getElementById('mobileMenu').classList.contains('open'))">
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <a href="/#how">How it works</a>
+    <a href="/#everywhere">Categories</a>
+    <a href="/#try">Try Spargo</a>
+    <a href="/for-stores">For stores</a>
+    <a class="btn btn-orange" href="/#join">Get early access</a>
+  </div>
+</div>
+
+<main id="main" class="not-found">
+  <div class="wrap not-found-grid">
+    <div>
+      <p class="chapter"><span>404</span>Page not found</p>
+      <h1 class="display">This aisle is <em>empty.</em></h1>
+      <p class="lede">The page you're looking for has moved or never existed. The best prices are still where we left them.</p>
+      <div class="not-found-actions">
+        <a class="btn btn-orange btn-lg" href="/">Back to home</a>
+        <a class="btn btn-ghost btn-lg" href="/#try">Try Spargo live</a>
+      </div>
+    </div>
+    <img class="not-found-fox" src="/img/spargo-fox-presenting-400.webp" width="400" height="515" alt="" />
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <a href="/" class="nav-logo footer-logo" aria-label="Spargo home">
+        <img src="/img/spargo-logo-sm.webp" width="46" height="44" alt="" loading="lazy" />
+        <span>spargo</span>
+      </a>
+      <p class="footer-copy">Shop smarter. Save better. &copy; 2026 Spargo</p>
+    </div>
+    <nav class="footer-links" aria-label="Explore Spargo">
+      <a href="/calgary/grocery-prices">Calgary grocery prices</a>
+      <a href="/grocery-price-comparison-app">Price comparison app</a>
+      <a href="/features/grocery-list-optimizer">List optimizer</a>
+      <a href="/features/price-tracking">Price tracking</a>
+      <a href="/for-stores">For stores</a>
+    </nav>
+    <div class="footer-end">
+      <div class="footer-legal">
+        <a href="/privacy">Privacy policy</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:hello@spargo.app">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav.js"></script>
+</body>
+</html>
